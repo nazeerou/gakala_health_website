@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gakala Health Centre | Tunatibu, Mungu anaponya</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="icon" type="image/x-icon" href="/assets/logo_2_gakala.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo_2_gakala.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo_2_gakala.png">
+
+    <!-- Tailwind CSS -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* Add loading indicator styles */
+        /* .app-loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #1e7c23, #123456);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .app-loading.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .app-loading.hidden {
+            display: none;
+        }
+        
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        .loading-text {
+            color: white;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        } */
+    </style>
+</head>
+<body>    
+    <div id="app"></div>
+    
+    <!-- Load Vue and Dependencies - order matters! -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Main App - load as module WITHOUT defer -->
+    <script type="module" src="/src/main.js"></script>
+
+    
+    <script>
+        // Function to hide loading indicator
+        function hideLoading() {
+            const loader = document.getElementById('app-loading');
+            if (loader) {
+                loader.classList.add('fade-out');
+                setTimeout(() => {
+                    loader.classList.add('hidden');
+                }, 500);
+            }
+        }
+
+        // Hide loading when app is ready
+        window.addEventListener('load', function() {
+            // Give Vue a moment to mount
+            setTimeout(hideLoading, 1000);
+        });
+
+        // Fallback: hide after 3 seconds no matter what
+        setTimeout(hideLoading, 3000);
+    </script>
+</body>
+</html>

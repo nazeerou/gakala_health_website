@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Your custom CSS below */
+:root {
+    --primary: #1e4b7c;
+    --primary-light: #2e6ca3;
+    --primary-dark: #123456;
+    --primary-soft: #e8f0fe;
+    --primary-very-light: #f5f9ff;
+}
+
+/* ... rest of your custom styles */
