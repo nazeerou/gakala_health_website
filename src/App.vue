@@ -12,7 +12,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import LoadingScreen from './components/common/LoadingScreen.vue'
-import AppLayout from './components/Layout/AppLayout.vue'
+import AppLayout from './components/layout/AppLayout.vue'
 
 const isLoading = ref(true)
 
