@@ -180,13 +180,13 @@ defineEmits(['open-appointment'])
 
 const galleryImages = ref([
     {
-        url: '/assets/img1.jpg',
+        url: '/assets/img11.jpg',
         alt: 'Modern Facility',
         title: 'Modern Facility',
         description: 'State-of-the-art equipment'
     },
     {
-        url: '/assets/img2.jpg',
+        url: '/assets/img1.jpg',
         alt: 'Expert Doctors',
         title: 'Expert Doctors',
         description: 'Qualified professionals'
@@ -199,6 +199,24 @@ const galleryImages = ref([
     },
     {
         url: '/assets/img5.jpg',
+        alt: 'Emergency Services',
+        title: 'Emergency Services',
+        description: '24/7 availability'
+    },
+    {
+        url: '/assets/img9.jpg',
+        alt: 'Emergency Services',
+        title: 'Emergency Services',
+        description: '24/7 availability'
+    },
+    {
+        url: '/assets/img8.jpg',
+        alt: 'Emergency Services',
+        title: 'Emergency Services',
+        description: '24/7 availability'
+    },
+    {
+        url: '/assets/img7.jpg',
         alt: 'Emergency Services',
         title: 'Emergency Services',
         description: '24/7 availability'
