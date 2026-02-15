@@ -1,36 +1,40 @@
 <template>
     <footer class="footer">
-        <div class="container mx-auto px-6">
+        <div class="footer-container">
             <!-- Main Footer Content -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+            <div class="footer-grid">
                 <!-- Company Info -->
                 <div class="footer-section" data-aos="fade-up">
-                    <div class="flex items-center space-x-3 mb-6">
+                    <div class="company-brand">
                         <div class="logo-wrapper">
                             <img src="/assets/logo_2_gakala.png" alt="Gakala Health Centre" class="logo-img">
                         </div>
+                        <h3 class="company-name">Gakala Health Centre</h3>
                     </div>
                     
-                    <p class="text-white/70 mb-6 text-sm leading-relaxed">
-                        Providing quality healthcare with compassion and excellence since 2016.
+                    <p class="company-description">
+                        Providing quality healthcare with compassion and excellence since 2016. Your health, our priority.
                     </p>
                     
-                    <div class="motto-box mb-6">
-                        <p class="text-primary-soft font-semibold italic">
-                            "Tunatibu Mungu anaponya"
-                        </p>
-                        <p class="text-white/60 text-xs">We treat, God heals</p>
+                    <div class="motto-wrapper">
+                        <div class="motto-icon">
+                            <i class="fas fa-praying-hands"></i>
+                        </div>
+                        <div class="motto-content">
+                            <p class="motto-text">"Tunatibu Mungu anaponya"</p>
+                            <p class="motto-translation">We treat, God heals</p>
+                        </div>
                     </div>
                     
-                    <div class="social-links">
-                        <h5 class="text-white/90 text-sm font-semibold mb-3">Connect With Us</h5>
-                        <div class="flex space-x-3">
+                    <div class="social-section">
+                        <h5 class="social-title">Connect With Us</h5>
+                        <div class="social-grid">
                             <a 
                                 v-for="social in socialLinks" 
                                 :key="social.name" 
                                 :href="social.link" 
                                 target="_blank" 
-                                class="social-icon"
+                                class="social-link"
                                 :aria-label="social.name"
                             >
                                 <i :class="social.icon"></i>
@@ -46,7 +50,7 @@
                         <li v-for="link in quickLinks" :key="link.name">
                             <router-link :to="link.path" class="footer-link">
                                 <i class="fas fa-chevron-right link-icon"></i>
-                                {{ link.name }}
+                                <span>{{ link.name }}</span>
                             </router-link>
                         </li>
                     </ul>
@@ -59,7 +63,7 @@
                         <li v-for="service in serviceLinks" :key="service.name">
                             <router-link :to="service.path" class="footer-link">
                                 <i class="fas fa-chevron-right link-icon"></i>
-                                {{ service.name }}
+                                <span>{{ service.name }}</span>
                             </router-link>
                         </li>
                     </ul>
@@ -70,9 +74,10 @@
                 <div class="footer-section" data-aos="fade-up" data-aos-delay="300">
                     <h4 class="footer-title">Contact Info</h4>
                     
-                    <ul class="contact-list">
-                        <li class="contact-item">
-                            <div class="contact-icon-wrapper">
+                    <div class="contact-list">
+                        <!-- Address -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="contact-details">
@@ -80,42 +85,77 @@
                                 <span class="contact-value">Mwanza, Tanzania</span>
                                 <span class="contact-sub">Mtaa wa Mabatini</span>
                             </div>
-                        </li>
+                        </div>
                         
-                        <li class="contact-item">
-                            <div class="contact-icon-wrapper">
+                        <!-- Phone -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div class="contact-details">
-                                <span class="contact-label">Call Us</span>
-                                <a href="tel:+255718400400" class="contact-value hover:text-white transition-colors">
-                                    +255 718 400 400
-                                </a>
-                                <a href="tel:+255718400401" class="contact-value hover:text-white transition-colors">
-                                    +255 718 400 401
-                                </a>
+                                <span class="contact-label">Call Us 24/7</span>
+                                <a href="tel:+255718400400" class="contact-link">+255 718 400 400</a>
+                                <a href="tel:+255718400401" class="contact-link">+255 718 400 401</a>
                             </div>
-                        </li>
+                        </div>
                         
-                        <li class="contact-item">
-                            <div class="contact-icon-wrapper">
+                        <!-- Email -->
+                        <div class="contact-item">
+                            <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="contact-details">
                                 <span class="contact-label">Email Us</span>
-                                <a href="mailto:info@gakalahealth.co.tz" class="contact-value hover:text-white transition-colors">
-                                    info@gakalahealth.co.tz
-                                </a>
-                                <a href="mailto:appointments@gakalahealth.co.tz" class="contact-value hover:text-white transition-colors text-sm">
-                                    appointments@gakalahealth.co.tz
-                                </a>
+                                <a href="mailto:info@gakalahealth.co.tz" class="contact-link">info@gakalahealth.co.tz</a>
+                                <a href="mailto:appointments@gakalahealth.co.tz" class="contact-link contact-link-small">appointments@gakalahealth.co.tz</a>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             
-           
+            <!-- Emergency Contact Bar -->
+            <div class="emergency-bar" data-aos="fade-up">
+                <div class="emergency-content">
+                    <div class="emergency-icon-wrapper">
+                        <i class="fas fa-ambulance"></i>
+                    </div>
+                    <div class="emergency-text">
+                        <span class="emergency-label">Emergency 24/7</span>
+                        <span class="emergency-phone">
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+255718400400">+255 718 400 400</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="emergency-badge">
+                    <span class="badge-pulse"></span>
+                    <span>Available Now</span>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright-section">
+                    <p class="copyright">
+                        &copy; {{ currentYear }} Gakala Health Centre. All rights reserved.
+                    </p>
+                    <div class="legal-links">
+                        <router-link to="/privacy" class="legal-link">Privacy Policy</router-link>
+                        <span class="separator">|</span>
+                        <router-link to="/terms" class="legal-link">Terms of Use</router-link>
+                        <span class="separator">|</span>
+                    </div>
+                </div>
+                
+                
+                <!-- <div class="developer-credit">
+                    <p class="credit-text">
+                        Developed with <i class="fas fa-heart text-red-400"></i> by 
+                        <a href="#" class="credit-link">Manani Tech Solution Limited</a>
+                    </p>
+                </div> -->
+            </div>
         </div>
     </footer>
 </template>
@@ -126,7 +166,14 @@ import { computed } from 'vue'
 const props = defineProps({
     socialLinks: {
         type: Array,
-        default: () => []
+        default: () => [
+            { name: 'Facebook', icon: 'fab fa-facebook-f', link: '#' },
+            { name: 'Twitter', icon: 'fab fa-twitter', link: '#' },
+            { name: 'Instagram', icon: 'fab fa-instagram', link: '#' },
+            { name: 'LinkedIn', icon: 'fab fa-linkedin-in', link: '#' },
+            { name: 'WhatsApp', icon: 'fab fa-whatsapp', link: '#' },
+            { name: 'YouTube', icon: 'fab fa-youtube', link: '#' }
+        ]
     }
 })
 
@@ -154,47 +201,67 @@ const serviceLinks = [
 
 <style scoped>
 .footer {
-    background: linear-gradient(135deg, #0a2a45, #123456);
+    background: linear-gradient(145deg, #0a2a45, #0f3a5a);
     color: white;
-    padding: 60px 0 20px;
     position: relative;
     overflow: hidden;
     margin-top: 4rem;
+    padding: 0;
 }
 
+/* Background Pattern */
 .footer::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-soft), var(--primary), var(--primary-soft));
+    inset: 0;
+    background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
+    background-size: 40px 40px;
+    pointer-events: none;
 }
 
 .footer::after {
     content: '';
     position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 300px;
-    height: 300px;
-    background: rgba(255, 255, 255, 0.03);
+    top: -50%;
+    right: -10%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.02), transparent);
     border-radius: 50%;
     pointer-events: none;
 }
 
-.footer-section {
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: clamp(40px, 6vw, 60px) clamp(16px, 5vw, 40px) clamp(20px, 4vw, 30px);
     position: relative;
     z-index: 2;
 }
 
+/* Footer Grid */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(20px, 3vw, 40px);
+    margin-bottom: clamp(30px, 5vw, 50px);
+}
+
+/* Company Info Section */
+.company-brand {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 2vw, 15px);
+    margin-bottom: clamp(15px, 3vw, 20px);
+    flex-wrap: wrap;
+}
+
 .logo-wrapper {
-    width: 180px;
-    height: 60px;
+    width: clamp(60px, 8vw, 80px);
+    height: clamp(60px, 8vw, 80px);
     background: white;
-    border-radius: 15px;
-    padding: 8px;
+    border-radius: clamp(12px, 2vw, 15px);
+    padding: clamp(8px, 1.5vw, 10px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
@@ -207,21 +274,111 @@ const serviceLinks = [
     object-fit: contain;
 }
 
-.motto-box {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 15px;
-    border-radius: 12px;
-    /* border-left: 4px solid var(--primary-soft); */
+.company-name {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: 600;
+    color: white;
+    line-height: 1.3;
 }
 
-.footer-title {
-    font-size: 1.2rem;
+.company-description {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    line-height: 1.6;
+    margin-bottom: clamp(15px, 3vw, 20px);
+}
+
+/* Motto Section */
+.motto-wrapper {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 2vw, 15px);
+    background: rgba(255, 255, 255, 0.05);
+    padding: clamp(12px, 2vw, 15px);
+    border-radius: clamp(12px, 2vw, 15px);
+    margin-bottom: clamp(20px, 4vw, 25px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.motto-icon {
+    width: clamp(40px, 5vw, 45px);
+    height: clamp(40px, 5vw, 45px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #21dd1b;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    flex-shrink: 0;
+}
+
+.motto-content {
+    flex: 1;
+}
+
+.motto-text {
+    color: #21dd1b;
     font-weight: 600;
-    margin-bottom: 1.5rem;
-    position: relative;
-    padding-bottom: 0.75rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-style: italic;
+    margin-bottom: 2px;
+}
+
+.motto-translation {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+}
+
+/* Social Section */
+.social-section {
+    margin-top: clamp(15px, 3vw, 20px);
+}
+
+.social-title {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    font-weight: 600;
+    margin-bottom: clamp(10px, 2vw, 12px);
+}
+
+.social-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(8px, 1.5vw, 10px);
+}
+
+.social-link {
+    width: clamp(36px, 5vw, 40px);
+    height: clamp(36px, 5vw, 40px);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    letter-spacing: 0.5px;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover {
+    background: linear-gradient(135deg, #21dd1b, #30b85d);
+    color: #0a2a45;
+    transform: translateY(-3px) scale(1.1);
+    border-color: transparent;
+}
+
+/* Footer Titles */
+.footer-title {
+    font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+    font-weight: 600;
+    margin-bottom: clamp(15px, 3vw, 20px);
+    position: relative;
+    padding-bottom: clamp(8px, 1.5vw, 10px);
+    color: white;
 }
 
 .footer-title::after {
@@ -229,20 +386,21 @@ const serviceLinks = [
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 40px;
+    width: clamp(30px, 4vw, 40px);
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-soft), transparent);
+    background: linear-gradient(90deg, #21dd1b, transparent);
     border-radius: 2px;
 }
 
+/* Footer Links */
 .footer-links {
     list-style: none;
     padding: 0;
-    margin: 0 0 1rem 0;
+    margin: 0 0 clamp(15px, 3vw, 20px) 0;
 }
 
 .footer-links li {
-    margin-bottom: 0.6rem;
+    margin-bottom: clamp(8px, 1.5vw, 10px);
 }
 
 .footer-link {
@@ -251,18 +409,19 @@ const serviceLinks = [
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
-    font-size: 0.95rem;
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    line-height: 1.5;
 }
 
 .footer-link:hover {
-    color: var(--primary-soft);
+    color: #21dd1b;
     transform: translateX(5px);
 }
 
 .link-icon {
-    font-size: 0.7rem;
-    margin-right: 8px;
-    color: var(--primary-soft);
+    font-size: 0.65rem;
+    margin-right: clamp(6px, 1vw, 8px);
+    color: #21dd1b;
     transition: transform 0.3s ease;
 }
 
@@ -270,201 +429,272 @@ const serviceLinks = [
     transform: translateX(3px);
 }
 
+/* View All Link */
 .view-all-link {
     display: inline-flex;
     align-items: center;
-    color: var(--primary-soft);
+    gap: clamp(6px, 1.5vw, 8px);
+    color: #21dd1b;
     text-decoration: none;
     font-weight: 500;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+    padding: clamp(8px, 1.5vw, 10px) clamp(12px, 2vw, 15px);
     background: rgba(255, 255, 255, 0.05);
     border-radius: 50px;
     transition: all 0.3s ease;
+    border: 1px solid rgba(255, 215, 0, 0.2);
 }
 
 .view-all-link:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 215, 0, 0.15);
     transform: translateX(5px);
+    border-color: rgba(255, 215, 0, 0.3);
 }
 
+/* Contact List */
 .contact-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(15px, 2.5vw, 20px);
 }
 
 .contact-item {
     display: flex;
-    gap: 12px;
-    margin-bottom: 1.2rem;
-    padding-bottom: 1.2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    gap: clamp(10px, 2vw, 15px);
+    transition: all 0.3s ease;
 }
 
-.contact-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.contact-icon-wrapper {
-    width: 36px;
-    height: 36px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+.contact-icon {
+    width: clamp(36px, 5vw, 40px);
+    height: clamp(36px, 5vw, 40px);
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-soft);
-    font-size: 1rem;
+    color: #21dd1b;
+    font-size: clamp(0.9rem, 2vw, 1rem);
     transition: all 0.3s ease;
     flex-shrink: 0;
 }
 
-.contact-item:hover .contact-icon-wrapper {
-    background: var(--primary-soft);
-    color: var(--primary-dark);
+.contact-item:hover .contact-icon {
+    background: #21dd1b;
+    color: #0a2a45;
     transform: scale(1.1);
 }
 
 .contact-details {
     flex: 1;
+    min-width: 0;
 }
 
 .contact-label {
     display: block;
-    font-size: 0.8rem;
-    color: var(--primary-soft);
+    font-size: clamp(0.7rem, 1.5vw, 0.75rem);
+    color: #21dd1b;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .contact-value {
     display: block;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+.contact-link {
+    display: block;
     color: white;
     text-decoration: none;
-    font-weight: 500;
-    line-height: 1.4;
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    line-height: 1.5;
+    transition: color 0.3s ease;
+    word-break: break-word;
+}
+
+.contact-link:hover {
+    color: #ffd700;
+}
+
+.contact-link-small {
+    font-size: clamp(0.75rem, 1.6vw, 0.85rem);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .contact-sub {
     display: block;
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1.5vw, 0.75rem);
     color: rgba(255, 255, 255, 0.5);
     margin-top: 2px;
 }
 
-.social-icon {
-    width: 36px;
-    height: 36px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.social-icon:hover {
-    background: var(--primary-soft);
-    color: var(--primary-dark);
-    transform: translateY(-3px);
-}
-
+/* Emergency Bar */
 .emergency-bar {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 50px;
-    padding: 1rem 2rem;
-    margin: 2rem 0 1.5rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 215, 0, 0.1);
     backdrop-filter: blur(10px);
+    border-radius: clamp(20px, 4vw, 30px);
+    padding: clamp(15px, 3vw, 20px) clamp(20px, 4vw, 30px);
+    margin: clamp(30px, 5vw, 40px) 0;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(15px, 3vw, 20px);
 }
 
-.emergency-icon {
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.1);
+.emergency-content {
+    display: flex;
+    align-items: center;
+    gap: clamp(15px, 3vw, 20px);
+    flex-wrap: wrap;
+}
+
+.emergency-icon-wrapper {
+    width: clamp(50px, 7vw, 60px);
+    height: clamp(50px, 7vw, 60px);
+    background: linear-gradient(135deg, #cff018, #cff018);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary-soft);
-    font-size: 1.5rem;
+    color: #0a2a45;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    animation: pulse 2s infinite;
+}
+
+.emergency-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.emergency-label {
+    color: #21dd1b;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .emergency-phone {
-    color: var(--primary-soft);
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: clamp(5px, 1vw, 8px);
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
     font-weight: 700;
-    text-decoration: none;
-    margin-left: 0.5rem;
-    transition: all 0.3s ease;
 }
 
-.emergency-phone:hover {
+.emergency-phone i {
+    color: #21dd1b;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.emergency-phone a {
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
+.emergency-phone a:hover {
+    color: #21dd1b;
+}
+
+.emergency-badge {
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 1.5vw, 10px);
+    background: rgba(255, 255, 255, 0.1);
+    padding: clamp(8px, 1.5vw, 10px) clamp(15px, 3vw, 20px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-pulse {
+    width: 10px;
+    height: 10px;
+    background: #4ade80;
+    border-radius: 50%;
+    animation: badgePulse 1.5s infinite;
+}
+
+.emergency-badge span {
+    color: white;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+    font-weight: 500;
+}
+
+/* Footer Bottom */
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 1.5rem;
-    margin-top: 1rem;
+    padding-top: clamp(20px, 4vw, 25px);
+    margin-top: clamp(20px, 4vw, 25px);
+}
+
+.copyright-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(15px, 3vw, 20px);
+    margin-bottom: clamp(15px, 3vw, 20px);
 }
 
 .copyright {
     color: rgba(255, 255, 255, 0.6);
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+    margin: 0;
 }
 
 .legal-links {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.5rem;
+    gap: clamp(8px, 1.5vw, 12px);
 }
 
 .legal-link {
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .legal-link:hover {
-    color: var(--primary-soft);
+    color: #21dd1b;
 }
 
 .separator {
     color: rgba(255, 255, 255, 0.3);
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
 }
 
+/* Alternative Names */
 .alt-names {
-    margin-top: 1.5rem;
     text-align: center;
+    margin: clamp(15px, 3vw, 20px) 0;
 }
 
 .alt-names-text {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: clamp(0.7rem, 1.6vw, 0.8rem);
+    letter-spacing: 1px;
+    word-spacing: 4px;
 }
 
+/* Developer Credit */
 .developer-credit {
-    margin-top: 1rem;
     text-align: center;
+    margin-top: clamp(15px, 3vw, 20px);
 }
 
 .credit-text {
     color: rgba(255, 255, 255, 0.3);
-    font-size: 0.8rem;
+    font-size: clamp(0.7rem, 1.6vw, 0.8rem);
 }
 
 .credit-link {
@@ -475,25 +705,61 @@ const serviceLinks = [
 }
 
 .credit-link:hover {
-    color: var(--primary-soft);
+    color: #ffd700;
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(255, 215, 0, 0);
+    }
+}
+
+@keyframes badgePulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.2);
+    }
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+    .footer-grid {
+        gap: 30px;
+    }
 }
 
 @media (max-width: 1024px) {
-    .footer {
-        padding: 40px 0 20px;
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
     }
     
-    .emergency-bar {
-        border-radius: 30px;
-        padding: 1rem;
+    .copyright-section {
+        flex-direction: column;
+        text-align: center;
     }
     
-    .emergency-phone {
-        font-size: 1.2rem;
+    .legal-links {
+        justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
     .footer-section {
         text-align: center;
     }
@@ -503,8 +769,26 @@ const serviceLinks = [
         transform: translateX(-50%);
     }
     
+    .company-brand {
+        justify-content: center;
+    }
+    
+    .motto-wrapper {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .social-grid {
+        justify-content: center;
+    }
+    
     .footer-link {
         justify-content: center;
+    }
+    
+    .view-all-link {
+        justify-content: center;
+        width: 100%;
     }
     
     .contact-item {
@@ -513,36 +797,34 @@ const serviceLinks = [
         text-align: center;
     }
     
-    .contact-icon-wrapper {
-        margin-bottom: 0.5rem;
+    .contact-icon {
+        margin: 0 auto;
     }
     
-    .legal-links {
-        justify-content: center;
-    }
-    
-    .emergency-bar .flex-col {
+    .emergency-bar {
+        flex-direction: column;
         text-align: center;
     }
     
-    .emergency-icon {
-        margin: 0 auto;
+    .emergency-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .emergency-badge {
+        width: 100%;
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
-    .footer {
-        padding: 30px 0 15px;
-    }
-    
-    .logo-wrapper {
-        width: 50px;
-        height: 50px;
-        margin: 0 auto;
+    .footer-container {
+        padding: 30px 16px 20px;
     }
     
     .legal-links {
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 8px;
     }
     
     .separator {
@@ -552,7 +834,82 @@ const serviceLinks = [
     .legal-link {
         width: 100%;
         text-align: center;
-        padding: 0.3rem 0;
+        padding: 5px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .legal-link:last-child {
+        border-bottom: none;
+    }
+    
+    .alt-names-text {
+        word-spacing: 2px;
+        line-height: 1.5;
+    }
+    
+    .emergency-phone {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+/* Landscape Mode */
+@media (max-width: 900px) and (orientation: landscape) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .emergency-bar {
+        flex-direction: row;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .footer {
+        background: #0a2a45;
+    }
+    
+    .motto-text {
+        color: #ffff00;
+    }
+    
+    .social-link {
+        border: 2px solid white;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .social-link,
+    .footer-link,
+    .contact-item,
+    .emergency-icon-wrapper {
+        transition: none;
+        animation: none;
+    }
+    
+    .social-link:hover {
+        transform: none;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .footer {
+        background: white;
+        color: black;
+    }
+    
+    .footer::before,
+    .footer::after {
+        display: none;
+    }
+    
+    .social-section,
+    .emergency-bar,
+    .developer-credit {
+        display: none;
     }
 }
 </style>
