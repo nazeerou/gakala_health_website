@@ -20,6 +20,6 @@ onMounted(() => {
     // Simulate loading time
     setTimeout(() => {
         isLoading.value = false
-    }, 1500)
+    }, 100)
 })
 </script>

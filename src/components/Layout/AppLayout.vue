@@ -64,7 +64,6 @@ import {
     menuItems,
     serviceList,
     doctors,
-    newsEvents,
     testimonials,
     insuranceProviders,
     heroImages,

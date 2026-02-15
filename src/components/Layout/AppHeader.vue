@@ -1,5 +1,22 @@
 <template>
     <header>
+        <!-- Custom Loader Overlay - Single loader for entire app -->
+        <div v-if="isLoading" class="loader-overlay">
+            <div class="loader-container">
+                <div class="medical-loader">
+                    <div class="heart-beat">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                        <div class="line line4"></div>
+                        <div class="line line5"></div>
+                    </div>
+                    <!-- <div class="loader-text">Gakala Health Centre</div> -->
+                    <!-- <div class="loader-subtext">Loading...</div> -->
+                </div>
+            </div>
+        </div>
+
         <nav class="fixed top-0 left-0 right-0 z-50 navbar-modern" :class="{ 'scrolled': scrolled }">
             <div class="container mx-auto px-6">
                 <div class="flex items-center justify-between h-20">
@@ -14,15 +31,16 @@
                     <div class="hidden lg:flex nav-menu">
                         <div v-for="item in menuItems" :key="item.name" class="nav-item">
                             <!-- Regular items with paths -->
-                            <router-link 
+                            <a 
                                 v-if="!item.external && item.path !== '#'" 
-                                :to="item.path" 
+                                :href="item.path" 
                                 class="nav-link-modern"
                                 :class="{ 'router-link-active': $route.path === item.path }"
+                                @click="handleNavigationWithLoader($event, item.path)"
                             >
                                 {{ item.name }}
                                 <span class="nav-indicator"></span>
-                            </router-link>
+                            </a>
                             
                             <!-- Dropdown parent items (About, Services) with arrow -->
                             <a 
@@ -46,37 +64,38 @@
                             
                             <!-- About Dropdown -->
                             <div v-if="item.name === 'About'" class="nav-dropdown" @mouseenter="setDropdownHover('About')" @mouseleave="setDropdownHover(null)">
-                                <router-link to="/about" class="nav-dropdown-item" :class="{ 'router-link-active': $route.path === '/about' }">
-                                    <i class="fas fa-info-circle mr-2"></i>
+                                <a href="/about" class="nav-dropdown-item" :class="{ 'router-link-active': $route.path === '/about' }" @click="handleNavigationWithLoader($event, '/about')">
+                                    <span class="item-icon"><i class="fas fa-info-circle"></i></span>
                                     About Us
-                                </router-link>
-                                <router-link to="/mission" class="nav-dropdown-item" :class="{ 'router-link-active': $route.path === '/mission' }">
-                                    <i class="fas fa-bullseye mr-2"></i>
+                                </a>
+                                <a href="/mission" class="nav-dropdown-item" :class="{ 'router-link-active': $route.path === '/mission' }" @click="handleNavigationWithLoader($event, '/mission')">
+                                    <span class="item-icon"><i class="fas fa-bullseye"></i></span>
                                     Our Mission
-                                </router-link>
-                                <router-link to="/vision" class="nav-dropdown-item" :class="{ 'router-link-active': $route.path === '/vision' }">
-                                    <i class="fas fa-eye mr-2"></i>
+                                </a>
+                                <a href="/vision" class="nav-dropdown-item" :class="{ 'router-link-active': $route.path === '/vision' }" @click="handleNavigationWithLoader($event, '/vision')">
+                                    <span class="item-icon"><i class="fas fa-eye"></i></span>
                                     Our Vision
-                                </router-link>
+                                </a>
                             </div>
 
-                            <!-- Services Dropdown - SAME ARROW AS ABOUT -->
+                            <!-- Services Dropdown -->
                             <div v-if="item.name === 'Services'" class="nav-dropdown" style="min-width: 280px;" @mouseenter="setDropdownHover('Services')" @mouseleave="setDropdownHover(null)">
-                                <router-link to="/services" class="nav-dropdown-item font-bold text-primary border-b border-gray-100 mb-2" :class="{ 'router-link-active': $route.path === '/services' }">
-                                    <i class="fas fa-list mr-2"></i>
+                                <a href="/services" class="nav-dropdown-item font-bold text-primary border-b border-gray-100 mb-2" :class="{ 'router-link-active': $route.path === '/services' }" @click="handleNavigationWithLoader($event, '/services')">
+                                    <span class="item-icon"><i class="fas fa-list"></i></span>
                                     All Services
-                                </router-link>
+                                </a>
                                 <div class="grid grid-cols-2 gap-1">
-                                    <router-link 
+                                    <a 
                                         v-for="service in serviceList" 
                                         :key="service.name" 
-                                        :to="`/services/${service.slug}`" 
+                                        :href="`/services/${service.slug}`" 
                                         class="nav-dropdown-item text-sm"
                                         :class="{ 'router-link-active': $route.path === `/services/${service.slug}` }"
+                                        @click="handleNavigationWithLoader($event, `/services/${service.slug}`)"
                                     >
-                                        <i :class="service.icon" class="mr-2" style="width: 16px;"></i>
+                                        <span class="item-icon"><i :class="service.icon"></i></span>
                                         {{ service.shortName || service.name }}
-                                    </router-link>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -107,62 +126,64 @@
                         <div v-for="item in menuItems" :key="item.name" class="mb-2">
                             <div v-if="item.name === 'Services'" class="mobile-menu-section">
                                 <div class="mobile-menu-item font-bold text-primary bg-primary-soft" @click="toggleMobileSubmenu('services')">
-                                    <i class="fas fa-list mr-2"></i>
+                                    <span class="item-icon"><i class="fas fa-list"></i></span>
                                     Our Services
                                     <i class="fas fa-chevron-down ml-auto transition-transform" :class="{ 'rotate-180': mobileSubmenuOpen === 'services' }"></i>
                                 </div>
                                 <transition name="slide-down">
                                     <div v-if="mobileSubmenuOpen === 'services'" class="grid grid-cols-2 gap-1 mt-1">
-                                        <router-link 
+                                        <a 
                                             v-for="service in serviceList" 
                                             :key="service.name" 
-                                            :to="`/services/${service.slug}`" 
+                                            :href="`/services/${service.slug}`" 
                                             class="mobile-menu-item text-sm pl-8"
                                             :class="{ 'router-link-active': $route.path === `/services/${service.slug}` }"
-                                            @click="mobileMenuOpen = false"
+                                            @click="handleNavigationWithLoader($event, `/services/${service.slug}`); mobileMenuOpen = false"
                                         >
-                                            <i :class="service.icon" class="mr-2"></i>
+                                            <span class="item-icon"><i :class="service.icon"></i></span>
                                             {{ service.shortName || service.name }}
-                                        </router-link>
+                                        </a>
                                     </div>
                                 </transition>
                             </div>
                             
                             <div v-else-if="item.name === 'About'" class="mobile-menu-section">
                                 <div class="mobile-menu-item font-bold text-primary bg-primary-soft" @click="toggleMobileSubmenu('about')">
-                                    <i class="fas fa-info-circle mr-2"></i>
+                                    <span class="item-icon"><i class="fas fa-info-circle"></i></span>
                                     About
                                     <i class="fas fa-chevron-down ml-auto transition-transform" :class="{ 'rotate-180': mobileSubmenuOpen === 'about' }"></i>
                                 </div>
                                 <transition name="slide-down">
                                     <div v-if="mobileSubmenuOpen === 'about'" class="mt-1">
-                                        <router-link to="/about" class="mobile-menu-item pl-8" :class="{ 'router-link-active': $route.path === '/about' }" @click="mobileMenuOpen = false">
-                                            <i class="fas fa-info-circle mr-2"></i>
+                                        <a href="/about" class="mobile-menu-item pl-8" :class="{ 'router-link-active': $route.path === '/about' }" @click="handleNavigationWithLoader($event, '/about'); mobileMenuOpen = false">
+                                            <span class="item-icon"><i class="fas fa-info-circle"></i></span>
                                             About Us
-                                        </router-link>
-                                        <router-link to="/mission" class="mobile-menu-item pl-8" :class="{ 'router-link-active': $route.path === '/mission' }" @click="mobileMenuOpen = false">
-                                            <i class="fas fa-bullseye mr-2"></i>
+                                        </a>
+                                        <a href="/mission" class="mobile-menu-item pl-8" :class="{ 'router-link-active': $route.path === '/mission' }" @click="handleNavigationWithLoader($event, '/mission'); mobileMenuOpen = false">
+                                            <span class="item-icon"><i class="fas fa-bullseye"></i></span>
                                             Our Mission
-                                        </router-link>
-                                        <router-link to="/vision" class="mobile-menu-item pl-8" :class="{ 'router-link-active': $route.path === '/vision' }" @click="mobileMenuOpen = false">
-                                            <i class="fas fa-eye mr-2"></i>
+                                        </a>
+                                        <a href="/vision" class="mobile-menu-item pl-8" :class="{ 'router-link-active': $route.path === '/vision' }" @click="handleNavigationWithLoader($event, '/vision'); mobileMenuOpen = false">
+                                            <span class="item-icon"><i class="fas fa-eye"></i></span>
                                             Our Vision
-                                        </router-link>
+                                        </a>
                                     </div>
                                 </transition>
                             </div>
                             
                             <div v-else>
-                                <router-link 
+                                <a 
                                     v-if="!item.external" 
-                                    :to="item.path" 
+                                    :href="item.path" 
                                     class="mobile-menu-item"
                                     :class="{ 'router-link-active': $route.path === item.path }"
-                                    @click="mobileMenuOpen = false"
+                                    @click="handleNavigationWithLoader($event, item.path); mobileMenuOpen = false"
                                 >
+                                    <span class="item-icon" v-if="item.icon"><i :class="item.icon"></i></span>
                                     {{ item.name }}
-                                </router-link>
+                                </a>
                                 <a v-else :href="item.link" target="_blank" class="mobile-menu-item" @click="mobileMenuOpen = false">
+                                    <span class="item-icon" v-if="item.icon"><i :class="item.icon"></i></span>
                                     {{ item.name }} <i class="fas fa-external-link-alt ml-2 text-xs"></i>
                                 </a>
                             </div>
@@ -207,9 +228,42 @@ const route = useRoute()
 const mobileMenuOpen = ref(false)
 const mobileSubmenuOpen = ref(null)
 const hoveredDropdown = ref(null)
+const isLoading = ref(false)
 
 // Define routes that should activate the About dropdown
 const aboutRoutes = ['/about', '/mission', '/vision']
+
+// Handle navigation with custom loader
+const handleNavigationWithLoader = (event, path) => {
+    event.preventDefault()
+    
+    // Close mobile menu if open
+    mobileMenuOpen.value = false
+    mobileSubmenuOpen.value = null
+    
+    // Show loader
+    isLoading.value = true
+    
+    // Prevent any default browser loading indicator
+    document.body.style.cursor = 'wait'
+    
+    // Navigate to new page
+    window.location.href = path
+}
+
+// Special handler for home
+const goToHome = () => {
+    emit('go-home')
+    mobileMenuOpen.value = false
+    mobileSubmenuOpen.value = null
+    
+    // Show loader
+    isLoading.value = true
+    document.body.style.cursor = 'wait'
+    
+    // Navigate to home
+    window.location.href = '/'
+}
 
 // Check if any about route is active
 const isDropdownActive = (item) => {
@@ -246,9 +300,9 @@ watch(() => route.path, () => {
     mobileSubmenuOpen.value = null
 })
 
-// Close mobile menu on window resize (if switching to desktop)
+// Close mobile menu on window resize
 const handleResize = () => {
-    if (window.innerWidth >= 1024) { // lg breakpoint
+    if (window.innerWidth >= 1024) {
         mobileMenuOpen.value = false
         mobileSubmenuOpen.value = null
     }
@@ -259,12 +313,6 @@ const toggleMobileMenu = () => {
     if (!mobileMenuOpen.value) {
         mobileSubmenuOpen.value = null
     }
-}
-
-const goToHome = () => {
-    emit('go-home')
-    mobileMenuOpen.value = false
-    mobileSubmenuOpen.value = null
 }
 
 // Handle click outside to close mobile menu
@@ -281,9 +329,22 @@ const handleClickOutside = (event) => {
     }
 }
 
+// Hide loader when page loads and reset cursor
 onMounted(() => {
     window.addEventListener('resize', handleResize)
     document.addEventListener('click', handleClickOutside)
+    
+    // Hide loader when page is fully loaded
+    window.addEventListener('load', () => {
+        isLoading.value = false
+        document.body.style.cursor = 'default'
+    })
+    
+    // Also hide loader after a short delay (fallback)
+    setTimeout(() => {
+        isLoading.value = false
+        document.body.style.cursor = 'default'
+    }, 10)
 })
 
 onUnmounted(() => {
@@ -331,7 +392,107 @@ onUnmounted(() => {
     padding: 5px;
 }
 
-/* Desktop Menu Styles - Only visible on desktop */
+/* Loader Styles - Single loader for entire app */
+.loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.loader-container {
+    text-align: center;
+}
+
+.medical-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.heart-beat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 60px;
+}
+
+.line {
+    width: 8px;
+    height: 30px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    border-radius: 4px;
+    animation: beat 1.2s ease-in-out infinite;
+}
+
+.line1 { animation-delay: 0s; }
+.line2 { animation-delay: 0.2s; }
+.line3 { animation-delay: 0.4s; }
+.line4 { animation-delay: 0.6s; }
+.line5 { animation-delay: 0.8s; }
+
+@keyframes beat {
+    0%, 100% {
+        height: 30px;
+        opacity: 0.5;
+        background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    }
+    50% {
+        height: 60px;
+        opacity: 1;
+        background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
+        box-shadow: 0 0 20px rgba(30, 75, 124, 0.5);
+    }
+}
+
+.loader-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    letter-spacing: 2px;
+    animation: pulse 2s ease-in-out infinite;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.loader-subtext {
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+        text-shadow: 0 0 20px rgba(30, 75, 124, 0.5);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Desktop Menu Styles */
 .nav-menu {
     display: flex;
     align-items: center;
@@ -435,7 +596,8 @@ onUnmounted(() => {
 }
 
 .nav-dropdown-item {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 0.6rem 1rem;
     color: var(--text-dark);
     text-decoration: none;
@@ -444,6 +606,7 @@ onUnmounted(() => {
     font-weight: 500;
     font-size: 0.9rem;
     cursor: pointer;
+    gap: 0.5rem;
 }
 
 .nav-dropdown-item:hover,
@@ -451,6 +614,12 @@ onUnmounted(() => {
     background: var(--primary-soft);
     color: var(--primary);
     transform: translateX(5px);
+}
+
+.item-icon {
+    display: inline-flex;
+    width: 20px;
+    justify-content: center;
 }
 
 /* Desktop Actions */
@@ -498,7 +667,7 @@ onUnmounted(() => {
     left: 100%;
 }
 
-/* Mobile Menu Button - Only visible on mobile */
+/* Mobile Menu Button */
 .mobile-menu-btn {
     width: 45px;
     height: 45px;
@@ -512,7 +681,6 @@ onUnmounted(() => {
     gap: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
-    /* Only show on mobile */
     display: flex;
 }
 
@@ -536,7 +704,7 @@ onUnmounted(() => {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile Menu - Hidden by default, only visible on mobile when open */
+/* Mobile Menu */
 .mobile-menu {
     position: absolute;
     top: 100%;
@@ -560,6 +728,7 @@ onUnmounted(() => {
     border-radius: 8px;
     transition: all 0.3s ease;
     cursor: pointer;
+    gap: 0.5rem;
 }
 
 .mobile-menu-item:hover,
@@ -590,12 +759,10 @@ onUnmounted(() => {
 
 /* Responsive Breakpoints */
 @media (min-width: 1024px) {
-    /* Hide mobile menu button on desktop */
     .mobile-menu-btn {
         display: none !important;
     }
     
-    /* Ensure desktop menu is visible */
     .nav-menu {
         display: flex;
     }
@@ -606,7 +773,6 @@ onUnmounted(() => {
 }
 
 @media (max-width: 1023px) {
-    /* Hide desktop menu on mobile */
     .nav-menu {
         display: none;
     }
@@ -615,7 +781,6 @@ onUnmounted(() => {
         display: none;
     }
     
-    /* Show mobile menu button */
     .mobile-menu-btn {
         display: flex;
     }

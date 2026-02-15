@@ -4,7 +4,7 @@
             <div class="container mx-auto px-6">
                 <h1 class="page-title">News & Events</h1>
                 <div class="page-breadcrumb">
-                    <router-link to="/">Home</router-link>
+                    <a href="/" @click.prevent="goToHome">Home</a>
                     <i class="fas fa-chevron-right text-sm"></i>
                     <span>News</span>
                 </div>
@@ -28,7 +28,7 @@
                             </div>
                             <h3 class="news-title">{{ news.title }}</h3>
                             <p class="news-excerpt">{{ news.excerpt }}</p>
-                            <a href="#" class="read-more" @click.prevent="$emit('open-external', news.link)">
+                            <a href="#" class="read-more" @click.prevent="handleReadMore(news.link)">
                                 Read More <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
@@ -40,14 +40,66 @@
 </template>
 
 <script setup>
-defineProps({
-    newsEvents: {
-        type: Array,
-        default: () => []
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+// News & Events Data
+const newsEvents = ref([
+    { 
+        image: '/assets/img2.jpg', 
+        date: 'March 15, 2026', 
+        title: 'Free Medical Camp This Weekend', 
+        excerpt: 'Join us for a free medical camp offering consultations and health screenings.', 
+        link: '/news/1' 
+    },
+    { 
+        image: '/assets/img6.jpg', 
+        date: 'March 10, 2026', 
+        title: 'New MRI Machine Installed', 
+        excerpt: 'State-of-the-art MRI machine installed for better diagnostics.', 
+        link: '/news/2' 
+    },
+    { 
+        image: '/assets/img4.jpg', 
+        date: 'March 5, 2026', 
+        title: 'Health Awareness Seminar', 
+        excerpt: 'Join our cardiologists for a seminar on heart health.', 
+        link: '/news/3' 
+    },
+    { 
+        image: '/assets/img1.jpg', 
+        date: 'February 28, 2026', 
+        title: 'New Maternity Wing Opening', 
+        excerpt: 'Opening of our new, modern maternity wing.', 
+        link: '/news/4' 
     }
+])
+
+// Log when component mounts for debugging
+onMounted(() => {
+    console.log('News component mounted with data:', newsEvents.value)
 })
 
-defineEmits(['open-external'])
+const goToHome = () => {
+    // If already on home, reload, otherwise navigate
+    if (window.location.pathname === '/') {
+        window.location.href = '/'
+    } else {
+        router.push('/')
+    }
+}
+
+const handleReadMore = (link) => {
+    console.log('Opening news link:', link)
+    // You can either emit an event or handle navigation here
+    // Option 1: Emit event (if parent needs to handle it)
+    // emit('open-external', link)
+    
+    // Option 2: Direct navigation
+    window.open(link, '_blank')
+}
 </script>
 
 <style scoped>
@@ -107,6 +159,7 @@ defineEmits(['open-external'])
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 .page-breadcrumb a:hover {
@@ -180,6 +233,9 @@ defineEmits(['open-external'])
     display: inline-flex;
     align-items: center;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .read-more i {

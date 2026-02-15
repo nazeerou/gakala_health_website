@@ -89,13 +89,13 @@ export const doctors = [
     { name: 'Dr. Grace Peter', specialty: 'OB/GYN', experience: '14', image: 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%231e4b7c\'/%3E%3Ctext x=\'200\' y=\'150\' font-size=\'24\' text-anchor=\'middle\' fill=\'white\'%3EDr. Grace%3C/text%3E%3C/svg%3E' }
 ]
 
-// News & Events
-export const newsEvents = [
-    { image: './assets/img2.jpg', date: 'March 15, 2026', title: 'Free Medical Camp This Weekend', excerpt: 'Join us for a free medical camp offering consultations and health screenings.', link: '/news/1' },
-    { image: './assets/img6.jpg', date: 'March 10, 2026', title: 'New MRI Machine Installed', excerpt: 'State-of-the-art MRI machine installed for better diagnostics.', link: '/news/2' },
-    { image: './assets/img4.jpg', date: 'March 5, 2026', title: 'Health Awareness Seminar', excerpt: 'Join our cardiologists for a seminar on heart health.', link: '/news/3' },
-    { image: '/assets/img1.jpg', date: 'February 28, 2026', title: 'New Maternity Wing Opening', excerpt: 'Opening of our new, modern maternity wing.', link: '/news/4' }
-]
+// // News & Events
+// export const newsEvents = [
+//     { image: './assets/img2.jpg', date: 'March 15, 2026', title: 'FFree Medical Camp This Weekend', excerpt: 'Join us for a free medical camp offering consultations and health screenings.', link: '/news/1' },
+//     { image: './assets/img6.jpg', date: 'March 10, 2026', title: 'New MRI Machine Installed', excerpt: 'State-of-the-art MRI machine installed for better diagnostics.', link: '/news/2' },
+//     { image: './assets/img4.jpg', date: 'March 5, 2026', title: 'Health Awareness Seminar', excerpt: 'Join our cardiologists for a seminar on heart health.', link: '/news/3' },
+//     { image: '/assets/img1.jpg', date: 'February 28, 2026', title: 'New Maternity Wing Opening', excerpt: 'Opening of our new, modern maternity wing.', link: '/news/4' }
+// ]
 
 // Announcements
 export const announcements = [

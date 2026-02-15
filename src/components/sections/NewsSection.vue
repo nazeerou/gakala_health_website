@@ -29,7 +29,7 @@
                     
                     <div class="text-center mt-12">
                         <router-link to="/news" class="btn-outline">
-                            View All News
+                            View All News  
                             <i class="fas fa-arrow-right ml-2"></i>
                         </router-link>
                     </div>

@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-// Import views directly
+// Import views
 import Home from '../views/Home.vue'
 import Services from '../views/Services.vue'
 import ServiceDetail from '../views/ServiceDetail.vue'
@@ -11,28 +11,80 @@ import Doctors from '../views/Doctors.vue'
 import News from '../views/News.vue'
 import Contact from '../views/Contact.vue'
 
-// Define routes - NO siteData references first
 const routes = [
-    { path: '/', component: Home },
-    { path: '/services', component: Services },
-    { path: '/services/:slug', component: ServiceDetail },
-    { path: '/about', component: About },
-    { path: '/mission', component: Mission },
-    { path: '/vision', component: Vision },
-    { path: '/doctors', component: Doctors },
-    { path: '/news', component: News },
-    { path: '/contact', component: Contact },
-    { path: '/:pathMatch(.*)*', redirect: '/' }
+    { 
+        path: '/', 
+        name: 'home',
+        component: Home,
+        meta: { title: 'Home - Gakala ' }
+    },
+    { 
+        path: '/services', 
+        name: 'services',
+        component: Services,
+        meta: { title: 'Our Services' }
+    },
+    { 
+        path: '/services/:slug', 
+        name: 'service-detail',
+        component: ServiceDetail 
+    },
+    { 
+        path: '/about', 
+        name: 'about',
+        component: About 
+    },
+    { 
+        path: '/mission', 
+        name: 'mission',
+        component: Mission 
+    },
+    { 
+        path: '/vision', 
+        name: 'vision',
+        component: Vision 
+    },
+    { 
+        path: '/doctors', 
+        name: 'doctors',
+        component: Doctors 
+    },
+    { 
+        path: '/news', 
+        name: 'news',
+        component: News 
+    },
+    { 
+        path: '/contact', 
+        name: 'contact',
+        component: Contact 
+    },
+    { 
+        path: '/:pathMatch(.*)*', 
+        redirect: { name: 'home' }
+    }
 ]
 
-// Verify routes is an array
-console.log('✅ Routes is array?', Array.isArray(routes))
-console.log('✅ Routes count:', routes.length)
-
-// Create router
 const router = createRouter({
     history: createWebHistory(),
-    routes
+    routes,
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        } else {
+            return { top: 0 }
+        }
+    }
+})
+
+// Debug navigation
+router.beforeEach((to, from, next) => {
+    console.log('Navigating to:', to.path, to.name)
+    next()
+})
+
+router.afterEach((to, from) => {
+    console.log('Successfully navigated to:', to.path)
 })
 
 export default router
