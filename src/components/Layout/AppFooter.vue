@@ -268,6 +268,7 @@ const serviceLinks = [
     justify-content: center;
 }
 
+
 .logo-img {
     width: 100%;
     height: 100%;
