@@ -9,7 +9,7 @@
                         <div class="logo-wrapper">
                             <img src="/assets/logo_2_gakala.png" alt="Gakala Health Centre" class="logo-img">
                         </div>
-                        <h3 class="company-name">Gakala Health Centre</h3>
+                        <!-- <h3 class="company-name">Gakala Health Centre</h3> -->
                     </div>
                     
                     <p class="company-description">
@@ -93,7 +93,7 @@
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div class="contact-details">
-                                <span class="contact-label">Call Us 24/7</span>
+                                <span class="contact-label">Call Us </span>
                                 <a href="tel:+255718400400" class="contact-link">+255 718 400 400</a>
                                 <a href="tel:+255718400401" class="contact-link">+255 718 400 401</a>
                             </div>
@@ -257,7 +257,7 @@ const serviceLinks = [
 }
 
 .logo-wrapper {
-    width: clamp(60px, 8vw, 80px);
+    width: clamp(250px, 8vw, 80px);
     height: clamp(60px, 8vw, 80px);
     background: white;
     border-radius: clamp(12px, 2vw, 15px);
@@ -319,7 +319,7 @@ const serviceLinks = [
 }
 
 .motto-text {
-    color: #21dd1b;
+    color: #ffffff;
     font-weight: 600;
     font-size: clamp(0.9rem, 2vw, 1rem);
     font-style: italic;
@@ -414,14 +414,14 @@ const serviceLinks = [
 }
 
 .footer-link:hover {
-    color: #21dd1b;
+    color: #ffffff;
     transform: translateX(5px);
 }
 
 .link-icon {
     font-size: 0.65rem;
     margin-right: clamp(6px, 1vw, 8px);
-    color: #21dd1b;
+    color: #ffffff;
     transition: transform 0.3s ease;
 }
 
@@ -472,7 +472,7 @@ const serviceLinks = [
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #21dd1b;
+    color: #ffffff;
     font-size: clamp(0.9rem, 2vw, 1rem);
     transition: all 0.3s ease;
     flex-shrink: 0;
@@ -492,7 +492,7 @@ const serviceLinks = [
 .contact-label {
     display: block;
     font-size: clamp(0.7rem, 1.5vw, 0.75rem);
-    color: #21dd1b;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 4px;
