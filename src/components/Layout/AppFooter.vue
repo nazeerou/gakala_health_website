@@ -82,8 +82,8 @@
                             </div>
                             <div class="contact-details">
                                 <span class="contact-label">Visit Us</span>
-                                <span class="contact-value">Mwanza, Tanzania</span>
-                                <span class="contact-sub">Mtaa wa Mabatini</span>
+                                <span class="contact-value">Masumbwe, Geita</span>
+                                <span class="contact-sub">Tanzania</span>
                             </div>
                         </div>
                         
@@ -94,8 +94,7 @@
                             </div>
                             <div class="contact-details">
                                 <span class="contact-label">Call Us </span>
-                                <a href="tel:+255718400400" class="contact-link">+255 718 400 400</a>
-                                <a href="tel:+255718400401" class="contact-link">+255 718 400 401</a>
+                                <a href="tel:+255752003059" class="contact-link">+255 752 003 059</a>
                             </div>
                         </div>
                         

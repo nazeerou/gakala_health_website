@@ -8,7 +8,7 @@ export const contactData = {
             type: 'address',
             icon: 'fas fa-map-marker-alt',
             title: 'Visit Us',
-            lines: ['Mwanza, Tanzania', 'Mtaa wa Mlango Mmoja, Mabatini'],
+            lines: ['Geita, Tanzania', 'Masumbwe'],
             color: '#1e4b7c'
         },
         {
@@ -16,7 +16,7 @@ export const contactData = {
             type: 'phone',
             icon: 'fas fa-phone-alt',
             title: 'Call Us',
-            lines: ['+255 718 400 400', '+255 718 400 401'],
+            lines: ['+255 752003059'],
             color: '#2e6ca3'
         },
         {

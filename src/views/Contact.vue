@@ -56,7 +56,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-primary-dark">Visit Us</h3>
-                                    <p class="text-gray-600">Mwanza, Tanzania<br>Mtaa wa Mlango Mmoja, Mabatini</p>
+                                    <p class="text-gray-600">Masumbwe, Geita Tanzania<br></p>
                                 </div>
                             </div>
                             
@@ -66,8 +66,7 @@
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-primary-dark">Call Us</h3>
-                                    <a href="tel:+255718400400" class="text-gray-600 hover:text-primary block">+255 718 400 400</a>
-                                    <a href="tel:+255718400401" class="text-gray-600 hover:text-primary block">+255 718 400 401</a>
+                                    <a href="tel:+255718400400" class="text-gray-600 hover:text-primary block">+255 752 003 059</a>
                                 </div>
                             </div>
                             
@@ -202,7 +201,7 @@ const submitContactForm = () => {
 .form-input {
     width: 100%;
     padding: 12px 16px;
-    border: 1px solid var(--border-light);
+    border: 1px solid #ddd;
     border-radius: 12px;
     transition: all 0.3s ease;
     font-size: 0.95rem;

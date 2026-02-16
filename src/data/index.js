@@ -90,12 +90,12 @@ export const doctors = [
 ]
 
 // // News & Events
-// export const newsEvents = [
-//     { image: './assets/img2.jpg', date: 'March 15, 2026', title: 'FFree Medical Camp This Weekend', excerpt: 'Join us for a free medical camp offering consultations and health screenings.', link: '/news/1' },
-//     { image: './assets/img6.jpg', date: 'March 10, 2026', title: 'New MRI Machine Installed', excerpt: 'State-of-the-art MRI machine installed for better diagnostics.', link: '/news/2' },
-//     { image: './assets/img4.jpg', date: 'March 5, 2026', title: 'Health Awareness Seminar', excerpt: 'Join our cardiologists for a seminar on heart health.', link: '/news/3' },
-//     { image: '/assets/img1.jpg', date: 'February 28, 2026', title: 'New Maternity Wing Opening', excerpt: 'Opening of our new, modern maternity wing.', link: '/news/4' }
-// ]
+export const newsEvents = [
+    { image: './assets/img2.jpg', date: 'March 15, 2026', title: 'FFree Medical Camp This Weekend', excerpt: 'Join us for a free medical camp offering consultations and health screenings.', link: '/news/1' },
+    { image: './assets/img6.jpg', date: 'March 10, 2026', title: 'New MRI Machine Installed', excerpt: 'State-of-the-art MRI machine installed for better diagnostics.', link: '/news/2' },
+    { image: './assets/img4.jpg', date: 'March 5, 2026', title: 'Health Awareness Seminar', excerpt: 'Join our cardiologists for a seminar on heart health.', link: '/news/3' },
+    { image: '/assets/img1.jpg', date: 'February 28, 2026', title: 'New Maternity Wing Opening', excerpt: 'Opening of our new, modern maternity wing.', link: '/news/4' }
+]
 
 // Announcements
 export const announcements = [
