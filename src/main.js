@@ -45,9 +45,9 @@ app.use(router)
 const mountApp = () => {
     try {
         // Log that data is loaded (for debugging)
-        console.log('Site data loaded:', siteData ? 'Yes' : 'No')
-        console.log('Hero stats:', siteData?.heroStats?.length || 0)
-        console.log('Services:', siteData?.serviceList?.length || 0)
+        // console.log('Site data loaded:', siteData ? 'Yes' : 'No')
+        // console.log('Hero stats:', siteData?.heroStats?.length || 0)
+        // console.log('Services:', siteData?.serviceList?.length || 0)
         
         // Mount the app
         app.mount('#app')

@@ -7,7 +7,7 @@
                     <div class="section-header text-left mb-8" data-aos="fade-up">
                         <span>NEWS & EVENTS</span>
                         <h2 class="section-title">Latest Updates</h2>
-                        <p class="section-subtitle">Stay informed with the latest news and events from Gakala Health Centre.</p>
+                        <p class="section-subtitle1">Stay informed with the latest news and events from Gakala Health Centre.</p>
                     </div>
                     
                     <div class="grid md:grid-cols-2 gap-8">

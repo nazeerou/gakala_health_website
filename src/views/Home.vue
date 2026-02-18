@@ -7,7 +7,7 @@
             @open-appointment="$emit('open-appointment')"
         />
 
-        <!-- Insurance Section -->
+       
         <BMASection :insurance-providers="insuranceProviders" />
 
         <!-- Services Section -->
@@ -28,6 +28,9 @@
 
         <!-- Testimonials Section -->
         <TestimonialsSection :testimonials="testimonials" />
+
+ <!-- Insurance Section -->
+          <BIMASections :BimaSections="bima" />
     </div>
 </template>
 
@@ -39,6 +42,7 @@ import ServicesSection from '../components/sections/ServicesSection.vue'
 import DoctorsSection from '../components/sections/DoctorsSection.vue'
 import NewsSection from '../components/sections/NewsSection.vue'
 import TestimonialsSection from '../components/sections/TestimonialsSection.vue'
+import BIMASections from '../components/sections/BIMASections.vue'
 
 const props = defineProps({
     heroStats: {
@@ -70,6 +74,10 @@ const props = defineProps({
         default: () => []
     },
     testimonials: {
+        type: Array,
+        default: () => []
+    },
+    BIMASections: {
         type: Array,
         default: () => []
     }
