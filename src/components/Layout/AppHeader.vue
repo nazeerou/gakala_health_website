@@ -70,11 +70,7 @@
                                 </a>
                                 <a href="/mission" class="nav-dropdown-item" :class="{ 'router-link-active': $route.path === '/mission' }" @click="handleNavigationWithLoader($event, '/mission')">
                                     <span class="item-icon"><i class="fas fa-bullseye"></i></span>
-                                    Our Mission
-                                </a>
-                                <a href="/vision" class="nav-dropdown-item" :class="{ 'router-link-active': $route.path === '/vision' }" @click="handleNavigationWithLoader($event, '/vision')">
-                                    <span class="item-icon"><i class="fas fa-eye"></i></span>
-                                    Our Vision
+                                    Our Mission & Vision
                                 </a>
                             </div>
 
@@ -161,11 +157,7 @@
                                         </a>
                                         <a href="/mission" class="mobile-menu-item pl-8" :class="{ 'router-link-active': $route.path === '/mission' }" @click="handleNavigationWithLoader($event, '/mission'); mobileMenuOpen = false">
                                             <span class="item-icon"><i class="fas fa-bullseye"></i></span>
-                                            Our Mission
-                                        </a>
-                                        <a href="/vision" class="mobile-menu-item pl-8" :class="{ 'router-link-active': $route.path === '/vision' }" @click="handleNavigationWithLoader($event, '/vision'); mobileMenuOpen = false">
-                                            <span class="item-icon"><i class="fas fa-eye"></i></span>
-                                            Our Vision
+                                            Our Mission & Vision
                                         </a>
                                     </div>
                                 </transition>

@@ -14,25 +14,94 @@
         <div class="about-page-section">
             <div class="container mx-auto px-6">
                 <div class="grid lg:grid-cols-3 gap-8">
+                    
+                    <!-- Main Content -->
                     <div class="lg:col-span-2">
                         <div class="about-content-card" data-aos="fade-right">
-                            <h2 class="about-content-title">Our Story</h2>
+                            <h2 class="about-content-title">Basic Hospital Identity</h2>
+
                             <p class="about-content-text">
-                               Gakala Health Centre is a privately owned healthcare facility established in 2025 with the primary objective of improving access to quality, affordable, 
-                               and reliable healthcare services within Geita Region and neighboring communities.
-                                The facility was founded to respond to the growing demand for comprehensive medical services closer to the community, reducing the need for long-distance referrals.
+                                <strong>Official Name:</strong><br>
+                                <span class="text-primary font-semibold">GAKALA HEALTH CENTRE</span>
                             </p>
+
                             <p class="about-content-text">
-                                Our journey has been driven by a commitment to excellence and a passion for patient care. Over the years, we have invested in state-of-the-art equipment, recruited the best medical professionals, and expanded our facilities to meet the growing healthcare needs of our community.
+                                Gakala Health Centre is a privately owned healthcare facility established in 2025
+                                with the primary objective of improving access to quality, affordable, and reliable
+                                healthcare services within Geita Region and neighboring communities.
+                                The facility was founded to respond to the growing demand for comprehensive medical
+                                services closer to the community, reducing the need for long-distance referrals.
                             </p>
-                            
+
+                            <p class="about-content-text">
+                                <strong>Ownership Type:</strong><br>
+                                Gakala Health Centre operates under private ownership, enabling flexible decision-making,
+                                faster adoption of modern healthcare practices, and a strong focus on patient satisfaction
+                                and service quality.
+                            </p>
+
+                            <p class="about-content-text">
+                                <strong>Hospital Category / Level:</strong><br>
+                                The facility is classified as a Health Centre, offering a wide range of outpatient,
+                                inpatient, emergency, and specialized clinical services aligned with national
+                                healthcare standards.
+                            </p>
+
                             <div class="about-highlight-box">
-                                <p>"TUNATIBU MUNGU ANAPONYA - We treat, God heals. This motto reflects our belief that while we provide the best medical care possible, ultimate healing comes from a higher power."</p>
-                                <div class="author">- Dr. James Mwansasu, Medical Director</div>
+                                <p>
+                                    <strong>Tagline / Slogan:</strong><br>
+                                    “TUNATIBU, MUNGU ANAPONYA”<br><br>
+                                    This slogan reflects the centre’s belief in combining professional medical care
+                                    with compassion, humility, and respect for life, recognizing both medical science
+                                    and faith in healing.
+                                </p>
                             </div>
                         </div>
+
+                        <div class="about-content-card" data-aos="fade-right" data-aos-delay="100">
+                            <h2 class="about-content-title">Legal & Registration Details</h2>
+                            
+                            <p class="about-content-text">
+                                Gakala Health Centre is a fully registered and legally compliant healthcare institution 
+                                operating under the laws and regulations of the United Republic of Tanzania.
+                            </p>
+
+                            <p class="about-content-text">
+                                <strong>Ministry of Health Registration:</strong><br>
+                                The facility holds a valid Ministry of Health Facility Registration Number 
+                                <span class="text-primary font-semibold">(124899-6)</span> and operates under an approved 
+                                license that authorizes it to provide medical services to the public.
+                            </p>
+
+                            <p class="about-content-text">
+                                <strong>NHIF Accreditation:</strong><br>
+                                The centre is officially accredited by the 
+                                <span class="text-primary font-semibold">National Health Insurance Fund (NHIF)</span>, 
+                                allowing insured patients to access services seamlessly.
+                            </p>
+                        </div>
+
+                        <div class="about-content-card" data-aos="fade-right" data-aos-delay="200">
+                            <h2 class="about-content-title">Location & Contact Information</h2>
+                            
+                            <p class="about-content-text">
+                                <strong>Physical Location:</strong><br>
+                                Gakala Health Centre is strategically located in 
+                                <span class="text-primary font-semibold">Kagili Masumbwe, Mbogwe District, Geita Region</span>, 
+                                an area that serves both semi-urban and rural populations. This location allows the facility 
+                                to act as a critical healthcare hub for surrounding communities that previously faced challenges 
+                                accessing timely medical care.
+                            </p>
+
+                            <p class="about-content-text">
+                                <strong>Accessibility:</strong><br>
+                                The facility is easily accessible by road and supported by ambulance services for emergency 
+                                referrals.
+                            </p>
+                        </div>
                     </div>
-                    
+
+                    <!-- Sidebar -->
                     <div class="lg:col-span-1">
                         <div class="announcements-sidebar" data-aos="fade-left">
                             <div class="announcements-header">
@@ -52,17 +121,28 @@
                                 </div>
                                 <div class="info-card">
                                     <div class="info-icon"><i class="fas fa-user-md"></i></div>
-                                    <div class="text-2xl font-bold text-primary">15+</div>
+                                    <div class="text-2xl font-bold text-primary">43</div>
                                     <div class="text-gray-600">Medical Specialists</div>
                                 </div>
                                 <div class="info-card">
+                                    <div class="info-icon"><i class="fas fa-id-card"></i></div>
+                                    <div class="text-2xl font-bold text-primary">124899-6</div>
+                                    <div class="text-gray-600">Ministry Reg. Number</div>
+                                </div>
+                                <div class="info-card">
+                                    <div class="info-icon"><i class="fas fa-check-circle"></i></div>
+                                    <div class="text-lg font-bold text-primary">NHIF Accredited</div>
+                                    <div class="text-gray-600">Insurance Partner</div>
+                                </div>
+                                <!-- <div class="info-card">
                                     <div class="info-icon"><i class="fas fa-procedures"></i></div>
                                     <div class="text-2xl font-bold text-primary">15K+</div>
                                     <div class="text-gray-600">Patients Yearly</div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -178,7 +258,7 @@
     border-radius: 20px;
     padding: 2rem;
     margin: 2rem 0;
-    border-left: 5px solid var(--primary);
+    /* border-left: 5px solid var(--primary); */
 }
 
 .about-highlight-box p {

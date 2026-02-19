@@ -2,7 +2,7 @@
     <div>
         <div class="page-header">
             <div class="container mx-auto px-6">
-                <h1 class="page-title">Our Mission</h1>
+                <h1 class="page-title">Our Mission & Vision</h1>
                 <div class="page-breadcrumb">
                     <router-link to="/">Home</router-link>
                     <i class="fas fa-chevron-right text-sm"></i>
@@ -18,7 +18,7 @@
                 <div class="mission-vision-grid">
                     <div class="mission-card" data-aos="fade-right">
                         <div class="mission-icon"><i class="fas fa-bullseye"></i></div>
-                        <h2 class="mission-title">Our Mission</h2>
+                        <h2 class="mission-title">Our Mission & Vision </h2>
                         <p class="mission-text">To deliver high-quality, affordable, and patient-centered healthcare services 
                             through skilled professionals, 
                             modern medical equipment, ethical practice, and continuous improvement in service delivery</p>

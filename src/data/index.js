@@ -158,7 +158,6 @@ export const coreValues = [
     { icon: 'fas fa-shield-alt', title: 'Integrity', description: 'Operating transparently and honestly in all engagements' },
     { icon: 'fas fa-users', title: 'Teamwork', description: 'Encouraging collaboration among healthcare professionals to achieve optimal patient outcomes.' },
     { icon: 'fas fa-lightbulb', title: 'Professionalism', description: 'Upholding medical ethics, competence, and accountability' },
-    { icon: 'fas fa-hand-holding-heart', title: 'Service', description: 'We are committed to serving our community.' }
 ]
 
 // Future Goals
