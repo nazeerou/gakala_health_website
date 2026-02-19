@@ -18,7 +18,9 @@
                         <div class="about-content-card" data-aos="fade-right">
                             <h2 class="about-content-title">Our Story</h2>
                             <p class="about-content-text">
-                                Gakala Health Centre was established in 2016 with a vision to provide quality healthcare to the community of Mwanza and beyond. What started as a small clinic has grown into a comprehensive health centre offering a wide range of medical services.
+                               Gakala Health Centre is a privately owned healthcare facility established in 2025 with the primary objective of improving access to quality, affordable, 
+                               and reliable healthcare services within Geita Region and neighboring communities.
+                                The facility was founded to respond to the growing demand for comprehensive medical services closer to the community, reducing the need for long-distance referrals.
                             </p>
                             <p class="about-content-text">
                                 Our journey has been driven by a commitment to excellence and a passion for patient care. Over the years, we have invested in state-of-the-art equipment, recruited the best medical professionals, and expanded our facilities to meet the growing healthcare needs of our community.
@@ -45,12 +47,12 @@
                             <div class="space-y-4">
                                 <div class="info-card">
                                     <div class="info-icon"><i class="fas fa-calendar-alt"></i></div>
-                                    <div class="text-2xl font-bold text-primary">2016</div>
+                                    <div class="text-2xl font-bold text-primary">2025</div>
                                     <div class="text-gray-600">Year Established</div>
                                 </div>
                                 <div class="info-card">
                                     <div class="info-icon"><i class="fas fa-user-md"></i></div>
-                                    <div class="text-2xl font-bold text-primary">50+</div>
+                                    <div class="text-2xl font-bold text-primary">15+</div>
                                     <div class="text-gray-600">Medical Specialists</div>
                                 </div>
                                 <div class="info-card">

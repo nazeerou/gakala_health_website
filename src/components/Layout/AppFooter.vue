@@ -82,7 +82,7 @@
                             </div>
                             <div class="contact-details">
                                 <span class="contact-label">Visit Us</span>
-                                <span class="contact-value">Masumbwe, Geita</span>
+                                <span class="contact-value">Kagili Masumbwe, Geita</span>
                                 <span class="contact-sub">Tanzania</span>
                             </div>
                         </div>
@@ -94,7 +94,7 @@
                             </div>
                             <div class="contact-details">
                                 <span class="contact-label">Call Us </span>
-                                <a href="tel:+255752003059" class="contact-link">+255 752 003 059</a>
+                                <a href="tel:+255752003059" class="contact-link">+255 758 709 526</a>
                             </div>
                         </div>
                         
@@ -123,7 +123,7 @@
                         <span class="emergency-label">Emergency 24/7</span>
                         <span class="emergency-phone">
                             <i class="fas fa-phone-alt"></i>
-                            <a href="tel:+255718400400">+255 718 400 400</a>
+                            <a href="tel:+255718400400">+255 758 709 526</a>
                         </span>
                     </div>
                 </div>

@@ -19,7 +19,9 @@
                     <div class="mission-card" data-aos="fade-right">
                         <div class="mission-icon"><i class="fas fa-bullseye"></i></div>
                         <h2 class="mission-title">Our Mission</h2>
-                        <p class="mission-text">To provide accessible, affordable, and high-quality healthcare services to our community with compassion, integrity, and excellence.</p>
+                        <p class="mission-text">To deliver high-quality, affordable, and patient-centered healthcare services 
+                            through skilled professionals, 
+                            modern medical equipment, ethical practice, and continuous improvement in service delivery</p>
                         <ul class="mission-list">
                             <li><i class="fas fa-check-circle"></i> Deliver patient-centered care</li>
                             <li><i class="fas fa-check-circle"></i> Maintain the highest medical standards</li>
@@ -30,11 +32,11 @@
                     <div class="vision-card" data-aos="fade-left">
                         <div class="vision-icon"><i class="fas fa-eye"></i></div>
                         <h2 class="vision-title">Our Vision</h2>
-                        <p class="vision-text">To be the leading healthcare provider in Mwanza and beyond, recognized for excellence in patient care, medical innovation, and community service.</p>
+                        <p class="vision-text">To become a trusted and leading health centre in Geita Region,
+                             recognized for excellence in patient care, service reliability, and community impact.</p>
                         <ul class="vision-list">
                             <li><i class="fas fa-check-circle"></i> Expand our facilities and services</li>
                             <li><i class="fas fa-check-circle"></i> Invest in cutting-edge technology</li>
-                            <li><i class="fas fa-check-circle"></i> Develop medical education programs</li>
                         </ul>
                     </div>
                 </div>

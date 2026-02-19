@@ -15,7 +15,7 @@
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12" data-aos="fade-up">
                     <h2 class="text-3xl md:text-4xl font-bold text-[#123456] mb-4">Comprehensive Healthcare Services</h2>
-                    <p class="text-gray-600 max-w-3xl mx-auto">We offer a wide range of medical services delivered by experienced specialists using state-of-the-art equipment. Each service is designed to provide the highest quality care for our patients.</p>
+                    <p class="text-gray-600 max-w-3xl mx-auto">Gakala Health Centre provides a comprehensive range of medical and support services designed to meet the diverse healthcare needs of the community.</p>
                 </div>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

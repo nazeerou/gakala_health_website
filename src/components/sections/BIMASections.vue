@@ -5,7 +5,7 @@
             <div class="bma-simple-container">
                 <!-- Header -->
                 <h2 class="bma-simple-title">
-                    <span class="highlight">We work with Health Insurance Partners</span>
+                    <span class="highlight"><i class="fas fa-shield-alt"></i> Accepted Health Insurance Partners  </span>
                 </h2>
                                 
                 <!-- Insurance Cards -->
@@ -52,6 +52,7 @@
 
 .bma-simple-title {
     font-size: 2rem;
+    /* margin: 4px 0 0 0; */
     font-weight: 700;
     color: #1a2634;
     margin-bottom: 10px;

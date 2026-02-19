@@ -13,9 +13,6 @@
                         <span class="highlight">Gakala Health Centre</span>
                     </h2>
                     
-                    <p class="section-subtitle">
-                        Providing quality healthcare with compassion and faith since 2014
-                    </p>
                 </div>
 
                 <div class="about-grid">
@@ -30,7 +27,7 @@
                         <div class="image-overlay"></div>
                         <div class="image-caption">
                             <i class="fas fa-calendar-alt"></i>
-                            <span>Est. 2014</span>
+                            <span>Est. 2025</span>
                         </div>
                         
                         <!-- Decorative Elements -->
@@ -43,9 +40,11 @@
                         <div class="about-description">
                             <p class="lead">
                                 <i class="fas fa-quote-left quote-icon"></i>
-                                Gakala Health Centre is a community-based health facility located in Masumbwe, 
-                                Geita Region, committed to providing quality, safe, and compassionate healthcare 
-                                services to the community.
+                                Gakala Health Centre is a privately owned healthcare facility established in 2025 with the primary
+                                objective of improving access to quality, affordable, and reliable healthcare services within Geita 
+                                Region and neighboring communities. The facility was founded to respond to the growing demand 
+                                for comprehensive medical services closer to the community,
+                                 reducing the need for long-distance referrals.
                             </p>
                             
                             <p>
@@ -65,13 +64,14 @@
                                     <span class="motto-label">Our Motto</span>
                                     <p class="motto-text">
                                         <span class="motto-quote">“We Treat, God Heals”</span>
-                                        <span class="motto-meaning">— combining professional medical care with faith, hope, and compassion for complete healing.</span>
+                                        <span class="motto-meaning">This slogan reflects the centre’s belief in combining professional medical care with compassion, humility, 
+                                            and respect for life, recognizing both medical science and faith in healing.</span>
                                     </p>
                                 </div>
                             </div>
                             
                             <p class="closing-statement">
-                                <strong>Gakala Health Centre – Your health, our priority.</strong>
+                                <strong>Gakala Health Centre – "Tunatibu, Mungu anaponya."</strong>
                             </p>
                         </div>
                     </div>

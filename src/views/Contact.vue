@@ -51,27 +51,27 @@
                         
                         <div class="space-y-6">
                             <div class="flex items-start gap-4 p-4 bg-primary-soft rounded-xl">
-                                <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white">
+                                <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
                                     <i class="fas fa-map-marker-alt text-xl"></i>
                                 </div>
-                                <div>
-                                    <h3 class="font-semibold text-primary-dark">Visit Us</h3>
-                                    <p class="text-gray-600">Masumbwe, Geita Tanzania<br></p>
+                                 <div>
+                                    <h3 class="font-semibold text-primary-dark">Contact Us</h3>
+                                    <p class="text-gray-600">P.O BOX 92, Masumbwe - Geita Tanzania<br></p>
                                 </div>
                             </div>
                             
                             <div class="flex items-start gap-4 p-4 bg-primary-soft rounded-xl">
-                                <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white">
+                                <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
                                     <i class="fas fa-phone-alt text-xl"></i>
                                 </div>
                                 <div>
                                     <h3 class="font-semibold text-primary-dark">Call Us</h3>
-                                    <a href="tel:+255718400400" class="text-gray-600 hover:text-primary block">+255 752 003 059</a>
+                                    <a href="tel:+255758709526" class="text-gray-600 hover:text-primary block">+255 758 709 526</a>
                                 </div>
                             </div>
                             
                             <div class="flex items-start gap-4 p-4 bg-primary-soft rounded-xl">
-                                <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white">
+                                <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
                                     <i class="fas fa-envelope text-xl"></i>
                                 </div>
                                 <div>
@@ -82,7 +82,7 @@
                             </div>
                             
                             <div class="flex items-start gap-4 p-4 bg-primary-soft rounded-xl">
-                                <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center text-white">
+                                <div class="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
                                     <i class="fas fa-clock text-xl"></i>
                                 </div>
                                 <div>

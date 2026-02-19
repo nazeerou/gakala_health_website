@@ -16,17 +16,27 @@ export const heroImages = [
 // Services Data
 export const serviceList = [
     { 
-        name: 'General Medicine', 
-        shortName: 'General Med',
+        name: 'Outpatient Department (OPD)', 
+        shortName: 'Outpatient Department (OPD)',
         icon: 'fas fa-stethoscope', 
-        description: 'Comprehensive healthcare with focus on preventive care.',
-        fullDescription: 'Our General Medicine department provides comprehensive primary care for individuals and families, focusing on prevention, diagnosis, and treatment of common illnesses.',
-        features: ['General Consultations', 'Chronic Disease Management', 'Preventive Care', 'Health Screenings', 'Immunizations'],
+        description: 'Offers general medical consultations, diagnosis, treatment, and follow-up care for common illnesses and chronic conditions.',
+        fullDescription: 'Our Outpatient Department (OPD) provides comprehensive primary care for individuals and families, focusing on prevention, diagnosis, and treatment of common illnesses.',
+        features: ['General Consultations', 'Chronic Disease Management', 'Preventive Care', 'Immunizations'],
         slug: 'general-medicine'
     },
     { 
+        name: 'Inpatient Department (IPD)', 
+        shortName: 'Inpatient Department (IPD)',
+        icon: 'fas fa-bed', 
+        description: 'Provides admission and continuous care for patients requiring close medical supervision, treatment, or post-operative recovery',
+        fullDescription: 'Our Inpatient Department offers complete care for medical supervision, treatment, or post-operative recovery',
+        features: ['Patient admission and ward care', 'Nursing care and vital signs monitoring',
+            'Medical management of acute illnesses', 'Post-operative recovery and observation', 'Doctor ward rounds and treatment follow-up'],
+        slug: 'inpatient-department(OPD)'
+    },
+    { 
         name: 'Maternity Care', 
-        shortName: 'Maternity',
+        shortName: 'Maternity Care',
         icon: 'fas fa-female', 
         description: 'Safe care for mothers and newborns throughout pregnancy.',
         fullDescription: 'Our Maternity department offers complete care for expectant mothers, from prenatal through postnatal, ensuring the health and safety of both mother and baby.',
@@ -39,36 +49,65 @@ export const serviceList = [
         icon: 'fas fa-ambulance', 
         description: '24/7 emergency department for critical cases.',
         fullDescription: 'Our Emergency department operates 24/7 with trained specialists ready to handle any medical emergency, from trauma to cardiac events.',
-        features: ['Trauma Care', 'Cardiac Emergencies', 'Stroke Management', 'Ambulance Services', 'Resuscitation'],
+        features: ['Trauma Care', 'Cardiac Emergencies',  'Ambulance Services'],
         slug: 'emergency-services'
     },
     { 
-        name: 'Cardiology', 
-        shortName: 'Cardiology',
-        icon: 'fas fa-heartbeat', 
-        description: 'Heart health services including diagnostics and treatment.',
-        fullDescription: 'Our Cardiology department offers comprehensive heart care, from diagnostic testing to treatment and rehabilitation for various cardiac conditions.',
-        features: ['ECG & Echo', 'Hypertension Care', 'Heart Failure Management', 'Cardiac Rehab', 'Holter Monitoring'],
-        slug: 'cardiology'
+        name: 'Theatre & Surgery', 
+        shortName: 'Theatre & Surgery',
+        icon: 'fas fa-user-md', 
+        description: 'Well-equipped operating theatre providing safe surgical care by qualified medical professionals.',
+        fullDescription: 'Well-equipped operating theatre providing safe surgical care by qualified medical professionals.',
+        features: ['Minor surgical procedures', 'Major general surgeries', 'Emergency surgeries', 'Wound management and suturing', 'Post-operative care and monitoring'],
+        slug: 'diagnostic-imaging'
     },
     { 
-        name: 'Neurology', 
-        shortName: 'Neurology',
-        icon: 'fas fa-brain', 
-        description: 'Expert treatment for nervous system disorders.',
-        fullDescription: 'Our Neurology department specializes in diagnosing and treating disorders of the brain and nervous system with advanced technology.',
-        features: ['Stroke Care', 'Epilepsy Treatment', 'Migraine Management', 'Neurological Testing', 'Movement Disorders'],
+        name: 'Laboratory Services', 
+        shortName: 'Laboratory Services',
+        icon: 'fas fa-flask', 
+        description: 'Offers diagnostic testing to support accurate diagnosis and treatment monitoring.',
+        fullDescription: 'Offers diagnostic testing to support accurate diagnosis and treatment monitoring.',
+        features: ['Blood tests (CBC, blood sugar)', 'Urine and stool analysis', 'Malaria and typhoid tests', 'HIV and other rapid tests'],
+        slug: 'Laboratory-Services'
+    },
+    { 
+        name: 'Radiology Services', 
+        shortName: 'Radiology Services',
+        icon: 'fas fa-x-ray', 
+        description: 'Imaging services to assist clinicians in diagnosis and treatment planning.',
+        fullDescription: 'Imaging services to assist clinicians in diagnosis and treatment planning.',
+        features: ['X-Ray & Ultrasound', 'CT Scan & MRI'],
+        slug: 'Radiology Services'
+    },
+    { 
+        name: 'Pharmacy', 
+        shortName: 'Pharmacy',
+        icon: 'fas fa-pills', 
+        description: 'Dispenses quality-assured medicines with professional guidance.',
+        fullDescription: 'Dispenses quality-assured medicines with professional guidance.',
+        features: ['Prescription dispensing', 'Over-the-counter medicines', 'Medication counseling', 'Drug safety advice'],
         slug: 'neurology'
     },
-    { 
-        name: 'Diagnostic Imaging', 
-        shortName: 'Imaging',
-        icon: 'fas fa-x-ray', 
-        description: 'State-of-the-art imaging for accurate diagnosis.',
-        fullDescription: 'Our Diagnostic Imaging center features modern equipment for accurate diagnosis, helping doctors provide the best treatment plans.',
-        features: ['X-Ray & Ultrasound', 'CT Scan & MRI', 'Mammography', 'Bone Density Scans', 'Fluoroscopy'],
-        slug: 'diagnostic-imaging'
-    }
+       { 
+        name: 'ICU / HDU', 
+        shortName: ' ICU / HDU',
+        icon: 'fas fa-procedures', 
+        description: 'Advanced care for critically ill patients requiring close monitoring.',
+        fullDescription: 'Advanced care for critically ill patients requiring close monitoring.',
+        features: ['Continuous patient monitoring', 'Oxygen therapy', 'Emergency stabilization', 'Post-operative critical care'],
+        slug: 'ICU / HDU'
+    },
+       { 
+        name: 'Specialized Clinics', 
+        shortName: 'Specialized Clinics',
+        icon: 'fas fa-clinic-medical', 
+        description: 'Focused clinics offering expert care in specific medical fields.',
+        fullDescription: 'Focused clinics offering expert care in specific medical fields.',
+        features: ['Dental Clinic – tooth extraction, fillings, oral health care',
+             'Eye Clinic – eye examination, treatment of infections, vision assessment', 
+             'Orthopedics Clinic – fracture care, joint pain treatment, minor procedures'],
+        slug: 'neurology'
+    },
 ]
 
 // Insurance Providers
@@ -91,7 +130,7 @@ export const doctors = [
 
 // // News & Events
 export const newsEvents = [
-    { image: './assets/img2.jpg', date: 'March 15, 2026', title: 'FFree Medical Camp This Weekend', excerpt: 'Join us for a free medical camp offering consultations and health screenings.', link: '/news/1' },
+    { image: './assets/img2.jpg', date: 'March 15, 2026', title: 'Free Medical Camp This Weekend', excerpt: 'Join us for a free medical camp offering consultations and health screenings.', link: '/news/1' },
     { image: './assets/img6.jpg', date: 'March 10, 2026', title: 'New MRI Machine Installed', excerpt: 'State-of-the-art MRI machine installed for better diagnostics.', link: '/news/2' },
     { image: './assets/img4.jpg', date: 'March 5, 2026', title: 'Health Awareness Seminar', excerpt: 'Join our cardiologists for a seminar on heart health.', link: '/news/3' },
     { image: '/assets/img1.jpg', date: 'February 28, 2026', title: 'New Maternity Wing Opening', excerpt: 'Opening of our new, modern maternity wing.', link: '/news/4' }
@@ -114,11 +153,11 @@ export const testimonials = [
 
 // Core Values
 export const coreValues = [
+    { icon: 'fas fa-star', title: 'Patient-Centered Care', description: 'Prioritizing patient safety, dignity, and satisfaction at all times.' },
     { icon: 'fas fa-heart', title: 'Compassion', description: 'We treat every patient with kindness and empathy.' },
-    { icon: 'fas fa-shield-alt', title: 'Integrity', description: 'We uphold the highest ethical standards in all we do.' },
-    { icon: 'fas fa-star', title: 'Excellence', description: 'We strive for the highest quality in patient care.' },
-    { icon: 'fas fa-users', title: 'Teamwork', description: 'We work together to achieve the best outcomes.' },
-    { icon: 'fas fa-lightbulb', title: 'Innovation', description: 'We embrace new ideas and technologies.' },
+    { icon: 'fas fa-shield-alt', title: 'Integrity', description: 'Operating transparently and honestly in all engagements' },
+    { icon: 'fas fa-users', title: 'Teamwork', description: 'Encouraging collaboration among healthcare professionals to achieve optimal patient outcomes.' },
+    { icon: 'fas fa-lightbulb', title: 'Professionalism', description: 'Upholding medical ethics, competence, and accountability' },
     { icon: 'fas fa-hand-holding-heart', title: 'Service', description: 'We are committed to serving our community.' }
 ]
 

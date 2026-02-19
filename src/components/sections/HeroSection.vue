@@ -146,7 +146,7 @@
 
                     <!-- Experience Badge -->
                     <div class="experience-badge">
-                        <div class="experience-number">10+</div>
+                        <div class="experience-number">1+</div>
                         <div class="experience-text">Years of<br>Excellence</div>
                     </div>
                 </div>
