@@ -14,38 +14,71 @@
         <div class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Meet Our Expert Staffs</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Highly qualified medical professionals dedicated to your health and wellbeing.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">Management & Leadership Team</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">The facility is guided by a competent and experienced management team responsible for strategic leadership, operational efficiency, and clinical governance.</p>
                 </div>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div v-for="(doctor, index) in doctors" :key="doctor.name" 
-                         class="doctor-card" data-aos="fade-up" :data-aos-delay="index * 100">
-                        <img :src="doctor.image" :alt="doctor.name" class="doctor-image">
+                    <!-- Medical Director -->
+                    <div class="doctor-card" data-aos="fade-up" data-aos-delay="0">
+                        <img src="/assets/medical-director.jpg" alt="Medical Director" class="doctor-image">
                         <div class="doctor-info">
-                            <h3 class="doctor-name">{{ doctor.name }}</h3>
-                            <p class="doctor-specialty">{{ doctor.specialty }}</p>
-                            <div class="flex items-center justify-center space-x-2 mt-3">
-                                <span class="text-sm text-gray-500">
-                                    <i class="fas fa-star text-[#1e4b7c]"></i> {{ doctor.experience }} Years
-                                </span>
+                            <h3 class="doctor-name">Medical Director</h3>
+                            <p class="doctor-specialty">Leadership & Clinical Governance</p>
+                            <div class="mt-3 text-sm text-gray-600">
+                                Provides overall leadership in clinical services, medical ethics, patient safety, and quality assurance.
                             </div>
                         </div>
                     </div>
+
+                    <!-- Hospital Administrator -->
+                    <div class="doctor-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="/assets/hospital.jpg" alt="Hospital Administrator" class="doctor-image">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Hospital Administrator</h3>
+                            <p class="doctor-specialty">Operations & Administration</p>
+                            <div class="mt-3 text-sm text-gray-600">
+                                Oversees administrative operations, finance, human resources, procurement, and compliance.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nursing Officer In-Charge -->
+                    <div class="doctor-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="/assets/nursing.jpg" alt="Nursing Officer In-Charge" class="doctor-image">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Nursing Officer In-Charge</h3>
+                            <p class="doctor-specialty">Nursing Services</p>
+                            <div class="mt-3 text-sm text-gray-600">
+                                Coordinates nursing services, ensures adherence to nursing standards, and supervises patient care delivery.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Heads of Departments -->
+                    <div class="doctor-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="/assets/hod.jpg" alt="Heads of Departments" class="doctor-image">
+                        <div class="doctor-info">
+                            <h3 class="doctor-name">Heads of Departments</h3>
+                            <p class="doctor-specialty">Departmental Management</p>
+                            <div class="mt-3 text-sm text-gray-600">
+                                Manage departmental operations, staff performance, equipment utilization, and service quality.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leadership Team Statement -->
+                <div class="mt-12 text-center max-w-3xl mx-auto" data-aos="fade-up">
+                    <p class="text-gray-600 text-lg italic border-l-4  pl-6 py-2 bg-primary-soft/20 rounded-r-lg">
+                        The leadership team works collaboratively to ensure smooth operations, efficient service delivery, 
+                        and continuous improvement across all departments.
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </template>
-
-<script setup>
-defineProps({
-    doctors: {
-        type: Array,
-        default: () => []
-    }
-})
-</script>
 
 <style scoped>
 .page-header {
@@ -117,6 +150,8 @@ defineProps({
     box-shadow: 0 5px 20px rgba(0,0,0,0.02);
     border: 1px solid var(--border-light);
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .doctor-card:hover {
@@ -135,6 +170,9 @@ defineProps({
 .doctor-info {
     padding: 20px;
     text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .doctor-name {
@@ -148,6 +186,7 @@ defineProps({
     color: var(--primary);
     font-weight: 500;
     font-size: 0.9rem;
+    margin-bottom: 10px;
 }
 
 @keyframes rotate {
