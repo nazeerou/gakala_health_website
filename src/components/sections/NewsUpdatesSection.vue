@@ -412,7 +412,7 @@ const { t } = useI18n()
 .announcements-icon {
     width: 50px;
     height: 50px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    /* background: linear-gradient(135deg, var(--primary), var(--primary-light)); */
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -762,7 +762,7 @@ const { t } = useI18n()
     .news-item,
     .news-right {
         /* background: #1e293b; */
-        border-color: #334155;
+        /* border-color: #334155; */
     }
     
     .section-badge {
@@ -772,7 +772,7 @@ const { t } = useI18n()
     }
     
     .announcements-icon {
-        background: linear-gradient(135deg, #2e6ca3, #1e4b7c);
+        /* background: linear-gradient(135deg, #2e6ca3, #1e4b7c); */
     }
 }
 
