@@ -761,7 +761,7 @@ const { t } = useI18n()
     
     .news-item,
     .news-right {
-        background: #1e293b;
+        /* background: #1e293b; */
         border-color: #334155;
     }
     
