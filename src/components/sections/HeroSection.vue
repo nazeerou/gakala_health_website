@@ -1,5 +1,5 @@
 <template>
-    <section class="hero-section-unique">
+    <section class="hero-section">
         <!-- Animated Medical Background -->
         <div class="hero-background">
             <div class="medical-pattern"></div>
@@ -35,120 +35,105 @@
             </div>
         </div>
 
-        <!-- Main Content Container -->
         <div class="hero-container">
-            <div class="hero-grid">
-                <!-- Left Content - Text Section -->
-                <div class="hero-text-section" data-aos="fade-right" data-aos-duration="1000">
-                    <!-- Welcome Badge with Pulse -->
-                    <div class="welcome-badge">
-                        <div class="pulse-dot"></div>
-                        <span>Gakala Health Centre</span>
-                        <div class="badge-shine"></div>
+            <!-- Left Content - Text Section -->
+            <div class="hero-content">
+                <div class="hero-badge1">
+                    <span>{{ t('hero.badge') }}</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">{{ t('hero.title.line1') }}</span>
+                    <span class="title-line highlight">{{ t('hero.title.line2') }}</span>
+                    <span class="title-line-small">{{ t('hero.title.line3') }}</span>
+                </h1>
+
+                <div class="hero-description">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>{{ t('hero.description') }}</p>
+                </div>
+
+                <div class="hero-badges">
+                    <div class="badge-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>{{ t('hero.badges.certified') }}</span>
                     </div>
-
-                    <!-- Main Title with Medical Typography -->
-                    <h1 class="hero-main-title">
-                        <span class="title-line">Your Health,</span>
-                        <span class="title-line gradient-text">Our Commitment</span>
-                        <span class="title-line-small">to Excellence in Care</span>
-                    </h1>
-
-                    <!-- Description with Medical Icon -->
-                    <div class="hero-description">
-                        <div class="description-icon">
-                            <i class="fas fa-quote-right"></i>
-                        </div>
-                        <p>
-                            Providing compassionate, quality healthcare with state-of-the-art facilities 
-                            and expert medical professionals dedicated to your wellbeing. We combine 
-                            modern medicine with compassionate care.
-                        </p>
+                    <div class="badge-item">
+                        <i class="fas fa-clock"></i>
+                        <span>{{ t('hero.badges.emergency') }}</span>
                     </div>
-
-                  
-
-                    <!-- Trust Badges -->
-                    <div class="trust-badges">
-                        <div class="badge-item">
-                            <i class="fas fa-certificate"></i>
-                            <span>Certified</span>
-                        </div>
-                        <div class="badge-item">
-                            <i class="fas fa-clock"></i>
-                            <span>24/7 Emergency</span>
-                        </div>
-                        <div class="badge-item">
-                            <i class="fas fa-user-md"></i>
-                            <span>Expert Doctors</span>
-                        </div>
+                    <div class="badge-item">
+                        <i class="fas fa-user-md"></i>
+                        <span>{{ t('hero.badges.expert_doctors') }}</span>
                     </div>
                 </div>
 
-                <!-- Right Content - Normal Slider -->
-                <div class="hero-gallery-section" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <!-- Main Slider Container -->
-                    <div class="slider-container">
-                        <!-- Main Slider -->
-                        <div class="main-slider">
-                            <div v-for="(image, index) in galleryImages" 
-                                 :key="index" 
-                                 class="slider-item"
-                                 :class="{ active: currentGalleryIndex === index }">
-                                <img :src="image.url" :alt="image.alt" class="slider-image">
-                                <div class="slider-overlay">
-                                    <div class="slider-content">
-                                        <h3>{{ image.title }}</h3>
-                                        <p>{{ image.description }}</p>
-                                    </div>
+                <div class="hero-actions">
+                    <!-- <button class="btn-primary" @click="$emit('open-appointment')">
+                        {{ t('hero.book_button') }}
+                        <i class="fas fa-arrow-right"></i>
+                    </button> -->
+                </div>
+            </div>
+
+            <!-- Right Content - Slider -->
+            <div class="hero-gallery-section">
+                <!-- Main Slider Container -->
+                <div class="slider-container">
+                    <!-- Main Slider -->
+                    <div class="main-slider">
+                        <div v-for="(image, index) in galleryImages" 
+                             :key="index" 
+                             class="slider-item"
+                             :class="{ active: currentGalleryIndex === index }">
+                            <img :src="image.url" :alt="image.alt" class="slider-image">
+                            <div class="slider-overlay">
+                                <div class="slider-content">
+                                    <h3>{{ image.title }}</h3>
+                                    <p>{{ image.description }}</p>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Slider Navigation -->
-                        <button class="slider-nav prev" @click="prevGallery">
-                            <i class="fas fa-chevron-left"></i>
-                        </button>
-                        <button class="slider-nav next" @click="nextGallery">
-                            <i class="fas fa-chevron-right"></i>
-                        </button>
-
-                        <!-- Slider Dots -->
-                        <div class="slider-dots">
-                            <span v-for="(dot, index) in galleryImages" 
-                                  :key="index"
-                                  :class="{ active: currentGalleryIndex === index }"
-                                  @click="setCurrentGallery(index)"></span>
-                        </div>
-
-                        <!-- Slide Counter -->
-                        <div class="slide-counter">
-                            {{ currentGalleryIndex + 1 }} / {{ galleryImages.length }}
-                        </div>
                     </div>
 
-                    <!-- Thumbnail Strip -->
-                    <div class="thumbnail-strip">
-                        <div v-for="(image, index) in galleryImages" 
-                             :key="index"
-                             class="thumbnail-item"
-                             :class="{ active: currentGalleryIndex === index }"
-                             @click="setCurrentGallery(index)">
-                            <img :src="image.url" :alt="image.alt">
-                            <div class="thumbnail-overlay"></div>
-                        </div>
+                    <!-- Slider Navigation -->
+                    <button class="slider-nav prev" @click="prevGallery">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-nav next" @click="nextGallery">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Slider Dots -->
+                    <div class="slider-dots">
+                        <span v-for="(dot, index) in galleryImages" 
+                              :key="index"
+                              :class="{ active: currentGalleryIndex === index }"
+                              @click="setCurrentGallery(index)"></span>
                     </div>
 
-                    <!-- Floating Cards -->
-                    <div class="floating-cards">
-                       
+                    <!-- Slide Counter -->
+                    <div class="slide-counter">
+                        {{ currentGalleryIndex + 1 }} / {{ galleryImages.length }}
                     </div>
+                </div>
 
-                    <!-- Experience Badge -->
-                    <div class="experience-badge">
-                        <div class="experience-number">1+</div>
-                        <div class="experience-text">Years of<br>Excellence</div>
+                <!-- Thumbnail Strip -->
+                <div class="thumbnail-strip">
+                    <div v-for="(image, index) in galleryImages" 
+                         :key="index"
+                         class="thumbnail-item"
+                         :class="{ active: currentGalleryIndex === index }"
+                         @click="setCurrentGallery(index)">
+                        <img :src="image.url" :alt="image.alt">
+                        <div class="thumbnail-overlay"></div>
                     </div>
+                </div>
+
+                <!-- Experience Badge -->
+                <div class="experience-badge">
+                    <div class="experience-number">1+</div>
+                    <div class="experience-text">{{ t('hero.experience') }}</div>
                 </div>
             </div>
         </div>
@@ -164,18 +149,9 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
-const props = defineProps({
-    heroStats: {
-        type: Array,
-        default: () => [
-            { icon: 'fas fa-smile', value: '5000+', label: 'Happy Patients', hover: false },
-            { icon: 'fas fa-user-md', value: '15+', label: 'Expert Doctors', hover: false },
-            { icon: 'fas fa-trophy', value: '10+', label: 'Years Experience', hover: false }
-        ]
-    }
-})
-
+const { t } = useI18n()
 defineEmits(['open-appointment'])
 
 const galleryImages = ref([
@@ -239,10 +215,9 @@ const nextGallery = () => {
 }
 
 onMounted(() => {
-    // Auto-rotate gallery every 5 seconds
     autoRotateInterval = setInterval(() => {
         nextGallery()
-    }, 5000)
+    }, 5500)
 })
 
 onUnmounted(() => {
@@ -253,8 +228,7 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* Hero Section Base */
-.hero-section-unique {
+.hero-section {
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -362,300 +336,154 @@ onUnmounted(() => {
     animation: drawEKG 8s linear infinite;
 }
 
-/* Main Container */
 .hero-container {
     position: relative;
     z-index: 10;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 20px;
     width: 100%;
-}
-
-.hero-grid {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     gap: 60px;
     align-items: center;
 }
 
-/* Left Text Section */
-.hero-text-section {
+/* Left Content Styles - Updated for dark background */
+.hero-content {
     color: white;
 }
 
-/* Welcome Badge */
-.welcome-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 12px 24px;
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 8px 20px;
     border-radius: 50px;
-    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-    overflow: hidden;
+    backdrop-filter: blur(5px);
 }
 
-.pulse-dot {
-    width: 8px;
-    height: 8px;
-    background: #4ade80;
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-}
-
-.badge-shine {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-    transform: rotate(45deg);
-    animation: shine 3s infinite;
-}
-
-/* Main Title */
-.hero-main-title {
+.hero-title {
     margin-bottom: 30px;
 }
 
 .title-line {
     display: block;
-    font-size: 4.2rem;
-    font-weight: 800;
-    line-height: 1.1;
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.2;
 }
 
-.gradient-text {
-    background: linear-gradient(135deg, #ffffff, #a8d8ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.highlight {
+    color: #ffffff;
     position: relative;
     display: inline-block;
+}
+
+.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    /* background: rgba(255, 255, 255, 0.2); */
+    z-index: -1;
+    border-radius: 6px;
 }
 
 .title-line-small {
     display: block;
     font-size: 1.8rem;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.8);
     margin-top: 10px;
 }
 
-/* Description */
 .hero-description {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     margin-bottom: 40px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     padding: 25px;
     border-radius: 20px;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.description-icon {
-    font-size: 2.5rem;
-    color: rgba(255, 255, 255, 0.3);
+.quote-icon {
+    color: white;
+    opacity: 0.5;
+    font-size: 1.5rem;
 }
 
 .hero-description p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-/* CTA Buttons */
-.hero-actions {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
-}
-
-.btn-primary {
-    position: relative;
-    padding: 18px 40px;
-    background: white;
-    border: none;
-    border-radius: 60px;
     font-size: 1.1rem;
-    font-weight: 600;
-    color: #1a4b7c;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.3s;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.hero-badges {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.btn-shine {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.3), transparent);
-    transform: rotate(45deg);
-    animation: shine 3s infinite;
-    pointer-events: none;
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
-}
-
-.btn-primary:hover .btn-icon {
-    transform: translateX(5px);
-}
-
-.btn-secondary {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 8px 25px 8px 8px;
-    border-radius: 60px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.3s;
-}
-
-.btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: translateX(5px);
-}
-
-.btn-circle {
-    width: 45px;
-    height: 45px;
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #1a4b7c;
-    font-size: 1rem;
-    transition: all 0.3s;
-}
-
-.btn-secondary:hover .btn-circle {
-    transform: scale(1.1);
-}
-
-/* Medical Stats */
-.medical-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.stat-card {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
-
-.stat-card:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-5px);
-}
-
-.stat-progress {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #4ade80, #60a5fa);
-    transition: width 0.3s ease;
-}
-
-.stat-icon {
-    width: 45px;
-    height: 45px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    transition: all 0.3s;
-}
-
-.stat-icon.pulse {
-    animation: iconPulse 0.5s ease;
-}
-
-.stat-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat-value {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-}
-
-.stat-label {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Trust Badges */
-.trust-badges {
-    display: flex;
-    gap: 25px;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
 .badge-item {
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
 }
 
 .badge-item i {
     color: #4ade80;
+    font-size: 1.2rem;
 }
 
-/* Gallery Section */
+.btn-primary {
+    background: white;
+    color: #1e4b7c;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Right Content - Slider Styles */
 .hero-gallery-section {
     position: relative;
 }
 
-/* Slider Container */
 .slider-container {
     position: relative;
     width: 100%;
     height: 500px;
-    border-radius: 14px;
+    border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Main Slider */
 .main-slider {
     position: relative;
     width: 100%;
@@ -689,7 +517,7 @@ onUnmounted(() => {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 40px;
+    padding: 30px;
     background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
     color: white;
     transform: translateY(100%);
@@ -701,23 +529,22 @@ onUnmounted(() => {
 }
 
 .slider-content h3 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
 .slider-content p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     opacity: 0.9;
 }
 
-/* Slider Navigation */
 .slider-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -726,7 +553,7 @@ onUnmounted(() => {
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 20;
@@ -734,7 +561,7 @@ onUnmounted(() => {
 
 .slider-nav:hover {
     background: white;
-    color: #1a4b7c;
+    color: #1e4b7c;
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -746,7 +573,6 @@ onUnmounted(() => {
     right: 20px;
 }
 
-/* Slider Dots */
 .slider-dots {
     position: absolute;
     bottom: 20px;
@@ -772,7 +598,6 @@ onUnmounted(() => {
     background: white;
 }
 
-/* Slide Counter */
 .slide-counter {
     position: absolute;
     top: 20px;
@@ -780,15 +605,14 @@ onUnmounted(() => {
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     color: white;
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 30px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     z-index: 20;
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Thumbnail Strip */
 .thumbnail-strip {
     display: flex;
     gap: 10px;
@@ -798,16 +622,32 @@ onUnmounted(() => {
     backdrop-filter: blur(10px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow-x: auto;
+}
+
+.thumbnail-strip::-webkit-scrollbar {
+    height: 4px;
+}
+
+.thumbnail-strip::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.thumbnail-strip::-webkit-scrollbar-thumb {
+    background: #1e4b7c;
+    border-radius: 4px;
 }
 
 .thumbnail-item {
     position: relative;
-    width: 80px;
-    height: 60px;
-    border-radius: 10px;
+    width: 70px;
+    height: 50px;
+    border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .thumbnail-item img {
@@ -832,7 +672,7 @@ onUnmounted(() => {
 }
 
 .thumbnail-item.active .thumbnail-overlay {
-    background: rgba(26, 75, 124, 0.3);
+    background: rgba(30, 75, 124, 0.3);
     border: 2px solid white;
 }
 
@@ -840,68 +680,23 @@ onUnmounted(() => {
     transform: scale(1.05);
 }
 
-/* Floating Cards */
-.floating-cards {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 30;
-}
-
-.card {
-    position: absolute;
-    background: white;
-    padding: 12px 20px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    animation: floatCard 6s infinite;
-    pointer-events: auto;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.card:hover {
-    transform: scale(1.1);
-    background: #1a4b7c;
-    color: white;
-}
-
-.card i {
-    color: #1a4b7c;
-    font-size: 1.2rem;
-}
-
-.card:hover i {
-    color: white;
-}
-
-.card-1 { top: 10%; right: -20px; animation-delay: 0s; }
-.card-2 { bottom: 20%; left: -20px; animation-delay: 2s; }
-.card-3 { top: 40%; right: -30px; animation-delay: 1s; }
-
-/* Experience Badge */
 .experience-badge {
     position: absolute;
-    bottom: 30%;
+    bottom: 100px;
     right: -20px;
-    background: linear-gradient(135deg, #1a4b7c, #2e6ca3);
+    background: linear-gradient(135deg, #1e4b7c, #2e6ca3);
     padding: 20px;
     border-radius: 60px 60px 60px 20px;
     color: white;
     text-align: center;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    z-index: 35;
+    z-index: 30;
     animation: floatBadge 5s infinite;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .experience-number {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 800;
     line-height: 1;
 }
@@ -909,9 +704,9 @@ onUnmounted(() => {
 .experience-text {
     font-size: 0.85rem;
     opacity: 0.9;
+    line-height: 1.3;
 }
 
-/* Wave Divider */
 .wave-divider {
     position: absolute;
     bottom: -1px;
@@ -933,14 +728,9 @@ onUnmounted(() => {
     50% { transform: translateY(-30px) rotate(10deg); }
 }
 
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.5); opacity: 0.5; }
-}
-
-@keyframes shine {
-    0% { transform: translateX(-100%) rotate(45deg); }
-    20%, 100% { transform: translateX(100%) rotate(45deg); }
+@keyframes wave {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(0.5); }
 }
 
 @keyframes drawEKG {
@@ -950,45 +740,23 @@ onUnmounted(() => {
     100% { stroke-dashoffset: -2000; }
 }
 
-@keyframes wave {
-    0%, 100% { transform: scaleY(1); }
-    50% { transform: scaleY(0.5); }
-}
-
-@keyframes iconPulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
-}
-
-@keyframes floatCard {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-@keyframes floatBadge {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-10px) rotate(2deg); }
-}
-
 @keyframes patternMove {
     0% { background-position: 0 0; }
     100% { background-position: 100px 100px; }
 }
 
-/* Responsive Design */
-@media (max-width: 1400px) {
-    .hero-container {
-        padding: 0 30px;
+@keyframes floatBadge {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
     }
-    
-    .title-line {
-        font-size: 3.8rem;
+    50% {
+        transform: translateY(-10px) rotate(2deg);
     }
 }
 
+/* Responsive */
 @media (max-width: 1200px) {
-    .hero-grid {
+    .hero-container {
         gap: 40px;
     }
     
@@ -1002,18 +770,18 @@ onUnmounted(() => {
 }
 
 @media (max-width: 1024px) {
-    .hero-grid {
+    .hero-container {
         grid-template-columns: 1fr;
         gap: 50px;
     }
     
-    .hero-text-section {
+    .hero-content {
         text-align: center;
         max-width: 700px;
         margin: 0 auto;
     }
     
-    .welcome-badge {
+    .hero-badge {
         margin-left: auto;
         margin-right: auto;
     }
@@ -1022,17 +790,7 @@ onUnmounted(() => {
         text-align: left;
     }
     
-    .hero-actions {
-        justify-content: center;
-    }
-    
-    .medical-stats {
-        max-width: 500px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
-    .trust-badges {
+    .hero-badges {
         justify-content: center;
     }
     
@@ -1046,15 +804,18 @@ onUnmounted(() => {
         height: 400px;
     }
     
-    .card-1 { right: 0; }
-    .card-2 { left: 0; }
-    .card-3 { right: 0; }
-    .experience-badge { right: 0; }
+    .experience-badge {
+        right: 20px;
+    }
 }
 
 @media (max-width: 768px) {
-    .hero-section-unique {
-        padding: 80px 0;
+    .hero-section {
+        padding: 100px 0 60px;
+    }
+    
+    .hero-container {
+        padding: 0 20px;
     }
     
     .title-line {
@@ -1069,20 +830,7 @@ onUnmounted(() => {
         font-size: 1rem;
     }
     
-    .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .btn-primary, .btn-secondary {
-        justify-content: center;
-    }
-    
-    .medical-stats {
-        grid-template-columns: 1fr;
-    }
-    
-    .trust-badges {
+    .hero-badges {
         flex-wrap: wrap;
     }
     
@@ -1090,59 +838,28 @@ onUnmounted(() => {
         height: 350px;
     }
     
-    .slider-content h3 {
-        font-size: 1.4rem;
-    }
-    
     .slider-nav {
         width: 40px;
         height: 40px;
-        font-size: 1rem;
-    }
-    
-    .thumbnail-strip {
-        display: none;
-    }
-    
-    .floating-cards {
-        display: none;
     }
     
     .experience-badge {
-        bottom: 20%;
-        right: 10px;
-        padding: 12px;
+        bottom: 80px;
+        padding: 15px;
     }
     
     .experience-number {
         font-size: 1.8rem;
     }
-    
-    .experience-text {
-        font-size: 0.7rem;
-    }
 }
 
 @media (max-width: 480px) {
-    .hero-container {
-        padding: 0 20px;
-    }
-    
     .title-line {
         font-size: 2.2rem;
     }
     
     .title-line-small {
         font-size: 1.2rem;
-    }
-    
-    .welcome-badge {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-    }
-    
-    .hero-description {
-        padding: 15px;
     }
     
     .slider-container {
@@ -1162,11 +879,6 @@ onUnmounted(() => {
         font-size: 0.85rem;
     }
     
-    .slider-nav {
-        width: 35px;
-        height: 35px;
-    }
-    
     .slider-nav.prev {
         left: 10px;
     }
@@ -1175,15 +887,14 @@ onUnmounted(() => {
         right: 10px;
     }
     
-    .slide-counter {
-        top: 10px;
-        right: 10px;
-        padding: 5px 12px;
-        font-size: 0.8rem;
+    .thumbnail-strip {
+        display: none;
     }
     
     .experience-badge {
-        padding: 10px;
+        bottom: 60px;
+        right: 10px;
+        padding: 12px;
     }
     
     .experience-number {
@@ -1191,102 +902,17 @@ onUnmounted(() => {
     }
 }
 
-/* Landscape Mode */
-@media (max-width: 900px) and (orientation: landscape) {
-    .hero-section-unique {
-        min-height: auto;
-        padding: 60px 0;
-    }
-    
-    .hero-grid {
-        gap: 30px;
-    }
-    
-    .slider-container {
-        height: 250px;
-    }
-    
-    .thumbnail-strip {
-        display: none;
-    }
-}
-
-/* High Contrast Mode */
-@media (prefers-contrast: high) {
-    .hero-section-unique {
-        background: #0b2b4a;
-    }
-    
-    .gradient-text {
-        -webkit-text-fill-color: white;
-        background: none;
-    }
-}
-
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
     .float-icon,
-    .card,
-    .experience-badge,
-    .pulse-dot,
-    .ekg-path,
     .wave,
+    .ekg-path,
     .slider-item,
-    .slider-overlay {
-        animation: none !important;
-        transition: none !important;
-    }
-    
-    .btn-primary:hover {
-        transform: none;
-    }
-}
-
-/* Print Styles */
-@media print {
-    .hero-section-unique {
-        background: white;
-        color: black;
-        min-height: auto;
-        padding: 20px 0;
-    }
-    
-    .hero-background,
-    .floating-icons,
-    .pulse-waves,
-    .ekg-line,
-    .wave-divider,
-    .btn-primary,
-    .btn-secondary,
-    .slider-nav,
-    .slider-dots,
-    .slide-counter,
-    .thumbnail-strip,
-    .floating-cards,
-    .experience-badge {
-        display: none;
-    }
-    
-    .hero-text-section {
-        color: black;
-    }
-    
-    .gradient-text {
-        -webkit-text-fill-color: black;
-        background: none;
-    }
-    
-    .slider-container {
-        box-shadow: none;
-        border: 1px solid #ddd;
-    }
-    
-    .slider-item {
-        position: relative;
-        opacity: 1;
-        visibility: visible;
-        height: 300px;
-        margin-bottom: 20px;
+    .slider-overlay,
+    .experience-badge,
+    .medical-pattern {
+        animation: none;
+        transition: none;
     }
 }
 </style>

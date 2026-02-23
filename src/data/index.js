@@ -22,7 +22,10 @@ export const serviceList = [
         description: 'Offers general medical consultations, diagnosis, treatment, and follow-up care for common illnesses and chronic conditions.',
         fullDescription: 'Our Outpatient Department (OPD) provides comprehensive primary care for individuals and families, focusing on prevention, diagnosis, and treatment of common illnesses.',
         features: ['General Consultations', 'Chronic Disease Management', 'Preventive Care', 'Immunizations'],
-        slug: 'general-medicine'
+        slug: 'general-medicine',
+        translations: { 
+            sw: 'Idara ya Wagonjwa wa Nje' 
+        }
     },
     { 
         name: 'Inpatient Department (IPD)', 
@@ -32,7 +35,10 @@ export const serviceList = [
         fullDescription: 'Our Inpatient Department offers complete care for medical supervision, treatment, or post-operative recovery',
         features: ['Patient admission and ward care', 'Nursing care and vital signs monitoring',
             'Medical management of acute illnesses', 'Post-operative recovery and observation', 'Doctor ward rounds and treatment follow-up'],
-        slug: 'inpatient-department(OPD)'
+        slug: 'inpatient-department(OPD)',
+        translations: { 
+            sw: 'Idara ya Wagonjwa wa Ndani' 
+        }
     },
     { 
         name: 'Maternity Care', 
@@ -41,7 +47,10 @@ export const serviceList = [
         description: 'Safe care for mothers and newborns throughout pregnancy.',
         fullDescription: 'Our Maternity department offers complete care for expectant mothers, from prenatal through postnatal, ensuring the health and safety of both mother and baby.',
         features: ['Antenatal Care', 'Delivery Services', 'Postnatal Care', 'Newborn Screening', 'Breastfeeding Support'],
-        slug: 'maternity-care'
+        slug: 'maternity-care',
+        translations: { 
+            sw: 'Huduma ya Uzazi' 
+        }
     },
     { 
         name: 'Emergency Services', 
@@ -49,8 +58,11 @@ export const serviceList = [
         icon: 'fas fa-ambulance', 
         description: '24/7 emergency department for critical cases.',
         fullDescription: 'Our Emergency department operates 24/7 with trained specialists ready to handle any medical emergency, from trauma to cardiac events.',
-        features: ['Trauma Care', 'Cardiac Emergencies',  'Ambulance Services'],
-        slug: 'emergency-services'
+        features: ['Trauma Care', 'Cardiac Emergencies', 'Ambulance Services'],
+        slug: 'emergency-services',
+        translations: { 
+            sw: 'Huduma za Dharura' 
+        }
     },
     { 
         name: 'Theatre & Surgery', 
@@ -59,7 +71,10 @@ export const serviceList = [
         description: 'Well-equipped operating theatre providing safe surgical care by qualified medical professionals.',
         fullDescription: 'Well-equipped operating theatre providing safe surgical care by qualified medical professionals.',
         features: ['Minor surgical procedures', 'Major general surgeries', 'Emergency surgeries', 'Wound management and suturing', 'Post-operative care and monitoring'],
-        slug: 'diagnostic-imaging'
+        slug: 'diagnostic-imaging',
+        translations: { 
+            sw: 'Upasuaji' 
+        }
     },
     { 
         name: 'Laboratory Services', 
@@ -68,7 +83,10 @@ export const serviceList = [
         description: 'Offers diagnostic testing to support accurate diagnosis and treatment monitoring.',
         fullDescription: 'Offers diagnostic testing to support accurate diagnosis and treatment monitoring.',
         features: ['Blood tests (CBC, blood sugar)', 'Urine and stool analysis', 'Malaria and typhoid tests', 'HIV and other rapid tests'],
-        slug: 'Laboratory-Services'
+        slug: 'Laboratory-Services',
+        translations: { 
+            sw: 'Huduma za Maabara' 
+        }
     },
     { 
         name: 'Radiology Services', 
@@ -77,7 +95,10 @@ export const serviceList = [
         description: 'Imaging services to assist clinicians in diagnosis and treatment planning.',
         fullDescription: 'Imaging services to assist clinicians in diagnosis and treatment planning.',
         features: ['X-Ray & Ultrasound', 'CT Scan & MRI'],
-        slug: 'Radiology Services'
+        slug: 'Radiology Services',
+        translations: { 
+            sw: 'Huduma za Radiolojia' 
+        }
     },
     { 
         name: 'Pharmacy', 
@@ -86,18 +107,24 @@ export const serviceList = [
         description: 'Dispenses quality-assured medicines with professional guidance.',
         fullDescription: 'Dispenses quality-assured medicines with professional guidance.',
         features: ['Prescription dispensing', 'Over-the-counter medicines', 'Medication counseling', 'Drug safety advice'],
-        slug: 'neurology'
+        slug: 'neurology',
+        translations: { 
+            sw: 'Famasia' 
+        }
     },
-       { 
+    { 
         name: 'ICU / HDU', 
-        shortName: ' ICU / HDU',
+        shortName: 'ICU / HDU',
         icon: 'fas fa-procedures', 
         description: 'Advanced care for critically ill patients requiring close monitoring.',
         fullDescription: 'Advanced care for critically ill patients requiring close monitoring.',
         features: ['Continuous patient monitoring', 'Oxygen therapy', 'Emergency stabilization', 'Post-operative critical care'],
-        slug: 'ICU / HDU'
+        slug: 'ICU / HDU',
+        translations: { 
+            sw: 'Huduma za Mahututi' 
+        }
     },
-       { 
+    { 
         name: 'Specialized Clinics', 
         shortName: 'Specialized Clinics',
         icon: 'fas fa-clinic-medical', 
@@ -106,8 +133,11 @@ export const serviceList = [
         features: ['Dental Clinic – tooth extraction, fillings, oral health care',
              'Eye Clinic – eye examination, treatment of infections, vision assessment', 
              'Orthopedics Clinic – fracture care, joint pain treatment, minor procedures'],
-        slug: 'neurology'
-    },
+        slug: 'specialized-clinics',
+        translations: { 
+            sw: 'Kliniki Maalumu' 
+        }
+    }
 ]
 
 // Insurance Providers
@@ -180,10 +210,37 @@ export const socialLinks = [
 
 // Menu Items
 export const menuItems = [
-    { name: 'Home', path: '/', external: false },
-    { name: 'Services', path: '/services', external: false },
-    { name: 'About', path: '#', external: false },
-    { name: 'Staffs', path: '/doctors', external: false },
-    { name: 'News', path: '/news', external: false },
-    { name: 'Contact', path: '/contact', external: false }
+    { name: 'Home', 
+        path: '/', external: false ,
+         translations: { sw: 'Nyumbani' }
+    },
+    { 
+        name: 'Services',
+         path: '/services', 
+         external: false,
+         translations: { sw: 'Huduma' }
+    },
+    { 
+        name: 'About',
+        path: '#', 
+        external: false,
+        translations: { sw: 'Kuhusu' }
+     },
+    { 
+        name: 'Staffs', 
+        path: '/doctors', 
+        external: false,
+        translations: { sw: 'Wafanyakazi' }
+    },
+    { name: 'News', 
+        path: '/news', 
+        external: false,
+        translations: { sw: 'Habari' }
+    },
+    { 
+        name: 'Contact', 
+        path: '/contact', 
+        external: false,
+        translations: { sw: 'Mawasiliano' }
+    }
 ]

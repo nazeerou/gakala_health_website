@@ -1,0 +1,561 @@
+{
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "staffs": "Staffs",
+    "news": "News",
+    "contact": "Contact"
+  },
+   "appointment": {
+       "book": "Book Appointment"
+  },
+   "about": {
+       "us": "About Us",
+       "mission": "Mission and Vision"
+  },
+  "services": {
+      "all" : " All Services",
+      "opd": " OutPatient Department (OPD)",
+      "ipd": " InPatient Department (IPD)",
+      "maternity": " Maternity Care",
+      "theatre": " Theatre & Surgery",
+      "radiology": " Radiology Services",
+      "icu": " ICU / HDU",
+      "emergency": " Emergency",
+      "laboratory": " Laboratory",
+      "pharmacy": " Pharmacy",
+      "specialized": " Specialized Clinics"
+
+  },
+    "about_us": {
+        "badge": "ABOUT US",
+        "title": "Gakala Health Centre",
+        "subtitle": "Your trusted healthcare provider in Geita Region",
+        "image_alt": "Gakala Health Centre - Our Facility",
+        "established": "Est.",
+        "description": {
+            "para1": "Gakala Health Centre is a privately owned healthcare facility established in 2025 with the primary objective of improving access to quality, affordable, and reliable healthcare services within Geita Region and neighboring communities. The facility was founded to respond to the growing demand for comprehensive medical services closer to the community, reducing the need for long-distance referrals.",
+            "para2": "We focus on preventive and curative care delivered by qualified health professionals, guided by integrity, professionalism, and respect for every patient. We continuously work with health authorities and partners to improve our services and ensure accessible healthcare for all."
+        },
+        "motto": {
+            "label": "Our Motto",
+            "quote": "“We Treat, God Heals”",
+            "meaning": "This slogan reflects the centre's belief in combining professional medical care with compassion, humility, and respect for life, recognizing both medical science and faith in healing."
+        },
+        "closing": "Gakala Health Centre – \"Tunatibu, Mungu anaponya.\""
+    },
+    "home": {
+        "title": "Gakala Health Centre",
+        "text": "Your trusted healthcare provider"
+    },
+    "hero": {
+        "badge": "Welcome Gakala Health Centre",
+        "title": {
+            "line1": "Your Health,",
+            "line2": "Our Commitment",
+            "line3": "to Excellence in Care"
+        },
+        "description": "Providing compassionate, quality healthcare with state-of-the-art facilities and expert medical professionals dedicated to your wellbeing. We combine modern medicine with compassionate care.",
+        "badges": {
+            "certified": "Certified",
+            "emergency": "24/7 Emergency",
+            "expert_doctors": "Expert Doctors"
+        },
+        "book_button": "Book Appointment",
+        "image_alt": "Medical Professional",
+        "experience": "Years of Excellence"
+    },
+    "our_services": {
+        "badge": "OUR SERVICES",
+        "title": "Comprehensive Medical Services",
+        "subtitle": "We offer a wide range of medical services to meet all your healthcare needs.",
+        "learn_more": "Learn More",
+        "opd": {
+            "name": "Outpatient Department (OPD)",
+            "description": "Offer general medical consultations, diagnosis, treatment, and follow-up care for common ailments and conditions."
+        },
+        "ipd": {
+            "name": "Inpatient Department (IPD)",
+            "description": "Provide admission and continuous care for patients requiring in-patient hospitalization, intensive, or post-operative recovery."
+        },
+        "maternity": {
+            "name": "Maternity Care",
+            "description": "Take care for mothers and newborns throughout pregnancy."
+        },
+        "emergency": {
+            "name": "Emergency Services",
+            "description": "24/7 emergency department for critical cases."
+        },
+        "theatre": {
+            "name": "Theatre & Surgery",
+            "description": "Well-equipped operating theater providing safe surgical and other specialized medical procedures."
+        },
+        "laboratory": {
+            "name": "Laboratory Services",
+            "description": "Offers diagnostic testing for specific disease diagnosis and treatment monitoring."
+        },
+        "radiology": {
+            "name": "Radiology Services",
+            "description": "Imaging services for various diseases and treatment planning."
+        },
+        "pharmacy": {
+            "name": "Pharmacy",
+            "description": "Dispense quality assured medicines with personalized guidance."
+        },
+        "icu": {
+            "name": "ICU / HDU",
+            "description": "Addresses the critically ill patient requiring intensive care."
+        },
+        "specialized": {
+            "name": "Specialized Clinics",
+            "description": "Provides clinical services for specific medical fields."
+        }
+    },
+    "why_choose": {
+        "super_badge": "Why Choose Us",
+        "super_title": "Excellence in Healthcare",
+        "super_subtitle": "Discover what makes Gakala Health Centre the trusted choice for healthcare in Geita Region.",
+        "title": "Exceptional Care, Compassionate Heart",
+        "subtitle": "Experience healthcare that puts you first with our commitment to excellence and compassion.",
+        "compassion": {
+            "title": "Compassionate Care",
+            "description": "We treat every patient with dignity, respect, and genuine compassion, combining medical expertise with emotional support.",
+            "point1": "Patient-Centered",
+            "point2": "Empathetic",
+            "point3": "Supportive"
+        },
+        "expert": {
+            "title": "Expert Medical Team",
+            "description": "Our team of qualified professionals brings years of experience and continuous learning to provide the best care possible.",
+            "point1": "Qualified",
+            "point2": "Experienced",
+            "point3": "Dedicated"
+        },
+        "facilities": {
+            "title": "Modern Facilities",
+            "description": "State-of-the-art equipment and modern facilities enable accurate diagnosis and effective treatment.",
+            "point1": "Modern Equipment",
+            "point2": "Clean",
+            "point3": "Well-Equipped"
+        }
+    },
+    "news": {
+        "badge": "NEWS & EVENTS",
+        "title": "Latest Updates",
+        "page_title": "NEWS AND EVENTS",
+        "subtitle": "Stay informed with the latest news and events from Gakala Health Centre.",
+        "view_all_announcements": "View All Announcements",
+        "read_more": "Read More",
+        "view_all": "View All News",
+         "breadcrumb": {
+            "home": "Home",
+            "current": "News & Events"
+        },
+        "items": {
+            "camp": {
+                "date": "March 15, 2026",
+                "title": "Free Medical Camp This Weekend",
+                "description": "Join us for a free medical camp offering consultations and health screenings."
+            },
+            "seminar": {
+                "date": "March 5, 2026",
+                "title": "Health Awareness Seminar",
+                "description": "Join our cardiologists for a seminar on heart health."
+            }
+        },
+        "announcements": {
+            "title": "Announcements",
+            "subtitle": "Important updates & notices",
+            "today": "TODAY",
+            "yesterday": "YESTERDAY",
+            "two_days_ago": "2 DAYS AGO",
+            "one_week_ago": "1 WEEK AGO",
+            "items": {
+                "mri": {
+                    "text": "New MRI machine installed - Book your appointment now"
+                },
+                "camp": {
+                    "text": "Free medical camp this Saturday at City Center"
+                },
+                "booster": {
+                    "text": "COVID-19 booster shots available for all adults"
+                },
+                "maternity": {
+                    "text": "Maternity wing renovation completed"
+                }
+            }
+        }
+    },
+    "testimonials": {
+        "badge": "TESTIMONIALS",
+        "title": "What Our Patients Say",
+        "subtitle": "Read about the experiences of those who trusted us with their health.",
+        "doctor_prefix": "Dr.",
+        "testimonial1": "The care of clients was responsive. The doctor never pre-judged and the patients are making an effort.",
+        "testimonial2": "I felt safe and cared for throughout my treatment. The staff were always on time.",
+        "testimonial3": "The healthcare experience I have seen has the majority need it immediately.",
+        "view_all": "Read More Testimonials"
+    },
+    "insurance": {
+        "title": "Accepted Health Insurance Partners",
+        "subtitle": "We work with leading insurance providers to serve you better",
+        "accepted": "Accepted",
+        "message": "Your health insurance is welcome here",
+        "nhif": {
+            "name": "NHIF"
+        },
+        "jubilee": {
+            "name": "Jubilee Insurance"
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "breadcrumb": {
+            "home": "Home",
+            "current": "Contact"
+        },
+        "form": {
+            "title": "Send Us a Message",
+            "name": "Full Name",
+            "email": "Email Address",
+            "phone": "Phone Number",
+            "subject": "Subject",
+            "message": "Message",
+            "submit": "Send Message",
+            "success": "Thank you for your message! We will get back to you soon."
+        },
+        "info": {
+            "title": "Get in Touch",
+            "description": "Have questions? We're here to help. Reach out to us through any of the following channels.",
+            "address": {
+                "title": "Contact Us",
+                "line1": "P.O BOX 92, Masumbwe - Geita Tanzania"
+            },
+            "phone": {
+                "title": "Call Us",
+                "number": "+255 758 709 526"
+            },
+            "email": {
+                "title": "Email Us",
+                "general": "info@gakalahealth.co.tz",
+                "appointments": "appointments@gakalahealth.co.tz"
+            },
+            "hours": {
+                "title": "Working Hours",
+                "schedule": "24/7 - Open All Days",
+                "emergency": "Emergency services available 24/7"
+            }
+        }
+    },
+    "footer": {
+        "alt": "Gakala Health Centre",
+        "description": "Providing quality healthcare with compassion and excellence since 2016. Your health, our priority.",
+        "motto": {
+            "text": "\"Tunatibu Mungu anaponya\"",
+            "translation": "We treat, God heals"
+        },
+        "connect": "Connect With Us",
+        "quick_links": "Quick Links",
+        "services_": "Our Services",
+        "contact": {
+            "title": "Contact Info",
+            "visit": "Visit Us",
+            "call": "Call Us",
+            "email": "Email Us",
+            "address": "Kagili Masumbwe, Geita",
+            "country": "Tanzania"
+        },
+        "emergency": {
+            "label": "Emergency 24/7",
+            "available": "Available Now"
+        },
+        "copyright": "Gakala Health Centre. All rights reserved.",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Use",
+        "links": {
+            "home": "Home",
+            "about": "About Us",
+            "mission": "Our Mission",
+            "vision": "Our Vision",
+            "doctors": "Our Doctors",
+            "news": "News & Events",
+            "contact": "Contact Us"
+        },
+        "services": {
+            "opd": "Outpatient Department (OPD)",
+            "ipd": "Inpatient Department (IPD)",
+            "maternity": "Maternity Care",
+            "emergency": "Emergency Services",
+            "theatre": "Theatre & Surgery",
+            "laboratory": "Laboratory Services",
+            "radiology": "Radiology Services",
+            "pharmacy": "Pharmacy",
+            "icu": "ICU / HDU",
+            "specialized": "Specialized Clinics"
+        }
+    },
+    "about_page": {
+        "title": "About Gakala Health Centre",
+        "breadcrumb": {
+            "home": "Home",
+            "current": "About Us"
+        },
+        "identity": {
+            "title": "Basic Hospital Identity",
+            "official_name": "Official Name:",
+            "description": "Gakala Health Centre is a privately owned healthcare facility established in 2025 with the primary objective of improving access to quality, affordable, and reliable healthcare services within Geita Region and neighboring communities. The facility was founded to respond to the growing demand for comprehensive medical services closer to the community, reducing the need for long-distance referrals.",
+            "ownership": "Ownership Type:",
+            "ownership_text": "Gakala Health Centre operates under private ownership, enabling flexible decision-making, faster adoption of modern healthcare practices, and a strong focus on patient satisfaction and service quality.",
+            "category": "Hospital Category / Level:",
+            "category_text": "The facility is classified as a Health Centre, offering a wide range of outpatient, inpatient, emergency, and specialized clinical services aligned with national healthcare standards.",
+            "tagline_label": "Tagline / Slogan:",
+            "tagline": "TUNATIBU, MUNGU ANAPONYA",
+            "tagline_text": "This slogan reflects the centre's belief in combining professional medical care with compassion, humility, and respect for life, recognizing both medical science and faith in healing."
+        },
+        "legal": {
+            "title": "Legal & Registration Details",
+            "description": "Gakala Health Centre is a fully registered and legally compliant healthcare institution operating under the laws and regulations of the United Republic of Tanzania.",
+            "registration": "Ministry of Health Registration:",
+            "registration_text": "The facility holds a valid Ministry of Health Facility Registration Number",
+            "nhif": "NHIF Accreditation:",
+            "nhif_text": "The centre is officially accredited by the National Health Insurance Fund (NHIF), allowing insured patients to access services seamlessly."
+        },
+        "location": {
+            "title": "Location & Contact Information",
+            "address": "Physical Location:",
+            "address_text": "Gakala Health Centre is strategically located in Kagili Masumbwe, Mbogwe District, Geita Region, an area that serves both semi-urban and rural populations. This location allows the facility to act as a critical healthcare hub for surrounding communities that previously faced challenges accessing timely medical care.",
+            "accessibility": "Accessibility:",
+            "accessibility_text": "The facility is easily accessible by road and supported by ambulance services for emergency referrals."
+        },
+        "sidebar": {
+            "title": "Quick Facts",
+            "established": "Year Established",
+            "specialists": "Medical Specialists",
+            "reg_number": "Ministry Reg. Number",
+            "nhif": "NHIF Accredited",
+            "insurance": "Insurance Partner"
+        }
+    },
+    "mission": {
+        "title": "Our Mission & Vision",
+        "breadcrumb": {
+            "home": "Home",
+            "about": "About",
+            "current": "Mission"
+        },
+        "mission": {
+            "title": "Our Mission",
+            "text": "To deliver high-quality, affordable, and patient-centered healthcare services through skilled professionals, modern medical equipment, ethical practice, and continuous improvement in service delivery.",
+            "points": [
+                "Deliver patient-centered care",
+                "Maintain the highest medical standards",
+                "Serve all members of our community"
+            ]
+        },
+        "vision": {
+            "title": "Our Vision",
+            "text": "To become a trusted and leading health centre in Geita Region, recognized for excellence in patient care, service reliability, and community impact.",
+            "points": [
+                "Expand our facilities and services",
+                "Invest in cutting-edge technology",
+                "Build lasting community partnerships"
+            ]
+        },
+        "values": {
+            "title": "Our Core Values",
+            "list": [
+                {
+                    "icon": "fas fa-heart",
+                    "iconClass": "compassion",
+                    "title": "Compassion",
+                    "description": "Treating every patient with empathy, respect, and humanity."
+                },
+                {
+                    "icon": "fas fa-shield-alt",
+                    "iconClass": "integrity",
+                    "title": "Integrity",
+                    "description": "Operating transparently and honestly in all engagements."
+                },
+                {
+                    "icon": "fas fa-star",
+                    "iconClass": "excellence",
+                    "title": "Professionalism",
+                    "description": "Upholding medical ethics, competence, and accountability."
+                },
+                {
+                    "icon": "fas fa-handshake",
+                    "iconClass": "teamwork",
+                    "title": "Teamwork",
+                    "description": "Encouraging collaboration among healthcare professionals to achieve optimal patient outcomes."
+                },
+                {
+                    "icon": "fas fa-users",
+                    "iconClass": "patients",
+                    "title": "Patient-Centered Care",
+                    "description": "Prioritizing patient safety, dignity, and satisfaction at all times."
+                }
+            ]
+        }
+    },
+    "staff": {
+        "title": "Our Specialists",
+        "breadcrumb": {
+            "home": "Home",
+            "current": "Staff"
+        },
+        "section_title": "Management & Leadership Team",
+        "section_description": "The facility is guided by a competent and experienced management team responsible for strategic leadership, operational efficiency, and clinical governance.",
+        "director": {
+            "title": "Medical Director",
+            "role": "Leadership & Clinical Governance",
+            "description": "Provides overall leadership in clinical services, medical ethics, patient safety, and quality assurance."
+        },
+        "administrator": {
+            "title": "Hospital Administrator",
+            "role": "Operations & Administration",
+            "description": "Oversees administrative operations, finance, human resources, procurement, and compliance."
+        },
+        "nursing": {
+            "title": "Nursing Officer In-Charge",
+            "role": "Nursing Services",
+            "description": "Coordinates nursing services, ensures adherence to nursing standards, and supervises patient care delivery."
+        },
+        "hod": {
+            "title": "Heads of Departments",
+            "role": "Departmental Management",
+            "description": "Manage departmental operations, staff performance, equipment utilization, and service quality."
+        },
+        "leadership_statement": "The leadership team works collaboratively to ensure smooth operations, efficient service delivery, and continuous improvement across all departments."
+    },
+    "news_page": {
+        "page_title": "News & Events",
+        "breadcrumb": {
+            "home": "Home",
+            "current": "News"
+        },
+        "section_title": "Latest Updates",
+        "section_description": "Stay informed with the latest news and events from Gakala Health Centre.",
+        "read_more": "Read More"
+    },
+    "services_page": {
+        "page_title": "Our Medical Services",
+        "read_more" : "Read More",
+        "breadcrumb": {
+            "home": "Home",
+            "current": "Services"
+        },
+        "section_title": "Comprehensive Healthcare Services",
+        "section_description": "Gakala Health Centre provides a comprehensive range of medical and support services designed to meet the diverse healthcare needs of the community.",
+        "opd": {
+            "name": "Outpatient Department (OPD)",
+            "full_description": "General consultations, diagnosis, treatment, and follow-up care for common ailments and chronic conditions.",
+            "features": [
+                "General medical consultations",
+                "Diagnosis and treatment",
+                "Follow-up care",
+                "Chronic disease management",
+                "Health screenings"
+            ]
+        },
+        "ipd": {
+            "name": "Inpatient Department (IPD)",
+            "full_description": "Admission and continuous care for patients requiring hospitalization, intensive care, or post-operative recovery.",
+            "features": [
+                "24/7 nursing care",
+                "Private and shared wards",
+                "Post-operative recovery",
+                "Critical care monitoring",
+                "Specialized medical attention"
+            ]
+        },
+        "maternity": {
+            "name": "Maternity Care",
+            "full_description": "Comprehensive care for mothers and newborns throughout pregnancy, delivery, and postnatal period.",
+            "features": [
+                "Antenatal care",
+                "Safe delivery services",
+                "Postnatal care",
+                "Newborn screening",
+                "Breastfeeding support"
+            ]
+        },
+        "emergency": {
+            "name": "Emergency Services",
+            "full_description": "24/7 emergency department equipped to handle critical cases and medical emergencies.",
+            "features": [
+                "24/7 availability",
+                "Triage and rapid assessment",
+                "Emergency resuscitation",
+                "Trauma care",
+                "Stabilization for referrals"
+            ]
+        },
+        "theatre": {
+            "name": "Theatre & Surgery",
+            "full_description": "Well-equipped operating theater providing safe surgical procedures under anesthesia.",
+            "features": [
+                "General surgery",
+                "Orthopedic procedures",
+                "Emergency surgeries",
+                "Qualified surgical team",
+                "Post-operative care"
+            ]
+        },
+        "laboratory": {
+            "name": "Laboratory Services",
+            "full_description": "Diagnostic testing for disease diagnosis, treatment monitoring, and health screening.",
+            "features": [
+                "Blood tests",
+                "Urinalysis",
+                "Microbiology tests",
+                "Rapid diagnostic tests",
+                "Quality assured results"
+            ]
+        },
+        "radiology": {
+            "name": "Radiology Services",
+            "full_description": "Advanced imaging services for accurate diagnosis and treatment planning.",
+            "features": [
+                "X-ray services",
+                "Ultrasound scans",
+                "CT scans",
+                "Imaging reporting",
+                "Emergency imaging"
+            ]
+        },
+        "pharmacy": {
+            "name": "Pharmacy",
+            "full_description": "Quality assured medicines dispensed with professional guidance and personalized care.",
+            "features": [
+                "Prescription filling",
+                "Medication counseling",
+                "Quality medicines",
+                "Emergency medication",
+                "Chronic disease medications"
+            ]
+        },
+        "icu": {
+            "name": "ICU / HDU",
+            "full_description": "Specialized care for critically ill patients requiring intensive monitoring and support.",
+            "features": [
+                "24/7 intensive care",
+                "Vital signs monitoring",
+                "Life support systems",
+                "Specialized nursing",
+                "Critical care specialists"
+            ]
+        },
+        "specialized": {
+            "name": "Specialized Clinics",
+            "full_description": "Clinical services for specific medical fields with specialist consultations.",
+            "features": [
+                "Cardiology clinic",
+                "Neurology clinic",
+                "Pediatric clinic",
+                "Diabetes clinic",
+                "Referral coordination"
+            ]
+        }
+    }
+}

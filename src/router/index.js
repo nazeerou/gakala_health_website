@@ -1,90 +1,47 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import MainLayout from '../layouts/MainLayout.vue'
 
-// Import views
 import Home from '../views/Home.vue'
-import Services from '../views/Services.vue'
-import ServiceDetail from '../views/ServiceDetail.vue'
 import About from '../views/About.vue'
-import Mission from '../views/Mission.vue'
-import Vision from '../views/Vision.vue'
-import Doctors from '../views/Doctors.vue'
-import News from '../views/News.vue'
+import Services from '../views/Services.vue'
 import Contact from '../views/Contact.vue'
+import Mission from '../views/Mission.vue'
+import News from '../views/News.vue'
+import Staff from '../views/Staff.vue'
+import ServiceDetail from '../views/ServiceDetail.vue'
 
 const routes = [
-    { 
-        path: '/', 
-        name: 'home',
-        component: Home,
-        meta: { title: 'Home - Gakala ' }
-    },
-    { 
-        path: '/services', 
-        name: 'services',
+  {
+    path: '/',
+    component: MainLayout,
+    children: [
+      { path: '', component: Home },
+      { path: 'about', component: About },
+      { 
+        path: 'services', 
         component: Services,
-        meta: { title: 'Our Services' }
-    },
-    { 
-        path: '/services/:slug', 
-        name: 'service-detail',
-        component: ServiceDetail 
-    },
-    { 
-        path: '/about', 
-        name: 'about',
-        component: About 
-    },
-    { 
-        path: '/mission', 
-        name: 'mission',
-        component: Mission 
-    },
-    { 
-        path: '/vision', 
-        name: 'vision',
-        component: Vision 
-    },
-    { 
-        path: '/doctors', 
-        name: 'doctors',
-        component: Doctors 
-    },
-    { 
-        path: '/news', 
-        name: 'news',
-        component: News 
-    },
-    { 
-        path: '/contact', 
-        name: 'contact',
-        component: Contact 
-    },
-    { 
-        path: '/:pathMatch(.*)*', 
-        redirect: { name: 'home' }
-    }
+        children: [
+          { path: 'opd', component: ServiceDetail },
+          { path: 'ipd', component: ServiceDetail },
+          { path: 'maternity', component: ServiceDetail },
+          { path: 'emergency', component: ServiceDetail },
+          { path: 'theatre', component: ServiceDetail },
+          { path: 'laboratory', component: ServiceDetail },
+          { path: 'radiology', component: ServiceDetail },
+          { path: 'pharmacy', component: ServiceDetail },
+          { path: 'icu', component: ServiceDetail },
+          { path: 'specialized-clinics', component: ServiceDetail }
+        ]
+      },
+      { path: 'contact', component: Contact },
+      { path: 'mission-vision', component: Mission },
+      { path: 'news', component: News },
+      { path: 'staff', component: Staff },
+    ]
+  }
 ]
 
-const router = createRouter({
-    history: createWebHistory(),
-    routes,
-    scrollBehavior(to, from, savedPosition) {
-        if (savedPosition) {
-            return savedPosition
-        } else {
-            return { top: 0 }
-        }
-    }
+export default createRouter({
+  history: createWebHistory(),
+  routes
 })
-
-// Debug navigation
-router.beforeEach((to, from, next) => {
-    console.log('Navigating to:', to.path, to.name)
-    next()
-})
-
-router.afterEach((to, from) => {
-    console.log('Successfully navigated to:', to.path)
-})
-
-export default router

@@ -2,52 +2,87 @@
     <div>
         <div class="page-header">
             <div class="container mx-auto px-6">
-                <h1 class="page-title">Our Mission & Vision</h1>
+                <h1 class="page-title">{{ t('mission.title') }}</h1>
                 <div class="page-breadcrumb">
-                    <router-link to="/">Home</router-link>
-                    <i class="fas fa-chevron-right text-sm"></i>
-                    <router-link to="/about">About</router-link>
-                    <i class="fas fa-chevron-right text-sm"></i>
-                    <span>Mission</span>
+                    <router-link to="/">{{ t('mission.breadcrumb.home') }}</router-link>
+                    <span class="separator">›</span>
+                    <router-link to="/about">{{ t('mission.breadcrumb.about') }}</router-link>
+                    <span class="separator">›</span>
+                    <span>{{ t('mission.breadcrumb.current') }}</span>
                 </div>
             </div>
         </div>
         
-        <div class="about-page-section">
+        <div class="mission-section">
             <div class="container mx-auto px-6">
+                <!-- Mission & Vision Cards -->
                 <div class="mission-vision-grid">
-                    <div class="mission-card" data-aos="fade-right">
-                        <div class="mission-icon"><i class="fas fa-bullseye"></i></div>
-                        <h2 class="mission-title">Our Mission & Vision </h2>
-                        <p class="mission-text">To deliver high-quality, affordable, and patient-centered healthcare services 
-                            through skilled professionals, 
-                            modern medical equipment, ethical practice, and continuous improvement in service delivery</p>
-                        <ul class="mission-list">
-                            <li><i class="fas fa-check-circle"></i> Deliver patient-centered care</li>
-                            <li><i class="fas fa-check-circle"></i> Maintain the highest medical standards</li>
-                            <li><i class="fas fa-check-circle"></i> Serve all members of our community</li>
-                        </ul>
+                    <!-- Mission Card -->
+                    <div class="mission-card">
+                        <div class="card-icon mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h2 class="card-title">{{ t('mission.mission.title') }}</h2>
+                        <p class="card-text">{{ t('mission.mission.text') }}</p>
                     </div>
                     
-                    <div class="vision-card" data-aos="fade-left">
-                        <div class="vision-icon"><i class="fas fa-eye"></i></div>
-                        <h2 class="vision-title">Our Vision</h2>
-                        <p class="vision-text">To become a trusted and leading health centre in Geita Region,
-                             recognized for excellence in patient care, service reliability, and community impact.</p>
-                        <ul class="vision-list">
-                            <li><i class="fas fa-check-circle"></i> Expand our facilities and services</li>
-                            <li><i class="fas fa-check-circle"></i> Invest in cutting-edge technology</li>
-                        </ul>
+                    <!-- Vision Card -->
+                    <div class="vision-card">
+                        <div class="card-icon vision-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h2 class="card-title">{{ t('mission.vision.title') }}</h2>
+                        <p class="card-text">{{ t('mission.vision.text') }}</p>
                     </div>
                 </div>
                 
-                <div class="mt-16" data-aos="fade-up">
-                    <h3 class="text-2xl font-bold text-center text-primary-dark mb-8">Our Core Values</h3>
+                <!-- Core Values Section -->
+                <div class="values-section">
+                    <h3 class="values-section-title">{{ t('mission.values.title') }}</h3>
                     <div class="values-grid">
-                        <div v-for="value in coreValues" :key="value.title" class="value-item">
-                            <div class="value-icon"><i :class="value.icon"></i></div>
-                            <h4 class="value-title">{{ value.title }}</h4>
-                            <p class="value-description">{{ value.description }}</p>
+                        <!-- Patient-Centered Care -->
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4 class="value-title">{{ t('mission.values.list[4].title') }}</h4>
+                            <p class="value-description">{{ t('mission.values.list[4].description') }}</p>
+                        </div>
+
+                        <!-- Compassion -->
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <h4 class="value-title">{{ t('mission.values.list[0].title') }}</h4>
+                            <p class="value-description">{{ t('mission.values.list[0].description') }}</p>
+                        </div>
+
+                        <!-- Integrity -->
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4 class="value-title">{{ t('mission.values.list[1].title') }}</h4>
+                            <p class="value-description">{{ t('mission.values.list[1].description') }}</p>
+                        </div>
+
+                        <!-- Excellence -->
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4 class="value-title">{{ t('mission.values.list[2].title') }}</h4>
+                            <p class="value-description">{{ t('mission.values.list[2].description') }}</p>
+                        </div>
+
+                        <!-- Teamwork -->
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4 class="value-title">{{ t('mission.values.list[3].title') }}</h4>
+                            <p class="value-description">{{ t('mission.values.list[3].description') }}</p>
                         </div>
                     </div>
                 </div>
@@ -57,18 +92,16 @@
 </template>
 
 <script setup>
-defineProps({
-    coreValues: {
-        type: Array,
-        default: () => []
-    }
-})
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 </script>
 
 <style scoped>
+/* Page Header */
 .page-header {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-    padding: 120px 0 60px;
+    background: linear-gradient(135deg, #0a2a45, #1e4b7c);
+    padding: 80px 0 40px;
     color: white;
     text-align: center;
     position: relative;
@@ -78,76 +111,94 @@ defineProps({
 .page-header::before {
     content: '';
     position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(255,255,255,0.05);
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 50%;
-    animation: rotate 30s linear infinite;
+    animation: float 20s infinite;
 }
 
 .page-header::after {
     content: '';
     position: absolute;
-    bottom: -50px;
-    left: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(255,255,255,0.05);
+    bottom: -50%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 50%;
-    animation: rotate 25s linear infinite reverse;
+    animation: float 25s infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -20px); }
 }
 
 .page-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     position: relative;
     z-index: 2;
+    letter-spacing: -0.02em;
 }
 
 .page-breadcrumb {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    color: rgba(255,255,255,0.8);
-    font-size: 1rem;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
     position: relative;
     z-index: 2;
+}
+
+.page-breadcrumb .separator {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.2rem;
+    line-height: 1;
 }
 
 .page-breadcrumb a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
 }
 
 .page-breadcrumb a:hover {
-    color: var(--primary-soft);
+    border-bottom-color: white;
+    opacity: 1;
 }
 
-.about-page-section {
-    padding: 5rem 0;
-    background: linear-gradient(135deg, #ffffff, var(--primary-very-light));
+/* Mission Section */
+.mission-section {
+    padding: 60px 20px;
+    background: #ffffff;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
+/* Mission & Vision Grid */
 .mission-vision-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin: 3rem 0;
+    gap: 30px;
+    margin-bottom: 60px;
 }
 
+/* Card Styles */
 .mission-card,
 .vision-card {
-    background: white;
-    border-radius: 30px;
-    padding: 3rem 2rem;
-    text-align: center;
-    box-shadow: 0 20px 40px rgba(30, 75, 124, 0.1);
-    border: 1px solid rgba(30, 75, 124, 0.1);
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 35px 30px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -155,8 +206,9 @@ defineProps({
 
 .mission-card:hover,
 .vision-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(30, 75, 124, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border-color: rgba(30, 75, 124, 0.2);
 }
 
 .mission-card::before,
@@ -166,144 +218,300 @@ defineProps({
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
-    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    height: 3px;
+    /* background: linear-gradient(90deg, #1e4b7c, #2e6ca3); */
 }
 
-.mission-icon,
-.vision-icon {
-    width: 100px;
-    height: 100px;
-    background: var(--primary-soft);
+.card-icon {
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 2rem;
-    color: var(--primary);
-    font-size: 3rem;
+    margin: 0 auto 20px;
+    font-size: 2rem;
     transition: all 0.3s ease;
+}
+
+.mission-icon {
+    background: rgba(30, 75, 124, 0.08);
+    color: #1e4b7c;
+}
+
+.vision-icon {
+    background: rgba(46, 108, 163, 0.08);
+    color: #2e6ca3;
 }
 
 .mission-card:hover .mission-icon,
 .vision-card:hover .vision-icon {
-    background: var(--primary);
-    color: white;
-    transform: rotate(360deg);
+    transform: scale(1.05);
 }
 
-.mission-title,
-.vision-title {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--primary-dark);
-    margin-bottom: 1rem;
+.card-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 15px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 12px;
 }
 
-.mission-text,
-.vision-text {
-    color: var(--text-light);
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #1e4b7c, #2e6ca3);
+    border-radius: 1px;
 }
 
-.mission-list,
-.vision-list {
-    text-align: left;
-    margin: 1.5rem 0;
-}
-
-.mission-list li,
-.vision-list li {
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
-
-.mission-list li i,
-.vision-list li i {
-    color: var(--primary);
+.card-text {
+    color: #475569;
+    line-height: 1.7;
     font-size: 1rem;
-    width: 20px;
+    text-align: center;
 }
 
+/* Values Section */
+.values-section {
+    margin-top: 40px;
+}
+
+.values-section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1e293b;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+    letter-spacing: -0.01em;
+}
+
+.values-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #1e4b7c, #2e6ca3);
+    border-radius: 2px;
+}
+
+/* Values Grid - 3 Columns */
 .values-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 3rem;
+    gap: 25px;
+    width: 100%;
 }
 
-.value-item {
-    background: white;
-    border-radius: 20px;
-    padding: 2rem 1.5rem;
+.value-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px 20px 0 20px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(30, 75, 124, 0.05);
-    border: 1px solid rgba(30, 75, 124, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.value-item:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary);
+.value-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border-color: rgba(30, 75, 124, 0.2);
 }
 
+/* All value icons have the same background */
 .value-icon {
     width: 60px;
     height: 60px;
-    background: var(--primary-soft);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
-    color: var(--primary);
+    margin: 0 auto 16px;
     font-size: 1.5rem;
     transition: all 0.3s ease;
+    /* Same background for all icons */
+    background: rgba(30, 75, 124, 0.08);
+    color: #1e4b7c;
 }
 
-.value-item:hover .value-icon {
-    background: var(--primary);
-    color: white;
+.value-card:hover .value-icon {
+    transform: scale(1.05);
+    background: rgba(30, 75, 124, 0.12);
+    color: #1e4b7c;
 }
 
 .value-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    color: var(--primary-dark);
-    margin-bottom: 0.5rem;
+    color: #1e293b;
+    margin-bottom: 8px;
 }
 
 .value-description {
-    color: var(--text-light);
+    color: #475569;
     font-size: 0.9rem;
     line-height: 1.6;
+    margin: 0;
 }
 
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
-
-@media (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 968px) {
+    .mission-vision-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
     .page-title {
         font-size: 2.2rem;
     }
     
-    .mission-vision-grid {
-        grid-template-columns: 1fr;
+    .card-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 60px 0 30px;
+    }
+    
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .mission-card,
+    .vision-card {
+        padding: 25px 20px;
+    }
+    
+    .card-text {
+        font-size: 0.95rem;
     }
     
     .values-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
     
-    .mission-card, .vision-card {
-        padding: 2rem 1.5rem;
+    .values-section-title {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.6rem;
+    }
+    
+    .card-title {
+        font-size: 1.4rem;
+    }
+    
+    .value-card {
+        padding: 25px 15px;
+    }
+    
+    .value-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.4rem;
+    }
+    
+    .value-title {
+        font-size: 1rem;
+    }
+    
+    .value-description {
+        font-size: 0.85rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .mission-section {
+        background: #0f172a;
+    }
+    
+    .page-header {
+        background: linear-gradient(135deg, #0a1a2f, #1a3a5a);
+    }
+    
+    .mission-card,
+    .vision-card,
+    .value-card {
+        background: #1e293b;
+        border-color: #334155;
+    }
+    
+    .card-title,
+    .values-section-title,
+    .value-title {
+        color: #f1f5f9;
+    }
+    
+    .card-text,
+    .value-description {
+        color: #cbd5e1;
+    }
+    
+    .mission-card:hover,
+    .vision-card:hover,
+    .value-card:hover {
+        border-color: rgba(46, 108, 163, 0.3);
+    }
+    
+    /* Dark mode icon background */
+    .value-icon {
+        background: rgba(255, 255, 255, 0.08);
+        color: #f1f5f9;
+    }
+    
+    .value-card:hover .value-icon {
+        background: rgba(255, 255, 255, 0.12);
+        color: #f1f5f9;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .page-header {
+        background: none;
+        color: black;
+        padding: 20px 0;
+    }
+    
+    .page-header::before,
+    .page-header::after {
+        display: none;
+    }
+    
+    .mission-card,
+    .vision-card,
+    .value-card {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
     }
 }
 </style>

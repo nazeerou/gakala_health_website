@@ -1,0 +1,547 @@
+{
+  "menu": {
+    "home": "Mwanzo",
+    "about": "Kuhusu",
+    "services": "Huduma",
+    "staffs": "Menejimenti",
+    "news": "Habari",
+    "contact": "Mawasiliano"
+  },
+ "appointment": {
+       "book": "Weka Miadi"
+  },
+  "about": {
+       "us": "Kuhusu Sisi",
+       "mission": "Dhamira na Maono"
+  },
+  "services": {
+      "all" : " Huduma Zote",
+      "opd": " Idara ya Wagonjwa wa Nje (OPD)",
+      "ipd": " Idara ya Wagonjwa wa Ndani (IPD)",
+      "maternity": " Huduma za Uzazi",
+      "theatre": " Upasuaji na Theatre",
+      "radiology": " Huduma za Radiology",
+      "icu": " ICU / HDU",
+      "emergency": " Dharura",
+      "laboratory": " Maabara",
+      "pharmacy": " Duka la Dawa",
+      "specialized": " Kliniki Maalum"
+  },
+ 
+    "about_us": {
+        "badge": "KUHUSU SISI",
+        "title": "Gakala Health Centre",
+        "subtitle": "Mtoa huduma wako wa afya anayeaminika Mkoani Geita",
+        "image_alt": "Gakala Health Centre - Kituo chetu",
+        "established": "Ilianzishwa",
+        "description": {
+            "para1": "Gakala Health Centre ni kituo cha afya kinachomilikiwa na watu binafsi kilichoanzishwa mwaka 2025 kwa lengo la kuboresha upatikanaji wa huduma bora, za bei nafuu, na za kuaminika za afya ndani ya Mkoa wa Geita na jamii za jirani. Kituo kilianzishwa ili kukidhi mahitaji yanayoongezeka ya huduma kamili za afya karibu na jamii, kupunguza hitaji la rufaa za masafa marefu.",
+            "para2": "Tunaangazia huduma za kinga na matibabu zinazotolewa na wataalamu wa afya waliohitimu, tukiongozwa na uadilifu, taaluma, na heshima kwa kila mgonjwa. Tunaendelea kufanya kazi na mamlaka za afya na washirika kuboresha huduma zetu na kuhakikisha upatikanaji wa afya kwa wote."
+        },
+        "motto": {
+            "label": "Kauli Mbiu Yetu",
+            "quote": "“Tunatibu, Mungu anaponya”",
+            "meaning": "Kauli hii inaakisi imani ya kituo katika kuchanganya huduma za kitabibu za kitaalamu na huruma, unyenyekevu, na heshima kwa uhai, ikitambua sayansi ya matibabu na imani katika uponyaji."
+        },
+        "closing": "Gakala Health Centre – \"Tunatibu, Mungu anaponya.\""
+    },
+    "hero": {
+        "badge": "Karibu Kituo cha Afya Gakala",
+        "title": {
+            "line1": "Afya Yako,",
+            "line2": "Ahadi Yetu",
+            "line3": "ya Ubora katika Huduma"
+        },
+        "description": "Kutoa huduma za afya za huruma, bora kwa vifaa vya kisasa na wataalamu wa afya waliojitolea kwa ustawi wako. Tunachanganya dawa za kisasa na huduma ya huruma.",
+        "badges": {
+            "certified": "Imethibitishwa",
+            "emergency": "Dharura 24/7",
+            "expert_doctors": "Madaktari Wataalamu"
+        },
+        "book_button": "Weka Miadi",
+        "image_alt": "Mtaalamu wa Afya",
+        "experience": "Miaka ya Ubora"
+    },
+    "our_services": {
+        "badge": "HUDUMA ZETU",
+        "title": "Huduma Kamili za Afya",
+        "subtitle": "Tunatoa huduma mbalimbali za afya kukidhi mahitaji yako yote ya afya.",
+        "learn_more": "Jifunze Zaidi",
+        "opd": {
+            "name": "Idara ya Wagonjwa wa Nje (OPD)",
+            "description": "Hutoa ushauri wa jumla wa matibabu, utambuzi, matibabu, na huduma ya ufuatiliaji kwa maradhi ya kawaida na hali sugu."
+        },
+        "ipd": {
+            "name": "Idara ya Wagonjwa wa Ndani (IPD)",
+            "description": "Hutoa ulazaji na huduma endelevu kwa wagonjwa wanaohitaji kulazwa, uangalizi maalum, au ahueni baada ya upasuaji."
+        },
+        "maternity": {
+            "name": "Huduma za Uzazi",
+            "description": "Huduma kwa akina mama na watoto wachanga wakati wote wa ujauzito."
+        },
+        "emergency": {
+            "name": "Huduma za Dharura",
+            "description": "Idara ya dharura inayofanya kazi 24/7 kwa kesi za hatari."
+        },
+        "theatre": {
+            "name": "Upasuaji na Theatre",
+            "description": "Ukumbi wa upasuaji ulio na vifaa kamili unaotoa huduma salama za upasuaji na taratibu nyingine maalum za matibabu."
+        },
+        "laboratory": {
+            "name": "Huduma za Maabara",
+            "description": "Hutoa upimaji wa uchunguzi kwa ajili ya utambuzi wa magonjwa maalum na ufuatiliaji wa matibabu."
+        },
+        "radiology": {
+            "name": "Huduma za Radiology",
+            "description": "Huduma za upigaji picha kwa ajili ya magonjwa mbalimbali na mipango ya matibabu."
+        },
+        "pharmacy": {
+            "name": "Duka la Dawa",
+            "description": "Hutoa dawa zilizohakikishwa ubora kwa mwongozo wa kibinafsi."
+        },
+        "icu": {
+            "name": "ICU / HDU",
+            "description": "Huduma kwa wagonjwa mahututi wanaohitaji uangalizi maalum."
+        },
+        "specialized": {
+            "name": "Kliniki Maalum",
+            "description": "Hutoa huduma za kliniki kwa fani maalum za matibabu."
+        }
+    },
+    "why_choose": {
+        "super_badge": "Kwa Nini Tuchague",
+        "super_title": "Ubora katika Huduma za Afya",
+        "super_subtitle": "Gundua kwa nini Gakala Health Centre ni chaguo la kuaminika kwa huduma za afya Mkoani Geita.",
+        "title": "Huduma Bora, Moyo wenye Huruma",
+        "subtitle": "Pata huduma ya afya inayokuweka wewe kwanza kwa kujitolea kwetu kwa ubora na huruma.",
+        "compassion": {
+            "title": "Huduma ya Huruma",
+            "description": "Tunamhudumia kila mgonjwa kwa heshima na huruma ya kweli, tukichanganya utaalamu wa kitabibu na msaada wa kihisia.",
+            "point1": "Kumweka Mgonjwa Kwanza",
+            "point2": "Wenye Huruma",
+            "point3": "Wasaidizi"
+        },
+        "expert": {
+            "title": "Timu ya Madaktari Wataalamu",
+            "description": "Timu yetu ya wataalamu waliohitimu huleta uzoefu wa miaka mingi na kujifunza kuendelea kutoa huduma bora iwezekanavyo.",
+            "point1": "Waliohitimu",
+            "point2": "Wenye Uzoefu",
+            "point3": "Waliojitolea"
+        },
+        "facilities": {
+            "title": "Vifaa vya Kisasa",
+            "description": "Vifaa vya kisasa na vifaa vya kisasa huwezesha utambuzi sahihi na matibabu bora.",
+            "point1": "Vifaa vya Kisasa",
+            "point2": "Safi",
+            "point3": "Vimekamilika"
+        }
+    },
+    "news": {
+        "badge": "HABARI NA MATUKIO",
+        "title": "Habari za Karibuni",
+        "page_title": "HABARI NA MATUKIO",
+        "subtitle": "Endelea kufahamishwa na habari na matukio ya karibuni kutoka Gakala Health Centre.",
+        "view_all_announcements": "Angalia Matangazo Yote",
+        "read_more": "Soma Zaidi",
+        "view_all": "Angalia Habari Zote",
+        "breadcrumb": {
+            "home": "Nyumba",
+            "current": "Habari na Matukio"
+        },
+        "items": {
+            "camp": {
+                "date": "Machi 15, 2026",
+                "title": "Kambi ya Matibabu Bure Wikendi Hii",
+                "description": "Jiunge nasi kwa kambi ya matibabu bure inayotoa ushauri na uchunguzi wa afya."
+            },
+            "seminar": {
+                "date": "Machi 5, 2026",
+                "title": "Semina ya Uhamasishaji wa Afya",
+                "description": "Jiunge na madaktari wetu wa moyo kwa semina kuhusu afya ya moyo."
+            }
+        },
+        "announcements": {
+            "title": "Matangazo",
+            "subtitle": "Taarifa muhimu na ilani",
+            "today": "LEO",
+            "yesterday": "JANA",
+            "two_days_ago": "SIKU 2 ZILIZOPITA",
+            "one_week_ago": "WIKI 1 ILIYOPITA",
+            "items": {
+                "mri": {
+                    "text": "Mashine mpya ya MRI imewekwa - Weka miadi yako sasa"
+                },
+                "camp": {
+                    "text": "Kambi ya matibabu bure Jumamosi hii Kituo cha Jiji"
+                },
+                "booster": {
+                    "text": "Chanjo ya nyongeza ya COVID-19 inapatikana kwa watu wazima wote"
+                },
+                "maternity": {
+                    "text": "Ukamilishaji wa ukarabati wa wodi ya uzazi"
+                }
+            }
+        }
+    },
+    "testimonials": {
+        "badge": "USHuhuda",
+        "title": "Wagonjwa Wetu Watasema Nini",
+        "subtitle": "Soma kuhusu uzoefu wa wale walioamini afya zao kwetu.",
+        "doctor_prefix": "Dkt.",
+        "testimonial1": "Huduma kwa wateja ilikuwa nyeti. Daktari hakuwahi kuhukumu mapema na wagonjwa wanajitahidi.",
+        "testimonial2": "Nilijisikia salama na kuhudumiwa vizuri wakati wote wa matibabu yangu. Wafanyakazi walikuwa kwa wakati kila wakati.",
+        "testimonial3": "Uzoefu wa huduma ya afya niliouona una wengi wanaouhita mara moja.",
+        "view_all": "Soma Ushuhuda Zaidi"
+    },
+    "insurance": {
+        "title": "Washirika wa Bima Wanaokubalika",
+        "subtitle": "Tunafanya kazi na watoa huduma wakuu wa bima kukuhudumia vizuri zaidi",
+        "accepted": "Inakubalika",
+        "message": "Bima yako ya afya inakaribishwa hapa",
+        "nhif": {
+            "name": "NHIF"
+        },
+        "jubilee": {
+            "name": "Jubilee Insurance"
+        }
+    },
+    "contact": {
+        "title": "Wasiliana Nasi",
+        "breadcrumb": {
+            "home": "Nyumbani",
+            "current": "Mawasiliano"
+        },
+        "form": {
+            "title": "Tutumie Ujumbe",
+            "name": "Jina Kamili",
+            "email": "Barua pepe",
+            "phone": "Namba ya Simu",
+            "subject": "Mada",
+            "message": "Ujumbe",
+            "submit": "Tuma Ujumbe",
+            "success": "Asante kwa ujumbe wako! Tutakujibu karibuni."
+        },
+        "info": {
+            "title": "Wasiliana Nasi",
+            "description": "Una maswali? Tupo hapa kusaidia. Wasiliana nasi kupitia njia zozote zifuatazo.",
+            "address": {
+                "title": "Anwani",
+                "line1": "S.L.P 92, Masumbwe - Geita Tanzania"
+            },
+            "phone": {
+                "title": "Piga Simu",
+                "number": "+255 758 709 526"
+            },
+            "email": {
+                "title": "Tuma Barua pepe",
+                "general": "info@gakalahealth.co.tz",
+                "appointments": "appointments@gakalahealth.co.tz"
+            },
+            "hours": {
+                "title": "Saa za Kazi",
+                "schedule": "24/7 - Tupo Siku Zote",
+                "emergency": "Huduma za dharura zinapatikana 24/7"
+            }
+        }
+    },
+    "footer": {
+        "alt": "Gakala Health Centre",
+        "description": "Kutoa huduma bora za afya kwa huruma na ubora tangu 2016. Afya yako, kipaumbele chetu.",
+        "motto": {
+            "text": "\"Tunatibu Mungu anaponya\"",
+            "translation": "Tunatibu, Mungu anaponya"
+        },
+        "connect": "Ungana Nasi",
+        "quick_links": "Viungo vya Haraka",
+        "contact": {
+            "title": "Mawasiliano",
+            "visit": "Tembelea",
+            "call": "Piga Simu",
+            "email": "Tuma Barua pepe",
+            "address": "Kagili Masumbwe, Geita",
+            "country": "Tanzania"
+        },
+        "emergency": {
+            "label": "Dharura 24/7",
+            "available": "Inapatikana Sasa"
+        },
+        "copyright": "Gakala Health Centre. Haki zote zimehifadhiwa.",
+        "privacy": "Sera ya Faragha",
+        "terms": "Sheria na Masharti",
+        "links": {
+            "home": "Nyumbani",
+            "about": "Kuhusu Sisi",
+            "mission": "Dhamira Yetu",
+            "vision": "Maono Yetu",
+            "doctors": "Madaktari Wetu",
+            "news": "Habari na Matukio",
+            "contact": "Wasiliana Nasi"
+        },
+        "our_services": "Huduma Zetu",
+        "services": {
+            "opd": "Idara ya Wagonjwa wa Nje (OPD)",
+            "ipd": "Idara ya Wagonjwa wa Ndani (IPD)",
+            "maternity": "Huduma za Uzazi",
+            "emergency": "Huduma za Dharura",
+            "theatre": "Upasuaji na Theatre",
+            "laboratory": "Huduma za Maabara",
+            "radiology": "Huduma za Radiology",
+            "pharmacy": "Duka la Dawa",
+            "icu": "ICU / HDU",
+            "specialized": "Kliniki Maalum"
+        }
+    },
+    "about_page": {
+        "title": "Kuhusu Gakala Health Centre",
+        "breadcrumb": {
+            "home": "Nyumbani",
+            "current": "Kuhusu Sisi"
+        },
+        "identity": {
+            "title": "Utambulisho wa Msingi wa Hospitali",
+            "official_name": "Jina Rasmi:",
+            "description": "Gakala Health Centre ni kituo cha afya kinachomilikiwa na watu binafsi kilichoanzishwa mwaka 2025 kwa lengo la kuboresha upatikanaji wa huduma bora, za bei nafuu, na za kuaminika za afya ndani ya Mkoa wa Geita na jamii za jirani. Kituo kilianzishwa ili kukidhi mahitaji yanayoongezeka ya huduma kamili za afya karibu na jamii, kupunguza hitaji la rufaa za masafa marefu.",
+            "ownership": "Aina ya Umiliki:",
+            "ownership_text": "Gakala Health Centre inafanya kazi chini ya umiliki wa kibinafsi, kuwezesha kufanya maamuzi kwa urahisi, kupitisha haraka mazoea ya kisasa ya afya, na kuzingatia sana kuridhika kwa wagonjwa na ubora wa huduma.",
+            "category": "Kiwango cha Hospitali:",
+            "category_text": "Kituo kimeainishwa kama Kituo cha Afya, kinachotoa huduma mbalimbali za wagonjwa wa nje, wagonjwa wa ndani, dharura, na kliniki maalum zinazolingana na viwango vya kitaifa vya afya.",
+            "tagline_label": "Kauli Mbiu:",
+            "tagline": "TUNATIBU, MUNGU ANAPONYA",
+            "tagline_text": "Kauli hii inaakisi imani ya kituo katika kuchanganya huduma za kitabibu za kitaalamu na huruma, unyenyekevu, na heshima kwa uhai, ikitambua sayansi ya matibabu na imani katika uponyaji."
+        },
+        "legal": {
+            "title": "Maelezo ya Kisheria na Usajili",
+            "description": "Gakala Health Centre ni taasisi ya afya iliyosajiliwa kikamilifu na inayofuata sheria na kanuni za Jamhuri ya Muungano wa Tanzania.",
+            "registration": "Usajili wa Wizara ya Afya:",
+            "registration_text": "Kituo kina Nambari halali ya Usajili wa Kituo cha Afya cha Wizara ya Afya",
+            "nhif": "Uidhinishaji wa NHIF:",
+            "nhif_text": "Kituo kimeidhinishwa rasmi na Mfuko wa Taifa wa Bima ya Afya (NHIF), kuruhusu wagonjwa wenye bima kupata huduma kwa urahisi."
+        },
+        "location": {
+            "title": "Mahali na Mawasiliano",
+            "address": "Mahali:",
+            "address_text": "Gakala Health Centre iko katika eneo la kimkakati Kagili Masumbwe, Wilaya ya Mbogwe, Mkoa wa Geita, eneo linalohudumia wakazi wa mijini na vijijini. Eneo hili linairuhusu kituo kuwa kitovu muhimu cha huduma za afya kwa jamii za jirani ambazo hapo awali zilikumbana na changamoto za kupata huduma za afya kwa wakati.",
+            "accessibility": "Upatikanaji:",
+            "accessibility_text": "Kituo kinafikiwa kwa urahisi kwa barabara na kinaungwa mkono na huduma za gari la wagonjwa kwa rufaa za dharura."
+        },
+        "sidebar": {
+            "title": "Maelezo ya Haraka",
+            "established": "Kuanzishwa",
+            "specialists": "Wataalamu wa Afya",
+            "reg_number": "Nambari ya Usajili",
+            "nhif": "Imethibitishwa na NHIF",
+            "insurance": "Mshirika wa Bima"
+        }
+    },
+    "mission": {
+        "title": "Dhamira na Maono Yetu",
+        "breadcrumb": {
+            "home": "Nyumbani",
+            "about": "Kuhusu",
+            "current": "Dhamira"
+        },
+        "mission": {
+            "title": "Dhamira Yetu",
+            "text": "Kutoa huduma bora za afya, za bei nafuu, na zinazomlenga mgonjwa kupitia wataalamu wenye ujuzi, vifaa vya kisasa vya matibabu, maadili ya kitaaluma, na uboreshaji endelevu wa utoaji huduma.",
+            "points": [
+                "Kutoa huduma zinazomlenga mgonjwa",
+                "Kudumisha viwango vya juu vya matibabu",
+                "Kuhudumia wanajamii wote"
+            ]
+        },
+        "vision": {
+            "title": "Maono Yetu",
+            "text": "Kuwa kituo cha afya kinachoaminika na kinachoongoza Mkoani Geita, kinachotambulika kwa ubora wa huduma kwa wagonjwa, uaminifu wa huduma, na athari chanya kwa jamii.",
+            "points": [
+                "Kupanua vifaa na huduma zetu",
+                "Kuwekeza katika teknolojia ya kisasa",
+                "Kujenga ushirikiano endelevu na jamii"
+            ]
+        },
+        "values": {
+            "title": "Maadili Yetu",
+            "list": [
+                {
+                    "icon": "fas fa-heart",
+                    "iconClass": "compassion",
+                    "title": "Huruma",
+                    "description": "Kumtendea kila mgonjwa kwa uelewaji, heshima na ubinadamu."
+                },
+                {
+                    "icon": "fas fa-shield-alt",
+                    "iconClass": "integrity",
+                    "title": "Uadilifu",
+                    "description": "Kufanya kazi kwa uwazi na uaminifu katika shughuli zote."
+                },
+                {
+                    "icon": "fas fa-star",
+                    "iconClass": "excellence",
+                    "title": "Utaalamu",
+                    "description": "Kuzingatia maadili ya kitabibu, umahiri na uwajibikaji."
+                },
+                {
+                    "icon": "fas fa-handshake",
+                    "iconClass": "teamwork",
+                    "title": "Ushirikiano",
+                    "description": "Kuhimiza ushirikiano kati ya wataalamu wa afya kufikia matokeo bora kwa wagonjwa."
+                },
+                {
+                    "icon": "fas fa-users",
+                    "iconClass": "patients",
+                    "title": "Kumlenga Mgonjwa",
+                    "description": "Kutanguliza usalama, heshima na kuridhika kwa mgonjwa kila wakati."
+                }
+            ]
+        }
+    },
+    "staff": {
+        "title": "Wataalamu Wetu",
+        "breadcrumb": {
+            "home": "Nyumbani",
+            "current": "Wafanyakazi"
+        },
+        "section_title": "Timu ya Usimamizi na Uongozi",
+        "section_description": "Kituo kinaongozwa na timu ya usimamizi yenye uwezo na uzoefu inayowajibika kwa uongozi wa kimkakati, ufanisi wa kiutendaji, na usimamizi wa huduma za kitabibu.",
+        "director": {
+            "title": "Mkurugenzi wa Matibabu",
+            "role": "Uongozi na Usimamizi wa Kitabibu",
+            "description": "Hutoa uongozi wa jumla katika huduma za kitabibu, maadili ya kitabibu, usalama wa wagonjwa, na uhakikisho wa ubora."
+        },
+        "administrator": {
+            "title": "Msimamizi wa Hospitali",
+            "role": "Uendeshaji na Utawala",
+            "description": "Anasimamia shughuli za kiutawala, fedha, rasilimali watu, manunuzi, na ufuataji wa sheria."
+        },
+        "nursing": {
+            "title": "Afisa Uuguzi Mkuu",
+            "role": "Huduma za Uuguzi",
+            "description": "Huratibu huduma za uuguzi, anahakikisha ufuataji wa viwango vya uuguzi, na anasimamia utoaji wa huduma kwa wagonjwa."
+        },
+        "hod": {
+            "title": "Wakuu wa Idara",
+            "role": "Usimamizi wa Idara",
+            "description": "Wanasimamia uendeshaji wa idara, utendaji wa wafanyakazi, matumizi ya vifaa, na ubora wa huduma."
+        },
+        "leadership_statement": "Timu ya uongozi inafanya kazi kwa ushirikiano kuhakikisha uendeshaji mzuri, utoaji huduma bora, na uboreshaji endelevu katika idara zote."
+    },
+    "services_page": {
+        "page_title": "Huduma Zetu za Matibabu",
+        "read_more" : "Soma Zaidi",
+        "breadcrumb": {
+            "home": "Nyumbani",
+            "current": "Huduma"
+        },
+        "section_title": "Huduma Kamili za Afya",
+        "section_description": "Gakala Health Centre hutoa huduma kamili za matibabu na usaidizi ili kukidhi mahitaji mbalimbali ya afya ya jamii.",
+        "opd": {
+            "name": "Idara ya Wagonjwa wa Nje (OPD)",
+            "full_description": "Ushauri wa jumla, utambuzi, matibabu, na huduma ya ufuatiliaji kwa maradhi ya kawaida na hali sugu.",
+            "features": [
+                "Ushauri wa jumla wa matibabu",
+                "Utambuzi na matibabu",
+                "Huduma ya ufuatiliaji",
+                "Usimamizi wa magonjwa sugu",
+                "Uchunguzi wa afya"
+            ]
+        },
+        "ipd": {
+            "name": "Idara ya Wagonjwa wa Ndani (IPD)",
+            "full_description": "Ulazaji na huduma endelevu kwa wagonjwa wanaohitaji kulazwa, uangalizi maalum, au ahueni baada ya upasuaji.",
+            "features": [
+                "Huduma ya uuguzi 24/7",
+                "Wodi za faragha na za pamoja",
+                "Ahueni baada ya upasuaji",
+                "Ufuatiliaji wa wagonjwa mahututi",
+                "Huduma maalum za kitabibu"
+            ]
+        },
+        "maternity": {
+            "name": "Huduma za Uzazi",
+            "full_description": "Huduma kamili kwa akina mama na watoto wachanga wakati wa ujauzito, kujifungua, na baada ya kujifungua.",
+            "features": [
+                "Huduma ya ujauzito",
+                "Huduma salama za kujifungua",
+                "Huduma baada ya kujifungua",
+                "Uchunguzi wa watoto wachanga",
+                "Msaada wa kunyonyesha"
+            ]
+        },
+        "emergency": {
+            "name": "Huduma za Dharura",
+            "full_description": "Idara ya dharura inayofanya kazi 24/7 iliyojizatiti kushughulikia kesi za hatari na dharura za kitabibu.",
+            "features": [
+                "Huduma 24/7",
+                "Tathmini ya haraka",
+                "Ufufuaji wa dharura",
+                "Huduma za majeraha",
+                "Utayarishaji kwa rufaa"
+            ]
+        },
+        "theatre": {
+            "name": "Upasuaji na Theatre",
+            "full_description": "Ukumbi wa upasuaji ulio na vifaa kamili unaotoa huduma salama za upasuaji kwa ganzi.",
+            "features": [
+                "Upasuaji wa jumla",
+                "Taratibu za mifupa",
+                "Upasuaji wa dharura",
+                "Timu ya upasuaji iliyobobea",
+                "Huduma baada ya upasuaji"
+            ]
+        },
+        "laboratory": {
+            "name": "Huduma za Maabara",
+            "full_description": "Upimaji wa uchunguzi kwa ajili ya utambuzi wa magonjwa, ufuatiliaji wa matibabu, na uchunguzi wa afya.",
+            "features": [
+                "Vipimo vya damu",
+                "Uchunguzi wa mkojo",
+                "Vipimo vya vijidudu",
+                "Vipimo vya haraka",
+                "Matokeo yaliyohakikishwa"
+            ]
+        },
+        "radiology": {
+            "name": "Huduma za Radiology",
+            "full_description": "Huduma za kisasa za upigaji picha kwa ajili ya utambuzi sahihi na mipango ya matibabu.",
+            "features": [
+                "Huduma za X-ray",
+                "Uchunguzi wa Ultrasound",
+                "Uchunguzi wa CT",
+                "Ripoti za picha",
+                "Upigaji picha wa dharura"
+            ]
+        },
+        "pharmacy": {
+            "name": "Duka la Dawa",
+            "full_description": "Dawa zilizohakikishwa ubora zinazotolewa kwa mwongozo wa kitaalamu na huduma ya kibinafsi.",
+            "features": [
+                "Ujazaji wa maagizo",
+                "Ushauri wa dawa",
+                "Dawa bora",
+                "Dawa za dharura",
+                "Dawa za magonjwa sugu"
+            ]
+        },
+        "icu": {
+            "name": "ICU / HDU",
+            "full_description": "Huduma maalum kwa wagonjwa mahututi wanaohitaji ufuatiliaji wa karibu na usaidizi maalum.",
+            "features": [
+                "Huduma mahututi 24/7",
+                "Ufuatiliaji wa ishara muhimu",
+                "Vifaa vya kusaidia uhai",
+                "Uuguzi maalum",
+                "Wataalamu wa wagonjwa mahututi"
+            ]
+        },
+        "specialized": {
+            "name": "Kliniki Maalum",
+            "full_description": "Huduma za kliniki kwa fani maalum za matibabu na ushauri wa wataalamu.",
+            "features": [
+                "Kliniki ya moyo",
+                "Kliniki ya mishipa ya fahamu",
+                "Kliniki ya watoto",
+                "Kliniki ya kisukari",
+                "Uratibu wa rufaa"
+            ]
+        }
+    }
+}

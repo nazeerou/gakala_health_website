@@ -2,157 +2,164 @@
     <div>
         <div class="page-header">
             <div class="container mx-auto px-6">
-                <h1 class="page-title">About Gakala Health Centre</h1>
+                <h1 class="page-title">{{ t('about_page.title') }}</h1>
                 <div class="page-breadcrumb">
-                    <router-link to="/">Home</router-link>
-                    <i class="fas fa-chevron-right text-sm"></i>
-                    <span>About Us</span>
+                    <router-link to="/">{{ t('about_page.breadcrumb.home') }}</router-link>
+                    <span class="separator">›</span>
+                    <span>{{ t('about_page.breadcrumb.current') }}</span>
                 </div>
             </div>
         </div>
         
-        <div class="about-page-section">
+        <div class="about-section">
             <div class="container mx-auto px-6">
-                <div class="grid lg:grid-cols-3 gap-8">
-                    
-                    <!-- Main Content -->
-                    <div class="lg:col-span-2">
-                        <div class="about-content-card" data-aos="fade-right">
-                            <h2 class="about-content-title">Basic Hospital Identity</h2>
+                <div class="about-grid">
+                    <!-- Left Column - Main Content -->
+                    <div class="about-main">
+                        <!-- Basic Hospital Identity -->
+                        <div class="about-card">
+                            <h2 class="card-title">{{ t('about_page.identity.title') }}</h2>
 
-                            <p class="about-content-text">
-                                <strong>Official Name:</strong><br>
-                                <span class="text-primary font-semibold">GAKALA HEALTH CENTRE</span>
-                            </p>
+                            <div class="info-block">
+                                <h3 class="info-block-title">{{ t('about_page.identity.official_name') }}</h3>
+                                <p class="info-block-text highlight">GAKALA HEALTH CENTRE</p>
+                            </div>
 
-                            <p class="about-content-text">
-                                Gakala Health Centre is a privately owned healthcare facility established in 2025
-                                with the primary objective of improving access to quality, affordable, and reliable
-                                healthcare services within Geita Region and neighboring communities.
-                                The facility was founded to respond to the growing demand for comprehensive medical
-                                services closer to the community, reducing the need for long-distance referrals.
-                            </p>
+                            <p class="about-text">{{ t('about_page.identity.description') }}</p>
 
-                            <p class="about-content-text">
-                                <strong>Ownership Type:</strong><br>
-                                Gakala Health Centre operates under private ownership, enabling flexible decision-making,
-                                faster adoption of modern healthcare practices, and a strong focus on patient satisfaction
-                                and service quality.
-                            </p>
+                            <div class="info-block">
+                                <h3 class="info-block-title">{{ t('about_page.identity.ownership') }}</h3>
+                                <p class="info-block-text">{{ t('about_page.identity.ownership_text') }}</p>
+                            </div>
 
-                            <p class="about-content-text">
-                                <strong>Hospital Category / Level:</strong><br>
-                                The facility is classified as a Health Centre, offering a wide range of outpatient,
-                                inpatient, emergency, and specialized clinical services aligned with national
-                                healthcare standards.
-                            </p>
+                            <div class="info-block">
+                                <h3 class="info-block-title">{{ t('about_page.identity.category') }}</h3>
+                                <p class="info-block-text">{{ t('about_page.identity.category_text') }}</p>
+                            </div>
 
-                            <div class="about-highlight-box">
-                                <p>
-                                    <strong>Tagline / Slogan:</strong><br>
-                                    “TUNATIBU, MUNGU ANAPONYA”<br><br>
-                                    This slogan reflects the centre’s belief in combining professional medical care
-                                    with compassion, humility, and respect for life, recognizing both medical science
-                                    and faith in healing.
+                            <div class="highlight-box">
+                                <h3 class="highlight-title">{{ t('about_page.identity.tagline_label') }}</h3>
+                                <p class="highlight-quote">“{{ t('about_page.identity.tagline') }}”</p>
+                                <p class="highlight-text">{{ t('about_page.identity.tagline_text') }}</p>
+                            </div>
+                        </div>
+
+                        <!-- Legal & Registration Details -->
+                        <div class="about-card">
+                            <h2 class="card-title">{{ t('about_page.legal.title') }}</h2>
+                            
+                            <p class="about-text">{{ t('about_page.legal.description') }}</p>
+
+                            <div class="info-block">
+                                <h3 class="info-block-title">{{ t('about_page.legal.registration') }}</h3>
+                                <p class="info-block-text">{{ t('about_page.legal.registration_text') }} 
+                                    <span class="highlight">(124899-6)</span>
                                 </p>
                             </div>
+
+                            <div class="info-block">
+                                <h3 class="info-block-title">{{ t('about_page.legal.nhif') }}</h3>
+                                <p class="info-block-text">{{ t('about_page.legal.nhif_text') }}</p>
+                            </div>
                         </div>
 
-                        <div class="about-content-card" data-aos="fade-right" data-aos-delay="100">
-                            <h2 class="about-content-title">Legal & Registration Details</h2>
+                        <!-- Location & Contact Information -->
+                        <div class="about-card">
+                            <h2 class="card-title">{{ t('about_page.location.title') }}</h2>
                             
-                            <p class="about-content-text">
-                                Gakala Health Centre is a fully registered and legally compliant healthcare institution 
-                                operating under the laws and regulations of the United Republic of Tanzania.
-                            </p>
+                            <div class="info-block">
+                                <h3 class="info-block-title">{{ t('about_page.location.address') }}</h3>
+                                <p class="info-block-text">{{ t('about_page.location.address_text') }}</p>
+                            </div>
 
-                            <p class="about-content-text">
-                                <strong>Ministry of Health Registration:</strong><br>
-                                The facility holds a valid Ministry of Health Facility Registration Number 
-                                <span class="text-primary font-semibold">(124899-6)</span> and operates under an approved 
-                                license that authorizes it to provide medical services to the public.
-                            </p>
-
-                            <p class="about-content-text">
-                                <strong>NHIF Accreditation:</strong><br>
-                                The centre is officially accredited by the 
-                                <span class="text-primary font-semibold">National Health Insurance Fund (NHIF)</span>, 
-                                allowing insured patients to access services seamlessly.
-                            </p>
-                        </div>
-
-                        <div class="about-content-card" data-aos="fade-right" data-aos-delay="200">
-                            <h2 class="about-content-title">Location & Contact Information</h2>
-                            
-                            <p class="about-content-text">
-                                <strong>Physical Location:</strong><br>
-                                Gakala Health Centre is strategically located in 
-                                <span class="text-primary font-semibold">Kagili Masumbwe, Mbogwe District, Geita Region</span>, 
-                                an area that serves both semi-urban and rural populations. This location allows the facility 
-                                to act as a critical healthcare hub for surrounding communities that previously faced challenges 
-                                accessing timely medical care.
-                            </p>
-
-                            <p class="about-content-text">
-                                <strong>Accessibility:</strong><br>
-                                The facility is easily accessible by road and supported by ambulance services for emergency 
-                                referrals.
-                            </p>
+                            <div class="info-block">
+                                <h3 class="info-block-title">{{ t('about_page.location.accessibility') }}</h3>
+                                <p class="info-block-text">{{ t('about_page.location.accessibility_text') }}</p>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Sidebar -->
-                    <div class="lg:col-span-1">
-                        <div class="announcements-sidebar" data-aos="fade-left">
-                            <div class="announcements-header">
-                                <div class="announcements-icon">
+                    <!-- Right Column - Sidebar -->
+                    <div class="about-sidebar">
+                        <div class="sidebar-card">
+                            <div class="sidebar-header">
+                                <div class="sidebar-icon">
                                     <i class="fas fa-info-circle"></i>
                                 </div>
-                                <div>
-                                    <h3 class="announcements-title">Quick Facts</h3>
-                                </div>
+                                <h3 class="sidebar-title">{{ t('about_page.sidebar.title') }}</h3>
                             </div>
                             
-                            <div class="space-y-4">
-                                <div class="info-card">
-                                    <div class="info-icon"><i class="fas fa-calendar-alt"></i></div>
-                                    <div class="text-2xl font-bold text-primary">2025</div>
-                                    <div class="text-gray-600">Year Established</div>
+                            <div class="stats-list">
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                                    <div class="stat-content">
+                                        <div class="stat-value">2025</div>
+                                        <div class="stat-label">{{ t('about_page.sidebar.established') }}</div>
+                                    </div>
                                 </div>
-                                <div class="info-card">
-                                    <div class="info-icon"><i class="fas fa-user-md"></i></div>
-                                    <div class="text-2xl font-bold text-primary">43</div>
-                                    <div class="text-gray-600">Medical Specialists</div>
+                                
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-user-md"></i></div>
+                                    <div class="stat-content">
+                                        <div class="stat-value">43</div>
+                                        <div class="stat-label">{{ t('about_page.sidebar.specialists') }}</div>
+                                    </div>
                                 </div>
-                                <div class="info-card">
-                                    <div class="info-icon"><i class="fas fa-id-card"></i></div>
-                                    <div class="text-2xl font-bold text-primary">124899-6</div>
-                                    <div class="text-gray-600">Ministry Reg. Number</div>
+                                
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-id-card"></i></div>
+                                    <div class="stat-content">
+                                        <div class="stat-value">124899-6</div>
+                                        <div class="stat-label">{{ t('about_page.sidebar.reg_number') }}</div>
+                                    </div>
                                 </div>
-                                <div class="info-card">
-                                    <div class="info-icon"><i class="fas fa-check-circle"></i></div>
-                                    <div class="text-lg font-bold text-primary">NHIF Accredited</div>
-                                    <div class="text-gray-600">Insurance Partner</div>
+                                
+                                <div class="stat-item">
+                                    <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+                                    <div class="stat-content">
+                                        <div class="stat-value">{{ t('about_page.sidebar.nhif') }}</div>
+                                        <div class="stat-label">{{ t('about_page.sidebar.insurance') }}</div>
+                                    </div>
                                 </div>
-                                <!-- <div class="info-card">
-                                    <div class="info-icon"><i class="fas fa-procedures"></i></div>
-                                    <div class="text-2xl font-bold text-primary">15K+</div>
-                                    <div class="text-gray-600">Patients Yearly</div>
-                                </div> -->
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </template>
 
+<script setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>
+
 <style scoped>
+/* CSS Variables */
+:root {
+    --primary: #1e4b7c;
+    --primary-dark: #0f2f4f;
+    --primary-light: #2e6ca3;
+    --primary-soft: rgba(30, 75, 124, 0.05);
+    --primary-very-light: #f0f5fa;
+    --text-dark: #1e293b;
+    --text-light: #475569;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Page Header */
 .page-header {
-    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-    padding: 120px 0 60px;
+    background: linear-gradient(135deg, #0a2a45, #1e4b7c);
+    padding: 100px 0 50px;
     color: white;
     text-align: center;
     position: relative;
@@ -162,25 +169,23 @@
 .page-header::before {
     content: '';
     position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(255,255,255,0.05);
+    top: -50%;
+    right: -10%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 50%;
-    animation: rotate 30s linear infinite;
 }
 
 .page-header::after {
     content: '';
     position: absolute;
-    bottom: -50px;
-    left: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(255,255,255,0.05);
+    bottom: -50%;
+    left: -10%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.03);
     border-radius: 50%;
-    animation: rotate 25s linear infinite reverse;
 }
 
 .page-title {
@@ -195,105 +200,170 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    color: rgba(255,255,255,0.8);
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 1rem;
     position: relative;
     z-index: 2;
 }
 
+.page-breadcrumb .separator {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
 .page-breadcrumb a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: var(--transition);
 }
 
 .page-breadcrumb a:hover {
-    color: var(--primary-soft);
+    opacity: 0.8;
 }
 
-.about-page-section {
-    padding: 5rem 0;
-    background: linear-gradient(135deg, #ffffff, var(--primary-very-light));
+/* About Section */
+.about-section {
+    padding: 20px 0;
+    background: var(--bg-light);
 }
 
-.about-content-card {
-    background: white;
-    border-radius: 30px;
-    padding: 3rem;
-    box-shadow: 0 20px 40px rgba(30, 75, 124, 0.1);
-    border: 1px solid rgba(30, 75, 124, 0.1);
-    margin-bottom: 2rem;
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.about-content-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--primary-dark);
-    margin-bottom: 1.5rem;
+/* Left Column - Main Content */
+.about-main {
+    /* display: flex; */
+    flex-direction: column;
+    /* gap: 30px; */
+}
+
+.about-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.about-card:hover {
+    box-shadow: var(--shadow-lg);
+}
+
+.card-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    /* margin-bottom: 25px; */
     position: relative;
-    padding-bottom: 1rem;
+    /* padding-bottom: 2px; */
 }
 
-.about-content-title::after {
+.card-title::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--primary-light));
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
     border-radius: 2px;
 }
 
-.about-content-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
+.about-text {
     color: var(--text-light);
-    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 1rem;
 }
 
-.about-highlight-box {
-    background: var(--primary-soft);
-    border-radius: 20px;
-    padding: 2rem;
-    margin: 2rem 0;
-    /* border-left: 5px solid var(--primary); */
+.info-block {
+    margin-bottom: 25px;
 }
 
-.about-highlight-box p {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: var(--primary-dark);
-    margin-bottom: 1rem;
-}
-
-.about-highlight-box .author {
+.info-block-title {
+    font-size: 1rem;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.announcements-sidebar {
-    background: white;
-    border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: 0 10px 30px rgba(30, 75, 124, 0.1);
-    border: 1px solid rgba(30, 75, 124, 0.1);
-    height: fit-content;
+.info-block-text {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.highlight {
+    color: #1e4b7c;
+    font-weight: 600;
+}
+
+.highlight-box {
+    background: rgba(164, 198, 235, 0.2);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 20px;
+    border-left: 4px solid var(--primary);
+}
+
+.highlight-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.highlight-quote {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e4b7c;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.highlight-text {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Right Column - Sidebar */
+.about-sidebar {
     position: sticky;
     top: 100px;
+    height: fit-content;
 }
 
-.announcements-header {
+.sidebar-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.sidebar-header {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--primary-soft);
+    gap: 12px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(30, 75, 124, 0.2);
 }
 
-.announcements-icon {
+.sidebar-icon {
     width: 40px;
     height: 40px;
     background: var(--primary-soft);
@@ -301,67 +371,171 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
+    color: #1e4b7c;
     font-size: 1.2rem;
 }
 
-.announcements-title {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--primary-dark);
+.sidebar-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
 }
 
-.info-card {
-    background: white;
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 10px 30px rgba(30, 75, 124, 0.05);
-    border: 1px solid rgba(30, 75, 124, 0.1);
-    transition: all 0.3s ease;
-    text-align: center;
+.stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(30, 75, 124, 0.1);
-    border-color: var(--primary);
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: rgba(148, 186, 226, 0.2);
+    border-radius: 10px;
+    transition: var(--transition);
 }
 
-.info-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--primary-soft);
-    border-radius: 16px;
+.stat-item:hover {
+    transform: translateX(1px);
+    background: #ffffff;
+    box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--white);
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
     color: var(--primary);
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    transition: var(--transition);
 }
 
-.info-card:hover .info-icon {
+.stat-item:hover .stat-icon {
     background: var(--primary);
-    color: white;
+    color: var(--white);
 }
 
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+.stat-content {
+    flex: 1;
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.3;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-sidebar {
+        position: static;
+    }
+    
+    .page-title {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 768px) {
+    .page-header {
+        padding: 80px 0 40px;
+    }
+    
     .page-title {
-        font-size: 2.2rem;
-    }
-    
-    .about-content-card {
-        padding: 2rem;
-    }
-    
-    .about-content-title {
         font-size: 2rem;
+    }
+    
+    .about-card {
+        padding: 25px;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .highlight-quote {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.75rem;
+    }
+    
+    .stat-item {
+        padding: 12px;
+    }
+    
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .stat-value {
+        font-size: 1.1rem;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-dark: #f1f5f9;
+        --text-light: #cbd5e1;
+        --text-muted: #94a3b8;
+        --border-color: #334155;
+        --bg-light: #0f172a;
+        --white: #1e293b;
+        --primary-soft: rgba(30, 75, 124, 0.2);
+    }
+    
+    .page-header {
+        background: linear-gradient(135deg, #0a1a2f, #123456);
+    }
+    
+    .stat-item {
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .stat-icon {
+        background: var(--white);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .page-header {
+        background: none;
+        color: black;
+        padding: 20px 0;
+    }
+    
+    .page-header::before,
+    .page-header::after {
+        display: none;
+    }
+    
+    .about-sidebar {
+        break-inside: avoid;
     }
 }
 </style>

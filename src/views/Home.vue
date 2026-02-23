@@ -1,92 +1,33 @@
 <template>
     <div>
         <!-- Hero Section -->
-        <HeroSection 
-            :hero-stats="heroStats"
-            :hero-images="heroImages"
-            @open-appointment="$emit('open-appointment')"
-        />
+        <HeroSection />
 
-       
-        <BMASection :insurance-providers="insuranceProviders" />
+        <!-- About Section -->
+        <AboutSection />
 
         <!-- Services Section -->
-        <ServicesSection 
-            :service-list="serviceList"
-            @navigate-service="navigateToService"
-        />
+        <ServicesSection />
 
-        <!-- Doctors Section -->
-        <DoctorsSection :doctors="doctors" />
+        <!-- Why Choose Us Section -->
+        <WhyChooseUsSection />
 
-        <!-- News and Announcements -->
-        <NewsSection 
-            :news-events="newsEvents"
-            :announcements="announcements"
-            @open-external="$emit('open-external', $event)"
-        />
+        <!-- News & Updates Section -->
+        <NewsUpdatesSection />
 
-        <!-- Testimonials Section -->
-        <TestimonialsSection :testimonials="testimonials" />
+        <!-- Insurance Partners Section -->
+        <InsurancePartnersSection />
 
- <!-- Insurance Section -->
-          <BIMASections :BimaSections="bima" />
+        <ScrollToTop />
     </div>
 </template>
 
 <script setup>
-import { useRouter } from 'vue-router'
 import HeroSection from '../components/sections/HeroSection.vue'
-import BMASection from '../components/sections/BMASection.vue'
+import AboutSection from '../components/sections/AboutSection.vue'
 import ServicesSection from '../components/sections/ServicesSection.vue'
-import DoctorsSection from '../components/sections/DoctorsSection.vue'
-import NewsSection from '../components/sections/NewsSection.vue'
-import TestimonialsSection from '../components/sections/TestimonialsSection.vue'
-import BIMASections from '../components/sections/BIMASections.vue'
-
-const props = defineProps({
-    heroStats: {
-        type: Array,
-        default: () => []
-    },
-    heroImages: {
-        type: Array,
-        default: () => []
-    },
-    insuranceProviders: {
-        type: Array,
-        default: () => []
-    },
-    serviceList: {
-        type: Array,
-        default: () => []
-    },
-    doctors: {
-        type: Array,
-        default: () => []
-    },
-    newsEvents: {
-        type: Array,
-        default: () => []
-    },
-    announcements: {
-        type: Array,
-        default: () => []
-    },
-    testimonials: {
-        type: Array,
-        default: () => []
-    },
-    BIMASections: {
-        type: Array,
-        default: () => []
-    }
-})
-
-const emit = defineEmits(['open-appointment', 'open-external'])
-const router = useRouter()
-
-const navigateToService = (service) => {
-    router.push(`/services/${service.slug}`)
-}
+import WhyChooseUsSection from '../components/sections/WhyChooseUsSection.vue'
+import NewsUpdatesSection from '../components/sections/NewsUpdatesSection.vue'
+import InsurancePartnersSection from '../components/sections/InsurancePartnersSection.vue'
+import ScrollToTop from '../views/ScrollToTop.vue'
 </script>
