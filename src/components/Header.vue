@@ -437,7 +437,6 @@ watch(() => route.path, () => {
     border-bottom: 1px solid rgba(30, 75, 124, 0.1);
     transition: all 0.3s ease;
 }
-
 .navbar-modern.scrolled {
     box-shadow: 0 10px 30px rgba(30, 75, 124, 0.1);
 }
