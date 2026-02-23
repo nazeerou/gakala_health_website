@@ -167,11 +167,26 @@
                     <!-- Mobile Actions (Language + Hamburger) -->
                     <div class="mobile-actions">
                         <!-- Mobile Language Select - Visible on mobile left of hamburger -->
-                        <div class="mobile-lang-wrapper">
-                            <select v-model="locale" class="mobile-lang-select-top">
-                                <option value="en">EN</option>
-                                <option value="sw">SW</option>
-                            </select>
+                         <!-- Mobile Language Select - Radio buttons -->
+                        <div class="mobile-lang-radio-group">
+                            <label class="mobile-lang-radio" :class="{ active: locale === 'en' }">
+                                <input 
+                                    type="radio" 
+                                    v-model="locale" 
+                                    value="en" 
+                                    name="mobile-language"
+                                >
+                                <span class="radio-label">EN</span>
+                            </label>
+                            <label class="mobile-lang-radio" :class="{ active: locale === 'sw' }">
+                                <input 
+                                    type="radio" 
+                                    v-model="locale" 
+                                    value="sw" 
+                                    name="mobile-language"
+                                >
+                                <span class="radio-label">SW</span>
+                            </label>
                         </div>
 
                         <!-- Mobile Menu Button -->
@@ -1098,5 +1113,62 @@ watch(() => route.path, () => {
 .services-mobile-submenu::-webkit-scrollbar-thumb {
     background: var(--primary-light);
     border-radius: 4px;
+}
+
+/* Mobile Language Radio Group */
+.mobile-lang-radio-group {
+    display: flex;
+    align-items: center;
+    background: rgba(30, 75, 124, 0.05);
+    border-radius: 30px;
+    padding: 2px;
+    border: 1px solid rgba(30, 75, 124, 0.2);
+    margin-right: 4px;
+}
+
+.mobile-lang-radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.mobile-lang-radio input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.mobile-lang-radio .radio-label {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.mobile-lang-radio.active {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    box-shadow: 0 2px 8px rgba(30, 75, 124, 0.3);
+}
+
+.mobile-lang-radio.active .radio-label {
+    color: white;
+}
+
+/* Responsive adjustments for mobile radio */
+@media (max-width: 480px) {
+    .mobile-lang-radio {
+        padding: 3px 6px;
+        font-size: 0.7rem;
+    }
+    
+    .mobile-lang-radio-group {
+        margin-right: 2px;
+    }
 }
 </style>
