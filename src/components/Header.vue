@@ -699,11 +699,11 @@ watch(() => route.path, () => {
 
 /* Mobile Language Select - Top */
 .mobile-lang-wrapper {
-    display: none;
+    /* display: none; */
 }
 
 .mobile-lang-select-top {
-    padding: 0.3rem 1.8rem 0.3rem 0.8rem;
+    /* padding: 0.3rem 1.8rem 0.3rem 0.8rem; */
     border-radius: 4px;
     border: 1px solid var(--border-color);
     background: var(--white);
@@ -711,9 +711,9 @@ watch(() => route.path, () => {
     font-weight: 500;
     font-size: 0.85rem;
     cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
+    /* appearance: none; */
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); */
+    /* background-repeat: no-repeat; */
     background-position: right 0.5rem center;
     background-size: 10px;
 }
@@ -737,7 +737,7 @@ watch(() => route.path, () => {
 .mobile-menu-btn span {
     width: 22px;
     height: 2px;
-    background: #161aee;
+    background: #4a4cec;
     border-radius: 2px;
     transition: var(--transition);
 }
@@ -1003,7 +1003,7 @@ watch(() => route.path, () => {
     }
 
     .mobile-lang-wrapper {
-        display: block;
+        /* display: block; */
     }
 
     .nav-container {
@@ -1029,7 +1029,7 @@ watch(() => route.path, () => {
     }
 
     .mobile-lang-select-top {
-        padding: 0.2rem 1.5rem 0.2rem 0.6rem;
+        /* padding: 0.2rem 1.5rem 0.2rem 0.6rem; */
         font-size: 0.8rem;
     }
 }
