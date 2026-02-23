@@ -169,15 +169,6 @@
                         <!-- Mobile Language Select - Visible on mobile left of hamburger -->
                          <!-- Mobile Language Select - Radio buttons -->
                         <div class="mobile-lang-radio-group">
-                            <label class="mobile-lang-radio" :class="{ active: locale === 'en' }">
-                                <input 
-                                    type="radio" 
-                                    v-model="locale" 
-                                    value="en" 
-                                    name="mobile-language"
-                                >
-                                <span class="radio-label">EN</span>
-                            </label>
                             <label class="mobile-lang-radio" :class="{ active: locale === 'sw' }">
                                 <input 
                                     type="radio" 
@@ -186,6 +177,15 @@
                                     name="mobile-language"
                                 >
                                 <span class="radio-label">SW</span>
+                            </label>
+                            <label class="mobile-lang-radio" :class="{ active: locale === 'en' }">
+                                <input 
+                                    type="radio" 
+                                    v-model="locale" 
+                                    value="en" 
+                                    name="mobile-language"
+                                >
+                                <span class="radio-label">EN</span>
                             </label>
                         </div>
 
