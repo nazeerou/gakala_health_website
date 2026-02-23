@@ -297,7 +297,7 @@
                             </transition>
                         </div>
 
-                        <router-link to="/staffs" class="mobile-item" @click="mobileMenuOpen = false">
+                        <router-link to="/staff" class="mobile-item" @click="mobileMenuOpen = false">
                             <i class="fas fa-user-md mobile-icon"></i>
                             {{ t('menu.staffs') }}
                         </router-link>
