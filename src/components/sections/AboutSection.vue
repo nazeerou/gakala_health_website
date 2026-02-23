@@ -11,7 +11,7 @@
                     <img src="/assets/hospital.jpg" :alt="t('about_us.image_alt')" class="about-image">
                     <div class="established-badge">
                         <i class="fas fa-calendar-alt"></i>
-                        <span>{{ t('about_us.established') }} 2015</span>
+                        <span>{{ t('about_us.established') }} 2025</span>
                     </div>
                 </div>
                 <div class="about-content">
