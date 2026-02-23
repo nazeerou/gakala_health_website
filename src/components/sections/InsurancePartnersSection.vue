@@ -64,7 +64,7 @@ const { t } = useI18n()
     right: -10%;
     width: 300px;
     height: 300px;
-    /* background: radial-gradient(circle, rgba(30, 75, 124, 0.03) 0%, transparent 70%); */
+    background: radial-gradient(circle, rgba(30, 75, 124, 0.03) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -318,15 +318,15 @@ const { t } = useI18n()
     }
     
     .bma-simple-title {
-        color: white;
+        /* color: white; */
     }
     
     .partners-subtitle {
-        color: #a0aec0;
+        /* color: #a0aec0; */
     }
     
     .card-simple {
-        background: #2d3748;
+        /* background: #2d3748; */
     }
     
     .nhif-simple {
