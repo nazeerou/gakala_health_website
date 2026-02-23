@@ -175,7 +175,7 @@ const { t } = useI18n()
 
 .news-section {
     padding: 60px 0;
-    background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%);
+    /* background: linear-gradient(135deg, var(--bg-light) 0%, var(--white) 100%); */
 }
 
 .container {
@@ -756,7 +756,7 @@ const { t } = useI18n()
     }
     
     .news-section {
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        /* background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); */
     }
     
     .news-item,
