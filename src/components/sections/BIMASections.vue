@@ -37,7 +37,7 @@
 <style scoped>
 .bma-simple-section {
     padding: 10px 10px;
-    background: #f8fafd;
+    /* background: #f8fafd; */
     min-height: 20vh;
     display: flex;
     align-items: center;

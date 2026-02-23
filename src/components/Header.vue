@@ -275,7 +275,7 @@
                                     <router-link to="/about" class="mobile-subitem" @click="mobileMenuOpen = false">
                                         {{ t('about.us') }}
                                     </router-link>
-                                    <router-link to="/mission" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                    <router-link to="/mission-vision" class="mobile-subitem" @click="mobileMenuOpen = false">
                                         {{ t('about.mission') }}
                                     </router-link>
                                 </div>
