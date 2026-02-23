@@ -488,7 +488,7 @@ const { t } = useI18n()
     /* Dark mode icon background */
     .value-icon {
         background: rgba(255, 255, 255, 0.08);
-        color: #f1f5f9;
+        /* color: #f1f5f9; */
     }
     
     .value-card:hover .value-icon {
