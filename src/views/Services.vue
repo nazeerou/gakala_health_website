@@ -568,7 +568,6 @@ const { t } = useI18n()
     .page-header::after {
         display: none;
     }
-    
     .service-card {
         break-inside: avoid;
         box-shadow: none;
