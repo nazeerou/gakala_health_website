@@ -240,7 +240,7 @@ const { t } = useI18n()
 }
 
 .news-item {
-    background: var(--white);
+    /* background: var(--white); */
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
