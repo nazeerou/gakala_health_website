@@ -64,7 +64,7 @@ const { t } = useI18n()
     right: -10%;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(30, 75, 124, 0.03) 0%, transparent 70%);
+    /* background: radial-gradient(circle, rgba(30, 75, 124, 0.03) 0%, transparent 70%); */
     border-radius: 50%;
     pointer-events: none;
 }
@@ -314,7 +314,7 @@ const { t } = useI18n()
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
     .bma-simple-section {
-        background: linear-gradient(135deg, #1a2634 0%, #2d3748 100%);
+        /* background: linear-gradient(135deg, #1a2634 0%, #2d3748 100%); */
     }
     
     .bma-simple-title {
