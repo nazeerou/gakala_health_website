@@ -424,6 +424,8 @@ const { t } = useI18n()
 @media (max-width: 480px) {
     .page-title {
         font-size: 1.6rem;
+        padding-top: 30px;
+
     }
     
     .card-title {
@@ -452,7 +454,7 @@ const { t } = useI18n()
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
     .mission-section {
-        background: #0f172a;
+        /* background: #0f172a; */
     }
     
     .page-header {
@@ -462,19 +464,19 @@ const { t } = useI18n()
     .mission-card,
     .vision-card,
     .value-card {
-        background: #1e293b;
-        border-color: #334155;
+        /* background: #1e293b; */
+        /* border-color: #334155; */
     }
     
     .card-title,
     .values-section-title,
     .value-title {
-        color: #f1f5f9;
+        /* color: #f1f5f9; */
     }
     
     .card-text,
     .value-description {
-        color: #cbd5e1;
+        /* color: #cbd5e1; */
     }
     
     .mission-card:hover,

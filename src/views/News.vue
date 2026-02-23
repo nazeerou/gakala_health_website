@@ -759,6 +759,7 @@ defineEmits(['open-external'])
 @media (max-width: 480px) {
     .page-title {
         font-size: 1.6rem;
+        padding-top: 30px;
     }
     
     .news-title {

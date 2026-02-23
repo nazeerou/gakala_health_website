@@ -357,6 +357,7 @@ const { t } = useI18n()
 @media (max-width: 480px) {
     .page-title {
         font-size: 1.6rem;
+        padding-top: 30px;
     }
     
     .staff-name {
@@ -375,16 +376,16 @@ const { t } = useI18n()
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
     .staff-section {
-        background: #0f172a;
+        /* background: #0f172a; */
     }
     
     .page-header {
-        background: linear-gradient(135deg, #0a1a2f, #1a3a5a);
+        /* background: linear-gradient(135deg, #0a1a2f, #1a3a5a); */
     }
     
     .staff-card {
-        background: #1e293b;
-        border-color: #334155;
+        /* background: #1e293b; */
+        /* border-color: #334155; */
     }
     
     .section-title,
