@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        
+
         <div class="contact-section">
             <div class="container mx-auto px-6">
                 <div class="contact-grid">
@@ -39,7 +39,7 @@
                                         type="email" 
                                         v-model="contactForm.email" 
                                         class="form-input" 
-                                        :placeholder="t('contact.form.email')"
+                                        placeholder="jjoe@gmail.com"
                                         required
                                     >
                                 </div>
@@ -125,8 +125,8 @@
                                 </div>
                                 <div class="info-content">
                                     <h3 class="info-title">{{ t('contact.info.email.title') }}</h3>
-                                    <a href="mailto:info@gakalahealth.co.tz" class="info-link">{{ t('contact.info.email.general') }}</a>
-                                    <a href="mailto:appointments@gakalahealth.co.tz" class="info-link">{{ t('contact.info.email.appointments') }}</a>
+                                    <a href="mailto:info@gakalahealth.co.tz" class="info-link">info@gakalahealth.co.tz</a>
+                                    <a href="mailto:appointments@gakalahealth.co.tz" class="info-link">appointment@gakalahealth.co.tz</a>
                                 </div>
                             </div>
                             

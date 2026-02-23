@@ -40,14 +40,6 @@
                 <div class="values-section">
                     <h3 class="values-section-title">{{ t('mission.values.title') }}</h3>
                     <div class="values-grid">
-                        <!-- Patient-Centered Care -->
-                        <div class="value-card">
-                            <div class="value-icon">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <h4 class="value-title">{{ t('mission.values.list[4].title') }}</h4>
-                            <p class="value-description">{{ t('mission.values.list[4].description') }}</p>
-                        </div>
 
                         <!-- Compassion -->
                         <div class="value-card">
@@ -84,8 +76,18 @@
                             <h4 class="value-title">{{ t('mission.values.list[3].title') }}</h4>
                             <p class="value-description">{{ t('mission.values.list[3].description') }}</p>
                         </div>
+
+                                 <!-- Patient-Centered Care -->
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4 class="value-title">{{ t('mission.values.list[4].title') }}</h4>
+                            <p class="value-description">{{ t('mission.values.list[4].description') }}</p>
+                        </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </div>
