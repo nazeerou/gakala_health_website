@@ -544,7 +544,7 @@ const { t } = useI18n()
     
     .section-description,
     .service-description {
-        color: #cbd5e1;
+        /* color: #cbd5e1; */
     }
     
     .read-more-link {
