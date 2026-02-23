@@ -20,19 +20,68 @@ const routes = [
       { 
         path: 'services', 
         component: Services,
-        children: [
-          { path: 'opd', component: ServiceDetail },
-          { path: 'ipd', component: ServiceDetail },
-          { path: 'maternity', component: ServiceDetail },
-          { path: 'emergency', component: ServiceDetail },
-          { path: 'theatre', component: ServiceDetail },
-          { path: 'laboratory', component: ServiceDetail },
-          { path: 'radiology', component: ServiceDetail },
-          { path: 'pharmacy', component: ServiceDetail },
-          { path: 'icu', component: ServiceDetail },
-          { path: 'specialized-clinics', component: ServiceDetail }
-        ]
       },
+       {
+        path: '/services/opd',
+        name: 'OPD',
+        component: ServiceDetail,
+        meta: { title: 'OPD' }
+      },
+       {
+        path: '/services/ipd',
+        name: 'IPD',
+        component: ServiceDetail,
+        meta: { title: 'IPD' }
+      },
+      {
+        path: '/services/maternity',
+        name: 'Maternity',
+        component: ServiceDetail,
+        meta: { title: 'Maternity' }
+      },
+      {
+        path: '/services/emergency',
+        name: 'Emergency',
+        component: ServiceDetail,
+        meta: { title: 'Emergency' }
+      },
+      {
+        path: '/services/theatre',
+        name: 'Theatre & Surgery',
+        component: ServiceDetail,
+        meta: { title: 'Theatre' }
+      },
+      {
+        path: '/services/pharmacy',
+        name: 'Pharmacy',
+        component: ServiceDetail,
+        meta: { title: 'Pharmacy' }
+      },
+      {
+        path: '/services/laboratory',
+        name: 'Laboratory',
+        component: ServiceDetail,
+        meta: { title: 'Labs' }
+      },
+      {
+        path: '/services/radiology',
+        name: 'radiology',
+        component: ServiceDetail,
+        meta: { title: 'radiology' }
+      },
+      {
+        path: '/services/icu',
+        name: 'ICU',
+        component: ServiceDetail,
+        meta: { title: 'ICU' }
+      },
+       {
+        path: '/services/specialized-clinics',
+        name: 'Specialized Clinics',
+        component: ServiceDetail,
+        meta: { title: 'Specialized Clinics' }
+      },
+
       { path: 'contact', component: Contact },
       { path: 'mission-vision', component: Mission },
       { path: 'news', component: News },

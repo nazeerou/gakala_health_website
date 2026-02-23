@@ -464,7 +464,7 @@ const { t } = useI18n()
 
 @media (max-width: 768px) {
     .page-header {
-        padding: 60px 0 30px;
+        padding: 80px 0 30px;
     }
     
     .page-title {
@@ -510,6 +510,7 @@ const { t } = useI18n()
 @media (max-width: 480px) {
     .page-title {
         font-size: 1.6rem;
+        padding-top: 30px;
     }
     
     .service-title {
@@ -532,13 +533,13 @@ const { t } = useI18n()
     }
     
     .service-card {
-        background: #1e293b;
-        border-color: #334155;
+        /* background: #1e293b; */
+        /* border-color: #334155; */
     }
     
     .section-title,
     .service-title {
-        color: #f1f5f9;
+        /* color: #f1f5f9; */
     }
     
     .section-description,
