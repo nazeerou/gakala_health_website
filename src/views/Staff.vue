@@ -390,13 +390,13 @@ const { t } = useI18n()
     
     .section-title,
     .staff-name {
-        color: #f1f5f9;
+        /* color: #f1f5f9; */
     }
     
     .section-description,
     .staff-description,
     .statement-text {
-        color: #cbd5e1;
+        /* color: #cbd5e1; */
     }
     
     .staff-role {
