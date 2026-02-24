@@ -709,7 +709,7 @@ const { t } = useI18n()
     }
     
     .news-image-wrapper {
-        height: 160px;
+        height: 290px;
     }
     
     .news-item-title {

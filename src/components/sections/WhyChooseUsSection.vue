@@ -524,5 +524,9 @@ const { t } = useI18n()
     .bg-ornament {
         display: none;
     }
+
+     .card-image-wrapper {
+        height: 300px;
+    }
 }
 </style>
