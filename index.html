@@ -339,11 +339,11 @@
         // Hide loading when app is ready
         window.addEventListener('load', function() {
             // Give Vue a moment to mount
-            setTimeout(hideLoading, 5000);
+            setTimeout(hideLoading, 10000);
         });
 
         // Fallback: hide after 3 seconds no matter what
-        setTimeout(hideLoading, 6000);
+        setTimeout(hideLoading, 3000);
 
         // Listen for app ready event (if you emit one from Vue)
         document.addEventListener('app-ready', hideLoading);
