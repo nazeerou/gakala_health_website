@@ -575,25 +575,25 @@ const serviceData = computed(() => {
 /* ===== DARK MODE SUPPORT ===== */
 @media (prefers-color-scheme: dark) {
     .bg-white {
-        background-color: #0f172a;
+        /* background-color: #0f172a; */
     }
     
     .clinic-content {
-        background: #1e293b;
-        border-color: #334155;
+        /* background: #1e293b; */
+        /* border-color: #334155; */
     }
     
     .clinic-title {
-        color: #f1f5f9;
+        /* color: #f1f5f9; */
     }
     
     .clinic-text,
     .features-list li {
-        color: #cbd5e1;
+        /* color: #cbd5e1; */
     }
     
     .features-title {
-        color: #f1f5f9;
+        /* color: #f1f5f9; */
     }
     
     .clinic-subtitle {
