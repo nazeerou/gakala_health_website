@@ -597,9 +597,15 @@ const serviceData = computed(() => {
     }
     
     .clinic-subtitle {
-        background: rgba(255, 255, 255, 0.05);
+        /* background: rgba(255, 255, 255, 0.05);
         color: #f1f5f9;
-        border-color: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.1); */
+    color: #1e4b7c;
+    /* font-weight: 600;
+    font-size: 1rem; */
+    /* margin-top: 1rem; */
+    /* padding: 5px 12px; */
+    background: rgba(30, 75, 124, 0.08);
     }
 }
 
