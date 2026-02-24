@@ -90,40 +90,6 @@
             }
         }
         
-        /* Pulse circle */
-        .pulse-circle {
-            width: 100px;
-            height: 100px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: pulse 2s infinite;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .pulse-circle i {
-            font-size: 3rem;
-            color: white;
-        }
-        
-        @keyframes pulse {
-            0% {
-                transform: scale(0.95);
-                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
-            }
-            70% {
-                transform: scale(1);
-                box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
-            }
-            100% {
-                transform: scale(0.95);
-                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-            }
-        }
-        
         .loading-text {
             color: white;
             margin-top: 20px;
@@ -163,29 +129,6 @@
             100% { width: 100%; }
         }
         
-        /* Logo container */
-        .loading-logo {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 20px;
-            background: white;
-            border-radius: 50%;
-            padding: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            animation: logoPulse 2s infinite;
-        }
-        
-        .loading-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-        
-        @keyframes logoPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
-            50% { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
-        }
-        
         /* EKG Line Animation */
         .ekg-line {
             width: 200px;
@@ -223,7 +166,6 @@
     <!-- Medical-themed loading indicator -->
     <div id="app-loading" class="app-loading">
         <div class="loading-container">
-            <!-- Option 1: Medical Heart Beat Loader -->
             <div class="medical-loader">
                 <div class="heart-beat">
                     <div class="line line1"></div>
@@ -234,15 +176,6 @@
                 </div>
             </div>
             
-            <!-- Option 2: Pulse Circle with Logo (uncomment to use) -->
-            <!-- <div class="loading-logo">
-                <img src="/assets/logo_2_gakala.png" alt="Gakala Health Centre">
-            </div>
-            <div class="pulse-circle">
-                <i class="fas fa-heartbeat"></i>
-            </div> -->
-            
-            <!-- EKG Line Animation -->
             <div class="ekg-line">
                 <svg viewBox="0 0 200 50" preserveAspectRatio="none">
                     <path class="ekg-path" d="M0,25 L20,25 L30,10 L40,40 L50,25 L70,25 L80,10 L90,40 L100,25 L120,25 L130,10 L140,40 L150,25 L170,25 L180,10 L190,40 L200,25" />
@@ -250,11 +183,10 @@
             </div>
             
             <div class="loading-text">Gakala Health Centre</div>
-            <div class="loading-subtext">Loading... please wait</div>
+            <div class="loading-subtext" id="loading-status">Loading ...</div>
             
-            <!-- Progress bar -->
             <div class="loading-progress">
-                <div class="loading-progress-bar"></div>
+                <div class="loading-progress-bar" id="progress-bar"></div>
             </div>
         </div>
     </div>
@@ -282,7 +214,7 @@
         <img src="/assets/nursing.jpg" alt="preload">
     </div>
     
-    <!-- Load Vue and Dependencies - order matters! -->
+    <!-- Load Vue and Dependencies -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://unpkg.com/vue-router@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -290,22 +222,34 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     
-    <!-- Main App - load as module WITHOUT defer -->
+    <!-- Main App -->
     <script type="module" src="/src/main.js"></script>
     
     <script>
+        // Track loading progress
+        let resourcesLoaded = 0;
+        const totalResources = 20; // Approximate number of resources to load
+        const loadingStatus = document.getElementById('loading-status');
+        const progressBar = document.getElementById('progress-bar');
+        
+        function updateProgress(message, progress) {
+            if (loadingStatus) loadingStatus.textContent = message;
+            if (progressBar) progressBar.style.width = progress + '%';
+        }
+
         // Function to hide loading indicator
         function hideLoading() {
             const loader = document.getElementById('app-loading');
             if (loader) {
+                updateProgress('Complete!', 100);
                 loader.classList.add('fade-out');
                 setTimeout(() => {
                     loader.classList.add('hidden');
-                }, 500); // Match with CSS transition
+                }, 500);
             }
         }
 
-        // Preload images function
+        // Preload images and track completion
         function preloadImages() {
             const images = [
                 '/assets/logo_2_gakala.png',
@@ -327,26 +271,60 @@
                 '/assets/nursing.jpg'
             ];
             
+            let loadedCount = 0;
+            const totalImages = images.length;
+            
             images.forEach(src => {
                 const img = new Image();
+                img.onload = img.onerror = () => {
+                    loadedCount++;
+                    const progress = Math.floor((loadedCount / totalImages) * 70); // Images = 70% of progress
+                    updateProgress(`Loading ... ${loadedCount}/${totalImages}`, progress);
+                };
                 img.src = src;
             });
+            
+            return totalImages;
         }
 
-        // Start preloading images immediately
-        preloadImages();
+        // Start preloading images
+        const imageCount = preloadImages();
+        updateProgress('Initializing...', 10);
 
-        // Hide loading when app is ready
+        // Check when Vue is mounted
+        let appMounted = false;
+        window.vueMounted = function() {
+            appMounted = true;
+            updateProgress('Rendering content...', 90);
+            
+            // Check if we can hide loader
+            if (appMounted) {
+                // Small delay to ensure rendering is complete
+                setTimeout(hideLoading, 300);
+            }
+        };
+
+        // Listen for window load (all resources including fonts)
         window.addEventListener('load', function() {
-            // Give Vue a moment to mount
-            setTimeout(hideLoading, 10000);
+            updateProgress('Resources loaded', 85);
+            resourcesLoaded++;
         });
 
-        // Fallback: hide after 3 seconds no matter what
-        setTimeout(hideLoading, 3000);
+        // Check every 100ms if app is mounted and we're ready
+        const checkInterval = setInterval(() => {
+            if (appMounted) {
+                clearInterval(checkInterval);
+            }
+        }, 100);
 
-        // Listen for app ready event (if you emit one from Vue)
-        document.addEventListener('app-ready', hideLoading);
+        // Fallback: hide after 5 seconds max
+        setTimeout(() => {
+            if (!appMounted) {
+                console.warn('Forcing loader hide after timeout');
+                updateProgress('Almost ready...', 95);
+                setTimeout(hideLoading, 500);
+            }
+        }, 5000);
     </script>
 </body>
 </html>

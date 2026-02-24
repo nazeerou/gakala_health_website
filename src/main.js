@@ -20,3 +20,13 @@ createApp(App)
   .use(router)
   .use(i18n)
   .mount('#app')
+
+  // In your main.js or App.vue mounted() hook
+App.mount('#app');
+// Call this when you're sure the app is ready
+if (window.vueMounted) {
+    // Small delay to ensure first paint
+    setTimeout(() => {
+        window.vueMounted();
+    }, 100);
+}
