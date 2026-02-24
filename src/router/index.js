@@ -9,7 +9,6 @@ import Mission from '../views/Mission.vue'
 import News from '../views/News.vue'
 import Staff from '../views/Staff.vue'
 import ServiceDetail from '../views/ServiceDetail.vue'
-import SpecializedClinics from '../views/SpecializedClinics.vue'
 
 const routes = [
   {
