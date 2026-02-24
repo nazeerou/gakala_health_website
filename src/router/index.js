@@ -79,7 +79,7 @@ const routes = [
        {
         path: '/services/specialized-clinics',
         name: 'Specialized Clinics',
-        component: SpecializedClinics,
+        component: ServiceDetail,
         meta: { title: 'Specialized Clinics' }
       },
 

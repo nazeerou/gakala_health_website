@@ -557,5 +557,175 @@
                 "Referral coordination"
             ]
         }
+    },
+    "service": {
+        "breadcrumb": {
+            "home": "Home",
+            "services": "Services"
+        },
+        "features_title": "Key Services:",
+        "opd": {
+            "pageTitle": "Outpatient Department",
+            "breadcrumb": "OPD",
+            "sectionTitle": "OutPatient Services",
+            "title": "Outpatient Department (OPD)",
+            "subtitle": "General Medical Care",
+            "description": "General consultations, diagnosis, treatment, and follow-up care for common ailments and chronic conditions.",
+            "features": [
+                "General medical consultations",
+                "Diagnosis and treatment",
+                "Follow-up care",
+                "Chronic disease management",
+                "Health screenings"
+            ]
+        },
+        "ipd": {
+            "pageTitle": "Inpatient Department",
+            "breadcrumb": "IPD",
+            "sectionTitle": "Inpatient Services",
+            "title": "Inpatient Department (IPD)",
+            "subtitle": "Hospital Admission Care",
+            "description": "Admission and continuous care for patients requiring hospitalization, intensive care, or post-operative recovery.",
+            "features": [
+                "24/7 nursing care",
+                "Private and shared wards",
+                "Post-operative recovery",
+                "Critical care monitoring",
+                "Specialized medical attention"
+            ]
+        },
+        "maternity": {
+            "pageTitle": "Maternity Care",
+            "breadcrumb": "Maternity",
+            "sectionTitle": "Maternity Care Services",
+            "title": "Maternity Care",
+            "subtitle": "Mother & Child Care",
+            "description": "Comprehensive care for mothers and newborns throughout pregnancy, delivery, and postnatal period.",
+            "features": [
+                "Antenatal care",
+                "Safe delivery services",
+                "Postnatal care",
+                "Newborn screening",
+                "Breastfeeding support"
+            ]
+        },
+        "emergency": {
+            "pageTitle": "Emergency Services",
+            "breadcrumb": "Emergency",
+            "sectionTitle": "Emergency Services",
+            "title": "Emergency Services",
+            "subtitle": "24/7 Emergency Care",
+            "description": "24/7 emergency department equipped to handle critical cases and medical emergencies.",
+            "features": [
+                "24/7 availability",
+                "Triage and rapid assessment",
+                "Emergency resuscitation",
+                "Trauma care",
+                "Stabilization for referrals"
+            ]
+        },
+        "theatre": {
+            "pageTitle": "Theatre & Surgery",
+            "breadcrumb": "Theatre",
+            "sectionTitle": "Theatre & Surgery Services",
+            "title": "Theatre & Surgery",
+            "subtitle": "Surgical Services",
+            "description": "Well-equipped operating theater providing safe surgical procedures under anesthesia.",
+            "features": [
+                "General surgery",
+                "Orthopedic procedures",
+                "Emergency surgeries",
+                "Qualified surgical team",
+                "Post-operative care"
+            ]
+        },
+        "laboratory": {
+            "pageTitle": "Laboratory Services",
+            "breadcrumb": "Laboratory",
+            "sectionTitle": "Labs Services",
+            "title": "Laboratory Services",
+            "subtitle": "Diagnostic Testing",
+            "description": "Diagnostic testing for disease diagnosis, treatment monitoring, and health screening.",
+            "features": [
+                "Blood tests",
+                "Urinalysis",
+                "Microbiology tests",
+                "Rapid diagnostic tests",
+                "Quality assured results"
+            ]
+        },
+        "radiology": {
+            "pageTitle": "Radiology Services",
+            "breadcrumb": "Radiology",
+            "sectionTitle": "Radiology Services",
+            "title": "Radiology Services",
+            "subtitle": "Medical Imaging",
+            "description": "Advanced imaging services for accurate diagnosis and treatment planning.",
+            "features": [
+                "X-ray services",
+                "Ultrasound scans",
+                "CT scans"
+            ]
+        },
+        "pharmacy": {
+            "pageTitle": "Pharmacy",
+            "breadcrumb": "Pharmacy",
+            "sectionTitle": "Pharmacy Services",
+            "title": "Pharmacy",
+            "subtitle": "Medication Services",
+            "description": "Quality assured medicines dispensed with professional guidance and personalized care.",
+            "features": [
+                "Prescription filling",
+                "Medication counseling",
+                "Quality medicines",
+                "Emergency medication",
+                "Chronic disease medications"
+            ]
+        },
+        "icu": {
+            "pageTitle": "Intensive Care Unit",
+            "breadcrumb": "ICU",
+            "sectionTitle": "Our Services",
+            "title": "ICU / HDU",
+            "subtitle": "Critical Care",
+            "description": "Specialized care for critically ill patients requiring intensive monitoring and support.",
+            "features": [
+                "24/7 intensive care",
+                "Vital signs monitoring",
+                "Life support systems",
+                "Specialized nursing",
+                "Critical care specialists"
+            ]
+        },
+        "specialized": {
+            "pageTitle": "Specialized Clinics",
+            "breadcrumb": "Specialized Clinics",
+            "sectionTitle": "Our Specialized Clinics",
+            "title": "Specialized Clinics",
+            "subtitle": "Specialist Care",
+            "description": "Specialized medical care with expert doctors for specific health conditions.",
+            "features": [
+                "Heart Clinic",
+                "Brain & Nerve Clinic",
+                "Children's Clinic",
+                "Bone & Joint Clinic",
+                "Diabetes Clinic"
+            ]
+        },
+        "default": {
+            "pageTitle": "Medical Service",
+            "breadcrumb": "Service",
+            "sectionTitle": "Our Services",
+            "title": "Medical Service",
+            "subtitle": "Quality Healthcare",
+            "description": "Expert medical care with compassionate service.",
+            "features": [
+                "Quality healthcare",
+                "Expert doctors",
+                "Modern facilities",
+                "Patient-centered care",
+                "24/7 service"
+            ]
+        }
     }
 }

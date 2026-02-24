@@ -1,142 +1,218 @@
 <template>
-  <div>
-    <div class="page-header">
-      <div class="container mx-auto px-6">
-        <h1 class="page-title">{{ serviceData.name }}</h1>
-        <div class="page-breadcrumb">
-          <router-link to="/">{{ t('services_page.breadcrumb.home') }}</router-link>
-          <span class="separator">›</span>
-          <router-link to="/services">{{ t('services_page.breadcrumb.services') }}</router-link>
-          <span class="separator">›</span>
-          <span>{{ serviceData.name }}</span>
+    <div>
+        <!-- Header -->
+        <div class="page-header">
+            <div class="container mx-auto px-6">
+                <h1 class="page-title">{{ serviceData.pageTitle }}</h1>
+                <div class="page-breadcrumb">
+                    <router-link to="/">{{ t('service.breadcrumb.home') }}</router-link>
+                    <i class="fas fa-chevron-right text-sm"></i>
+                    <router-link to="/services">{{ t('service.breadcrumb.services') }}</router-link>
+                    <i class="fas fa-chevron-right text-sm"></i>
+                    <span>{{ serviceData.breadcrumb }}</span>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="service-detail-section">
-      <div class="container mx-auto px-6">
-        <div class="service-detail-card">
-          <div class="service-detail-header">
-            <div class="service-detail-icon" :style="{ background: `linear-gradient(135deg, #1e4b7c, #2e6ca3)` }">
-              <i :class="serviceData.icon"></i>
-            </div>
-            <h2 class="service-detail-title">{{ serviceData.name }}</h2>
-          </div>
+        <!-- Content -->
+        <div class="py-20 bg-white">
+            <div class="container mx-auto px-6">
 
-          <div class="service-detail-content">
-            <p class="service-detail-description">{{ serviceData.full_description }}</p>
-            
-            <div v-if="serviceData.features" class="service-features-section">
-              <h3 class="features-title">{{ t('services_page.features_title') }}</h3>
-              <ul class="features-list">
-                <li v-for="(feature, index) in serviceData.features" :key="index">
-                  <i class="fas fa-check-circle"></i>
-                  <span>{{ feature }}</span>
-                </li>
-              </ul>
-            </div>
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">
+                        {{ serviceData.sectionTitle }}
+                    </h2>
+                </div>
 
-            <div class="service-cta">
-              <button class="btn-primary" @click="$emit('open-appointment')">
-                {{ t('services_page.book_appointment') }} <i class="fas fa-arrow-right"></i>
-              </button>
+                <!-- Service Item -->
+                <div class="clinic-row mb-16">
+                    
+                    <!-- LEFT: Image -->
+                    <div class="clinic-image">
+                        <img :src="serviceData.image" :alt="serviceData.title">
+                    </div>
+
+                    <!-- RIGHT: Description -->
+                    <div class="clinic-content">
+                        <h3 class="clinic-title">{{ serviceData.title }}</h3>
+                        <span class="clinic-subtitle">{{ serviceData.subtitle }}</span>
+
+                        <p class="clinic-text">
+                            {{ serviceData.description }}
+                        </p>
+
+                        <!-- Features Section -->
+                        <div class="service-features" v-if="serviceData.features && serviceData.features.length > 0">
+                            <!-- <h4 class="features-title">{{ t('service.features_title') }}</h4> -->
+                            <!-- <ul class="features-list">
+                                <li v-for="(feature, index) in serviceData.features" :key="index">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>{{ feature }}</span>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
 </template>
 
 <script setup>
 import { computed } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 const route = useRoute()
-const emit = defineEmits(['open-appointment'])
 
-// Get service ID from route params
-// Get the service ID from the URL
-const serviceId = computed(() => route.params.serviceId)
-
-// Log to see what's being received
-console.log('Service ID from route:', serviceId.value)
-
-// Service data mapping
+// Service data mapping for all your routes
 const serviceData = computed(() => {
-  const services = {
-    opd: {
-      name: t('services_page.opd.name'),
-      icon: 'fas fa-user-injured',
-      full_description: t('services_page.opd.full_description'),
-      features: t('services_page.opd.features', { returnObjects: true })
-    },
-    ipd: {
-      name: t('services_page.ipd.name'),
-      icon: 'fas fa-procedures',
-      full_description: t('services_page.ipd.full_description'),
-      features: t('services_page.ipd.features', { returnObjects: true })
-    },
-    maternity: {
-      name: t('services_page.maternity.name'),
-      icon: 'fas fa-female',
-      full_description: t('services_page.maternity.full_description'),
-      features: t('services_page.maternity.features', { returnObjects: true })
-    },
-    emergency: {
-      name: t('services_page.emergency.name'),
-      icon: 'fas fa-ambulance',
-      full_description: t('services_page.emergency.full_description'),
-      features: t('services_page.emergency.features', { returnObjects: true })
-    },
-    theatre: {
-      name: t('services_page.theatre.name'),
-      icon: 'fas fa-syringe',
-      full_description: t('services_page.theatre.full_description'),
-      features: t('services_page.theatre.features', { returnObjects: true })
-    },
-    laboratory: {
-      name: t('services_page.laboratory.name'),
-      icon: 'fas fa-flask',
-      full_description: t('services_page.laboratory.full_description'),
-      features: t('services_page.laboratory.features', { returnObjects: true })
-    },
-    radiology: {
-      name: t('services_page.radiology.name'),
-      icon: 'fas fa-x-ray',
-      full_description: t('services_page.radiology.full_description'),
-      features: t('services_page.radiology.features', { returnObjects: true })
-    },
-    pharmacy: {
-      name: t('services_page.pharmacy.name'),
-      icon: 'fas fa-pills',
-      full_description: t('services_page.pharmacy.full_description'),
-      features: t('services_page.pharmacy.features', { returnObjects: true })
-    },
-    icu: {
-      name: t('services_page.icu.name'),
-      icon: 'fas fa-heartbeat',
-      full_description: t('services_page.icu.full_description'),
-      features: t('services_page.icu.features', { returnObjects: true })
-    },
-    'specialized-clinics': {
-      name: t('services_page.specialized.name'),
-      icon: 'fas fa-stethoscope',
-      full_description: t('services_page.specialized.full_description'),
-      features: t('services_page.specialized.features', { returnObjects: true })
+    const serviceId = route.path.split('/').pop() 
+    
+    const services = {
+        // Outpatient Department
+        opd: {
+            pageTitle: t('service.opd.pageTitle'),
+            breadcrumb: t('service.opd.breadcrumb'),
+            sectionTitle: t('service.opd.sectionTitle'),
+            title: t('service.opd.title'),
+            subtitle: t('service.opd.subtitle'),
+            description: t('service.opd.description'),
+            features: t('service.opd.features', { returnObjects: true }),
+            image: '../../assets/outpatient.jpg'
+        },
+        
+        // Inpatient Department
+        ipd: {
+            pageTitle: t('service.ipd.pageTitle'),
+            breadcrumb: t('service.ipd.breadcrumb'),
+            sectionTitle: t('service.ipd.sectionTitle'),
+            title: t('service.ipd.title'),
+            subtitle: t('service.ipd.subtitle'),
+            description: t('service.ipd.description'),
+            features: t('service.ipd.features', { returnObjects: true }),
+            image: '../../assets/img2.jpg'
+        },
+        
+        // Maternity Care
+        maternity: {
+            pageTitle: t('service.maternity.pageTitle'),
+            breadcrumb: t('service.maternity.breadcrumb'),
+            sectionTitle: t('service.maternity.sectionTitle'),
+            title: t('service.maternity.title'),
+            subtitle: t('service.maternity.subtitle'),
+            description: t('service.maternity.description'),
+            features: t('service.maternity.features', { returnObjects: true }),
+            image: '../../assets/maternity3.jpg'
+        },
+        
+        // Emergency Services
+        emergency: {
+            pageTitle: t('service.emergency.pageTitle'),
+            breadcrumb: t('service.emergency.breadcrumb'),
+            sectionTitle: t('service.emergency.sectionTitle'),
+            title: t('service.emergency.title'),
+            subtitle: t('service.emergency.subtitle'),
+            description: t('service.emergency.description'),
+            features: t('service.emergency.features', { returnObjects: true }),
+            image: '../../assets/img2.jpg'
+        },
+        
+        // Theatre & Surgery
+        theatre: {
+            pageTitle: t('service.theatre.pageTitle'),
+            breadcrumb: t('service.theatre.breadcrumb'),
+            sectionTitle: t('service.theatre.sectionTitle'),
+            title: t('service.theatre.title'),
+            subtitle: t('service.theatre.subtitle'),
+            description: t('service.theatre.description'),
+            features: t('service.theatre.features', { returnObjects: true }),
+            image: '../../assets/img4.jpg'
+        },
+        
+        // Laboratory Services
+        laboratory: {
+            pageTitle: t('service.laboratory.pageTitle'),
+            breadcrumb: t('service.laboratory.breadcrumb'),
+            sectionTitle: t('service.laboratory.sectionTitle'),
+            title: t('service.laboratory.title'),
+            subtitle: t('service.laboratory.subtitle'),
+            description: t('service.laboratory.description'),
+            features: t('service.laboratory.features', { returnObjects: true }),
+            image: '../../assets/img5.jpg'
+        },
+        
+        // Radiology Services
+        radiology: {
+            pageTitle: t('service.radiology.pageTitle'),
+            breadcrumb: t('service.radiology.breadcrumb'),
+            sectionTitle: t('service.radiology.sectionTitle'),
+            title: t('service.radiology.title'),
+            subtitle: t('service.radiology.subtitle'),
+            description: t('service.radiology.description'),
+            features: t('service.radiology.features', { returnObjects: true }),
+            image: '../../assets/img7.jpg'
+        },
+        
+        // Pharmacy
+        pharmacy: {
+            pageTitle: t('service.pharmacy.pageTitle'),
+            breadcrumb: t('service.pharmacy.breadcrumb'),
+            sectionTitle: t('service.pharmacy.sectionTitle'),
+            title: t('service.pharmacy.title'),
+            subtitle: t('service.pharmacy.subtitle'),
+            description: t('service.pharmacy.description'),
+            features: t('service.pharmacy.features', { returnObjects: true }),
+            image: '../../assets/img10.jpg'
+        },
+        
+        // ICU / HDU
+        icu: {
+            pageTitle: t('service.icu.pageTitle'),
+            breadcrumb: t('service.icu.breadcrumb'),
+            sectionTitle: t('service.icu.sectionTitle'),
+            title: t('service.icu.title'),
+            subtitle: t('service.icu.subtitle'),
+            description: t('service.icu.description'),
+            features: t('service.icu.features', { returnObjects: true }),
+            image: '../../assets/icu.jpg'
+        },
+        
+        // Specialized Clinics 
+        'specialized-clinics': {
+            pageTitle: t('service.specialized.pageTitle'),
+            breadcrumb: t('service.specialized.breadcrumb'),
+            sectionTitle: t('service.specialized.sectionTitle'),
+            title: t('service.specialized.title'),
+            subtitle: t('service.specialized.subtitle'),
+            description: t('service.specialized.description'),
+            features: t('service.specialized.features', { returnObjects: true }),
+            image: '../../assets/nursing.jpg'
+        },
+        
+        // Default fallback
+        default: {
+            pageTitle: t('service.default.pageTitle'),
+            breadcrumb: t('service.default.breadcrumb'),
+            sectionTitle: t('service.default.sectionTitle'),
+            title: t('service.default.title'),
+            subtitle: t('service.default.subtitle'),
+            description: t('service.default.description'),
+            features: t('service.default.features', { returnObjects: true }),
+            image: '../../assets/default-service.jpg'
+        }
     }
-  }
-  
-  return services[serviceId.value] || services.opd
+    
+    return services[serviceId] || services.default
 })
 </script>
 
 <style scoped>
+/* ===== PAGE HEADER STYLES ===== */
 .page-header {
-    background: linear-gradient(135deg, #0a2a45, #1e4b7c);
-    padding: 80px 0 40px;
+    background: linear-gradient(135deg, #1e4b7c 0%, #0f2f4f 100%);
+    padding: 120px 0 60px;
     color: white;
     text-align: center;
     position: relative;
@@ -146,36 +222,36 @@ const serviceData = computed(() => {
 .page-header::before {
     content: '';
     position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 400px;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.03);
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
-    animation: float 20s infinite;
+    animation: rotate 30s linear infinite;
 }
 
 .page-header::after {
     content: '';
     position: absolute;
-    bottom: -50%;
-    left: -10%;
-    width: 400px;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.03);
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
-    animation: float 25s infinite reverse;
+    animation: rotate 25s linear infinite reverse;
 }
 
-@keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(20px, -20px); }
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .page-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     position: relative;
     z-index: 2;
     letter-spacing: -0.02em;
@@ -185,17 +261,11 @@ const serviceData = computed(() => {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.95rem;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
     position: relative;
     z-index: 2;
-}
-
-.page-breadcrumb .separator {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 1.2rem;
-    line-height: 1;
 }
 
 .page-breadcrumb a {
@@ -209,227 +279,357 @@ const serviceData = computed(() => {
     border-bottom-color: white;
 }
 
-/* Service Detail Section */
-.service-detail-section {
-    padding: 60px 20px;
-    background: #ffffff;
-    max-width: 1000px;
-    margin: 0 auto;
+.page-breadcrumb i {
+    font-size: 0.75rem;
+    opacity: 0.7;
 }
 
-.service-detail-card {
-    background: #ffffff;
-    border-radius: 30px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
+/* ===== SECTION HEADER STYLES ===== */
+.text-center.mb-12 {
+    position: relative;
+    margin-bottom: 2rem !important;
 }
 
-.service-detail-header {
-    background: linear-gradient(135deg, #f8fafc, #ffffff);
-    padding: 50px 40px 30px;
+.text-center {
     text-align: center;
-    border-bottom: 1px solid #e2e8f0;
+}
+.text-center.mb-12 h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    font-size: 2.5rem;
+    color: #0f2f4f;
+    font-weight: 700;
 }
 
-.service-detail-icon {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    display: flex;
+.text-center.mb-12 h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #1e4b7c, #2e6ca3);
+    border-radius: 3px;
+}
+
+/* ===== SERVICE ROW STYLES ===== */
+.clinic-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    font-size: 3rem;
-    color: white;
-    box-shadow: 0 20px 30px rgba(30, 75, 124, 0.2);
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
-.service-detail-title {
+/* ===== IMAGE STYLES ===== */
+.clinic-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.clinic-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 75, 124, 0.2), rgba(30, 75, 124, 0.1));
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.clinic-image:hover::before {
+    opacity: 1;
+}
+
+.clinic-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 50px rgba(30, 75, 124, 0.2);
+}
+
+.clinic-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+}
+
+.clinic-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== CONTENT STYLES ===== */
+.clinic-content {
+    background: #ffffff;
+    padding: 10px 40px 40px 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.clinic-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(135deg, #1e4b7c, #2e6ca3);
+    transition: height 0.4s ease;
+}
+
+.clinic-content:hover::before {
+    height: 100%;
+}
+
+.clinic-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 45px rgba(30, 75, 124, 0.1);
+}
+
+.clinic-title {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #1e293b;
-    margin-bottom: 10px;
+    color: #0f2f4f;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: 10px;
 }
 
-.service-detail-content {
-    padding: 40px;
+.clinic-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #1e4b7c, #2e6ca3);
+    border-radius: 3px;
 }
 
-.service-detail-description {
+.clinic-subtitle {
+    display: inline-block;
+    color: #1e4b7c;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding: 5px 12px;
+    background: rgba(30, 75, 124, 0.08);
+    border: 1px solid rgba(30, 75, 124, 0.15);
+}
+
+.clinic-text {
     color: #475569;
-    font-size: 1.1rem;
+    margin-top: 1.5rem;
     line-height: 1.8;
-    margin-bottom: 30px;
+    font-size: 1rem;
 }
 
-/* Features Section */
-.service-features-section {
-    margin-top: 30px;
-    padding-top: 30px;
-    border-top: 1px solid #e2e8f0;
+/* Features Styles */
+.service-features {
+    margin-top: 1.5rem;
 }
 
 .features-title {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 20px;
+    color: #0f2f4f;
+    margin-bottom: 0.75rem;
 }
 
 .features-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
 }
 
 .features-list li {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
-    padding: 10px 0;
-    border-bottom: 1px dashed #e2e8f0;
+    padding: 6px 0;
+    color: #475569;
+    font-size: 0.95rem;
 }
 
 .features-list li i {
     color: #1e4b7c;
-    font-size: 1.1rem;
-    margin-top: 3px;
-    flex-shrink: 0;
+    font-size: 0.9rem;
+    width: 20px;
 }
 
-.features-list li span {
-    color: #475569;
-    font-size: 1rem;
-    line-height: 1.5;
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1024px) {
+    .page-title {
+        font-size: 2.5rem;
+    }
+    
+    .clinic-row {
+        gap: 2rem;
+    }
+    
+    .clinic-content {
+        padding: 30px;
+    }
+    
+    .clinic-title {
+        font-size: 2rem;
+    }
 }
 
-/* CTA Button */
-.service-cta {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.btn-primary {
-    background: linear-gradient(135deg, #1e4b7c, #2e6ca3);
-    color: white;
-    padding: 16px 40px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(30, 75, 124, 0.3);
-}
-
-.btn-primary i {
-    transition: transform 0.3s ease;
-}
-
-.btn-primary:hover i {
-    transform: translateX(5px);
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .page-header {
-        padding: 60px 0 30px;
+        padding: 100px 0 40px;
     }
     
     .page-title {
         font-size: 2rem;
     }
     
-    .service-detail-section {
-        padding: 40px 20px;
+    .text-center.mb-12 h2 {
+        font-size: 2rem;
     }
     
-    .service-detail-title {
-        font-size: 1.8rem;
-    }
-    
-    .service-detail-content {
-        padding: 30px;
-    }
-    
-    .features-list {
+    .clinic-row {
         grid-template-columns: 1fr;
-        gap: 10px;
+        gap: 1.5rem;
     }
     
-    .service-detail-icon {
-        width: 100px;
-        height: 100px;
-        font-size: 2.5rem;
+    .clinic-image img {
+        height: 300px;
+    }
+    
+    .clinic-content {
+        padding: 25px;
+    }
+    
+    .clinic-content::before {
+        width: 0;
+        height: 4px;
+        transition: width 0.4s ease;
+    }
+    
+    .clinic-content:hover::before {
+        width: 100%;
+        height: 4px;
+    }
+    
+    .clinic-title {
+        font-size: 1.8rem;
     }
 }
 
 @media (max-width: 480px) {
+    .page-header {
+        padding: 80px 0 30px;
+    }
+    
     .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-breadcrumb {
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+    }
+    
+    .text-center.mb-12 h2 {
         font-size: 1.6rem;
     }
     
-    .service-detail-title {
+    .clinic-image img {
+        height: 220px;
+    }
+    
+    .clinic-content {
+        padding: 20px;
+    }
+    
+    .clinic-title {
         font-size: 1.5rem;
     }
     
-    .service-detail-description {
-        font-size: 1rem;
-    }
-    
-    .btn-primary {
-        width: 100%;
-        justify-content: center;
+    .clinic-text,
+    .features-list li {
+        font-size: 0.95rem;
     }
 }
 
-/* Dark Mode Support */
+/* ===== DARK MODE SUPPORT ===== */
 @media (prefers-color-scheme: dark) {
-    .service-detail-section {
-        background: #0f172a;
+    .bg-white {
+        background-color: #0f172a;
     }
     
-    .page-header {
-        background: linear-gradient(135deg, #0a1a2f, #1a3a5a);
-    }
-    
-    .service-detail-card {
+    .clinic-content {
         background: #1e293b;
         border-color: #334155;
     }
     
-    .service-detail-header {
-        background: linear-gradient(135deg, #1e293b, #2d3748);
-        border-bottom-color: #334155;
+    .clinic-title {
+        color: #f1f5f9;
     }
     
-    .service-detail-title,
+    .clinic-text,
+    .features-list li {
+        color: #cbd5e1;
+    }
+    
     .features-title {
         color: #f1f5f9;
     }
     
-    .service-detail-description,
-    .features-list li span {
-        color: #cbd5e1;
+    .clinic-subtitle {
+        background: rgba(255, 255, 255, 0.05);
+        color: #f1f5f9;
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.clinic-row {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .page-header {
+        background: none;
+        color: black;
+        padding: 40px 0;
     }
     
-    .features-list li {
-        border-bottom-color: #334155;
-    }
-    
-    .features-list li i {
-        color: #2e6ca3;
+    .page-header::before,
+    .page-header::after {
+        display: none;
     }
 }
 </style>

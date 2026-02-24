@@ -1,165 +1,63 @@
 <template>
     <div>
+        <!-- Header -->
         <div class="page-header">
             <div class="container mx-auto px-6">
-                <h1 class="page-title">{{ t('specialized_clinics.page_title') }}</h1>
+                <h1 class="page-title">Specialized Clinics</h1>
                 <div class="page-breadcrumb">
-                    <router-link to="/">{{ t('specialized_clinics.breadcrumb.home') }}</router-link>
-                    <span class="separator">›</span>
-                    <router-link to="/services">{{ t('specialized_clinics.breadcrumb.services') }}</router-link>
-                    <span class="separator">›</span>
-                    <span>{{ t('specialized_clinics.breadcrumb.current') }}</span>
+                    <router-link to="/">Home</router-link>
+                    <i class="fas fa-chevron-right text-sm"></i>
+                    <router-link to="/services">Services</router-link>
+                    <i class="fas fa-chevron-right text-sm"></i>
+                    <span>Specialized Clinics</span>
                 </div>
             </div>
         </div>
 
-        <div class="clinics-section">
+        <!-- Content -->
+        <div class="py-20 bg-white">
             <div class="container mx-auto px-6">
-                <!-- Section Header -->
-                <div class="section-header">
-                    <h2 class="section-title">{{ t('specialized_clinics.title') }}</h2>
-                    <p class="section-description">{{ t('specialized_clinics.description') }}</p>
+
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">
+                        Our Specialized Clinics
+                    </h2>
                 </div>
 
-                <!-- Clinics List - Each clinic in a two-column layout -->
-                <div class="clinics-list">
-                    <!-- Cardiology Clinic -->
-                    <div class="clinic-item" v-for="(clinic, index) in clinics" :key="index">
-                        <div class="clinic-grid" :class="{ 'reverse': index % 2 !== 0 }">
-                            <!-- Left Column - Image -->
-                            <div class="clinic-image-col">
-                                <div class="clinic-image-wrapper">
-                                    <img :src="clinic.image" :alt="clinic.name" class="clinic-image">
-                                    <div class="image-overlay"></div>
-                                </div>
-                            </div>
-
-                            <!-- Right Column - Description -->
-                            <div class="clinic-content-col">
-                                <div class="clinic-content">
-                                    <h3 class="clinic-name">{{ clinic.name }}</h3>
-                                    <p class="clinic-description">{{ clinic.description }}</p>
-                                    
-                                    <div class="clinic-details">
-                                        <div class="detail-item" v-if="clinic.specialists">
-                                            <i class="fas fa-user-md"></i>
-                                            <span><strong>{{ t('specialized_clinics.specialists') }}:</strong> {{ clinic.specialists }}</span>
-                                        </div>
-                                        <div class="detail-item" v-if="clinic.schedule">
-                                            <i class="fas fa-clock"></i>
-                                            <span><strong>{{ t('specialized_clinics.schedule') }}:</strong> {{ clinic.schedule }}</span>
-                                        </div>
-                                        <div class="detail-item" v-if="clinic.location">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span><strong>{{ t('specialized_clinics.location') }}:</strong> {{ clinic.location }}</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="clinic-services" v-if="clinic.services">
-                                        <h4 class="services-title">{{ t('specialized_clinics.services_offered') }}</h4>
-                                        <ul class="services-list">
-                                            <li v-for="(service, idx) in clinic.services" :key="idx">
-                                                <i class="fas fa-check-circle"></i>
-                                                <span>{{ service }}</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="clinic-cta">
-                                        <button class="btn-appointment" @click="$emit('open-appointment')">
-                                            {{ t('specialized_clinics.book_appointment') }} <i class="fas fa-arrow-right"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Clinic Item -->
+                <div class="clinic-row mb-16">
+                    
+                    <!-- LEFT: Image -->
+                    <div class="clinic-image">
+                        <img src="../../assets/img16.jpg" alt="Heart Clinic">
                     </div>
+
+                    <!-- RIGHT: Description -->
+                    <div class="clinic-content">
+                        <h3 class="clinic-title">Heart Clinic</h3>
+                        <span class="clinic-subtitle1">Cardiology</span>
+
+                        <p class="clinic-text">
+                            Expert care for heart and blood vessel conditions with specialist cardiologists.
+                        </p>
+
+                        <p class="clinic-doctors">
+                            Doctors: Dr. John Mushi, Dr. Sarah Mohamed
+                        </p>
+                    </div>
+
                 </div>
+
             </div>
         </div>
     </div>
 </template>
 
-<script setup>
-import { useI18n } from 'vue-i18n'
-
-const { t } = useI18n()
-
-defineEmits(['open-appointment'])
-
-// Clinic data with translations
-const clinics = [
-    {
-        name: t('specialized_clinics.cardiology.name'),
-        description: t('specialized_clinics.cardiology.description'),
-        image: '/assets/cardiology-clinic.jpg',
-        specialists: t('specialized_clinics.cardiology.specialists'),
-        schedule: t('specialized_clinics.cardiology.schedule'),
-        location: t('specialized_clinics.cardiology.location'),
-        services: t('specialized_clinics.cardiology.services', { returnObjects: true })
-    },
-    {
-        name: t('specialized_clinics.neurology.name'),
-        description: t('specialized_clinics.neurology.description'),
-        image: '/assets/neurology-clinic.jpg',
-        specialists: t('specialized_clinics.neurology.specialists'),
-        schedule: t('specialized_clinics.neurology.schedule'),
-        location: t('specialized_clinics.neurology.location'),
-        services: t('specialized_clinics.neurology.services', { returnObjects: true })
-    },
-    {
-        name: t('specialized_clinics.pediatric.name'),
-        description: t('specialized_clinics.pediatric.description'),
-        image: '/assets/pediatric-clinic.jpg',
-        specialists: t('specialized_clinics.pediatric.specialists'),
-        schedule: t('specialized_clinics.pediatric.schedule'),
-        location: t('specialized_clinics.pediatric.location'),
-        services: t('specialized_clinics.pediatric.services', { returnObjects: true })
-    },
-    {
-        name: t('specialized_clinics.orthopedic.name'),
-        description: t('specialized_clinics.orthopedic.description'),
-        image: '/assets/orthopedic-clinic.jpg',
-        specialists: t('specialized_clinics.orthopedic.specialists'),
-        schedule: t('specialized_clinics.orthopedic.schedule'),
-        location: t('specialized_clinics.orthopedic.location'),
-        services: t('specialized_clinics.orthopedic.services', { returnObjects: true })
-    },
-    {
-        name: t('specialized_clinics.diabetes.name'),
-        description: t('specialized_clinics.diabetes.description'),
-        image: '/assets/diabetes-clinic.jpg',
-        specialists: t('specialized_clinics.diabetes.specialists'),
-        schedule: t('specialized_clinics.diabetes.schedule'),
-        location: t('specialized_clinics.diabetes.location'),
-        services: t('specialized_clinics.diabetes.services', { returnObjects: true })
-    }
-]
-</script>
-
 <style scoped>
-/* CSS Variables */
-:root {
-    --primary: #1e4b7c;
-    --primary-dark: #0f2f4f;
-    --primary-light: #2e6ca3;
-    --primary-soft: rgba(30, 75, 124, 0.1);
-    --text-dark: #1e293b;
-    --text-light: #475569;
-    --text-muted: #64748b;
-    --border-color: #e2e8f0;
-    --bg-light: #f8fafc;
-    --white: #ffffff;
-    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
-}
-
-/* Page Header */
+/* ===== PAGE HEADER STYLES ===== */
 .page-header {
-    background: linear-gradient(135deg, #0a2a45, #1e4b7c);
-    padding: 80px 0 40px;
+    background: linear-gradient(135deg, #1e4b7c 0%, #0f2f4f 100%);
+    padding: 120px 0 60px;
     color: white;
     text-align: center;
     position: relative;
@@ -169,36 +67,36 @@ const clinics = [
 .page-header::before {
     content: '';
     position: absolute;
-    top: -50%;
-    right: -10%;
-    width: 400px;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.03);
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
-    animation: float 20s infinite;
+    animation: rotate 30s linear infinite;
 }
 
 .page-header::after {
     content: '';
     position: absolute;
-    bottom: -50%;
-    left: -10%;
-    width: 400px;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.03);
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 50%;
-    animation: float 25s infinite reverse;
+    animation: rotate 25s linear infinite reverse;
 }
 
-@keyframes float {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(20px, -20px); }
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .page-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     position: relative;
     z-index: 2;
     letter-spacing: -0.02em;
@@ -208,23 +106,17 @@ const clinics = [
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.95rem;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
     position: relative;
     z-index: 2;
-}
-
-.page-breadcrumb .separator {
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 1.2rem;
-    line-height: 1;
 }
 
 .page-breadcrumb a {
     color: white;
     text-decoration: none;
-    transition: var(--transition);
+    transition: all 0.3s ease;
     border-bottom: 1px solid transparent;
 }
 
@@ -232,347 +124,339 @@ const clinics = [
     border-bottom-color: white;
 }
 
-/* Clinics Section */
-.clinics-section {
-    padding: 60px 20px;
-    background: var(--white);
-    max-width: 1200px;
-    margin: 0 auto;
+.page-breadcrumb i {
+    font-size: 0.75rem;
+    opacity: 0.7;
 }
 
-/* Section Header */
-.section-header {
-    text-align: center;
-    margin-bottom: 50px;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.section-title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 16px;
+/* ===== SECTION HEADER STYLES ===== */
+.text-center.mb-12 {
     position: relative;
-    padding-bottom: 15px;
-    letter-spacing: -0.01em;
+    margin-bottom: 2rem !important;
 }
 
-.section-title::after {
+.text-center {
+    text-align: center;
+}
+.text-center.mb-12 h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+    font-size: 2.5rem;
+    color: #0f2f4f;
+    font-weight: 700;
+}
+
+.text-center.mb-12 h2::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;
+    width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary), var(--primary-light));
-    border-radius: 2px;
+    background: linear-gradient(90deg, #1e4b7c, #2e6ca3);
+    border-radius: 3px;
 }
 
-.section-description {
-    color: var(--text-light);
+.text-center.mb-12 p {
     font-size: 1.1rem;
     line-height: 1.7;
+    color: #555;
+    max-width: 600px;
+    margin-top: 1rem;
 }
 
-/* Clinics List */
-.clinics-list {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-}
-
-.clinic-item {
-    width: 100%;
-}
-
-.clinic-grid {
+/* ===== CLINIC ROW STYLES ===== */
+.clinic-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 3rem;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
-.clinic-grid.reverse {
+/* Alternate layout for even rows */
+.clinic-row:nth-child(even) {
     direction: rtl;
 }
 
-.clinic-grid.reverse .clinic-content-col {
+.clinic-row:nth-child(even) .clinic-content {
     direction: ltr;
 }
 
-/* Image Column */
-.clinic-image-col {
-    position: relative;
-}
-
-.clinic-image-wrapper {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    height: 350px;
-}
-
+/* ===== IMAGE STYLES ===== */
 .clinic-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.6s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
 }
 
-.clinic-item:hover .clinic-image {
-    transform: scale(1.05);
-}
-
-.image-overlay {
+.clinic-image::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, 
-        rgba(30, 75, 124, 0.2) 0%,
-        rgba(30, 75, 124, 0.4) 100%);
-    transition: var(--transition);
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 75, 124, 0.2), rgba(30, 75, 124, 0.1));
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
 }
 
-.clinic-item:hover .image-overlay {
-    background: linear-gradient(135deg, 
-        rgba(30, 75, 124, 0.3) 0%,
-        rgba(30, 75, 124, 0.5) 100%);
+.clinic-image:hover::before {
+    opacity: 1;
 }
 
-/* Content Column */
-.clinic-content-col {
-    padding: 20px;
+.clinic-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 50px rgba(30, 75, 124, 0.2);
 }
 
+.clinic-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+}
+
+.clinic-image:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== CONTENT STYLES ===== */
 .clinic-content {
-    background: var(--white);
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
-}
-
-.clinic-name {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 15px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
     position: relative;
-    padding-bottom: 12px;
+    overflow: hidden;
 }
 
-.clinic-name::after {
+.clinic-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(135deg, #1e4b7c, #2e6ca3);
+    transition: height 0.4s ease;
+}
+
+.clinic-content:hover::before {
+    height: 100%;
+}
+
+.clinic-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 45px rgba(30, 75, 124, 0.1);
+}
+
+.clinic-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #0f2f4f;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.clinic-title::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 50px;
+    width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary), var(--primary-light));
-    border-radius: 2px;
+    background: linear-gradient(90deg, #1e4b7c, #2e6ca3);
+    border-radius: 3px;
 }
 
-.clinic-description {
-    color: var(--text-light);
+.clinic-subtitle {
+    display: inline-block;
+    color: #1e4b7c;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 5px 12px;
+    background: rgba(30, 75, 124, 0.08);
+    border-radius: 30px;
+    border: 1px solid rgba(30, 75, 124, 0.15);
+}
+
+.clinic-text {
+    color: #475569;
+    margin-top: 1.5rem;
     line-height: 1.8;
-    margin-bottom: 25px;
     font-size: 1rem;
 }
 
-/* Clinic Details */
-.clinic-details {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 25px;
-    padding: 15px;
-    background: var(--bg-light);
-    border-radius: 12px;
-}
-
-.detail-item {
+.clinic-doctors {
+    margin-top: 1.5rem;
+    color: #0f2f4f;
+    font-weight: 500;
+    padding: 15px 0 0;
+    border-top: 1px solid rgba(226, 232, 240, 0.8);
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: var(--text-light);
-    font-size: 0.95rem;
+    gap: 8px;
 }
 
-.detail-item i {
-    width: 20px;
-    color: var(--primary);
+.clinic-doctors::before {
+    content: '\f0f0';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #1e4b7c;
     font-size: 1rem;
 }
 
-.detail-item strong {
-    color: var(--text-dark);
-    font-weight: 600;
+/* ===== ADDITIONAL PROFESSIONAL TOUCHES ===== */
+.bg-white {
+    background-color: #ffffff;
+    position: relative;
 }
 
-/* Services List */
-.clinic-services {
-    margin-bottom: 25px;
+.bg-white::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle at 10px 10px, rgba(30, 75, 124, 0.02) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    opacity: 0.5;
 }
 
-.services-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 15px;
-}
-
-.services-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-
-.services-list li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
-.services-list li i {
-    color: var(--primary);
-    font-size: 0.9rem;
-    flex-shrink: 0;
-}
-
-/* CTA Button */
-.clinic-cta {
-    margin-top: 20px;
-}
-
-.btn-appointment {
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.95rem;
-    cursor: pointer;
-    transition: var(--transition);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 10px 20px rgba(30, 75, 124, 0.2);
-}
-
-.btn-appointment:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(30, 75, 124, 0.3);
-}
-
-.btn-appointment i {
-    transition: transform 0.3s ease;
-}
-
-.btn-appointment:hover i {
-    transform: translateX(5px);
-}
-
-/* Responsive Design */
-@media (max-width: 968px) {
-    .clinic-grid,
-    .clinic-grid.reverse {
-        grid-template-columns: 1fr;
-        direction: ltr;
-        gap: 30px;
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1024px) {
+    .page-title {
+        font-size: 2.5rem;
     }
     
-    .clinic-image-wrapper {
-        height: 300px;
-        max-width: 600px;
-        margin: 0 auto;
+    .clinic-row {
+        gap: 2rem;
     }
     
-    .section-title {
-        font-size: 1.8rem;
+    .clinic-content {
+        padding: 30px;
+    }
+    
+    .clinic-title {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 768px) {
     .page-header {
-        padding: 60px 0 30px;
+        padding: 100px 0 40px;
     }
     
     .page-title {
         font-size: 2rem;
     }
     
-    .clinics-section {
-        padding: 40px 20px;
+    .text-center.mb-12 h2 {
+        font-size: 2rem;
     }
     
-    .section-title {
-        font-size: 1.6rem;
-    }
-    
-    .section-description {
+    .text-center.mb-12 p {
         font-size: 1rem;
     }
     
-    .clinic-name {
-        font-size: 1.5rem;
-    }
-    
-    .clinic-image-wrapper {
-        height: 250px;
-    }
-    
-    .services-list {
+    .clinic-row,
+    .clinic-row:nth-child(even) {
         grid-template-columns: 1fr;
+        direction: ltr;
+        gap: 1.5rem;
+    }
+    
+    .clinic-image img {
+        height: 280px;
+    }
+    
+    .clinic-content {
+        padding: 25px;
+    }
+    
+    .clinic-content::before {
+        width: 0;
+        height: 4px;
+        transition: width 0.4s ease;
+    }
+    
+    .clinic-content:hover::before {
+        width: 100%;
+        height: 4px;
+    }
+    
+    .clinic-title {
+        font-size: 1.8rem;
     }
 }
 
 @media (max-width: 480px) {
+    .page-header {
+        padding: 80px 0 30px;
+    }
+    
     .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-breadcrumb {
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+    }
+    
+    .text-center.mb-12 h2 {
         font-size: 1.6rem;
     }
     
-    .clinic-name {
-        font-size: 1.3rem;
+    .clinic-image img {
+        height: 220px;
     }
     
     .clinic-content {
         padding: 20px;
     }
     
-    .clinic-image-wrapper {
-        height: 200px;
+    .clinic-title {
+        font-size: 1.5rem;
     }
     
-    .detail-item {
-        font-size: 0.85rem;
+    .clinic-text {
+        font-size: 0.95rem;
     }
     
-    .btn-appointment {
-        width: 100%;
-        justify-content: center;
+    .clinic-doctors {
+        font-size: 0.9rem;
     }
 }
 
-/* Dark Mode Support */
+/* ===== DARK MODE SUPPORT ===== */
 @media (prefers-color-scheme: dark) {
-    .clinics-section {
-        background: #0f172a;
+    .bg-white {
+        background-color: #0f172a;
     }
     
-    .page-header {
-        background: linear-gradient(135deg, #0a1a2f, #1a3a5a);
+    .bg-white::before {
+        background-image: radial-gradient(circle at 10px 10px, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     }
     
     .clinic-content {
@@ -580,29 +464,54 @@ const clinics = [
         border-color: #334155;
     }
     
-    .clinic-name,
-    .services-title,
-    .detail-item strong {
+    .clinic-title {
         color: #f1f5f9;
     }
     
-    .clinic-description,
-    .detail-item,
-    .services-list li {
+    .clinic-text {
         color: #cbd5e1;
     }
     
-    .clinic-details {
-        background: #0f172a;
+    .clinic-doctors {
+        color: #f1f5f9;
+        border-top-color: #334155;
+    }
+    
+    .clinic-subtitle {
+        background: rgba(255, 255, 255, 0.05);
+        color: #f1f5f9;
+        border-color: rgba(255, 255, 255, 0.1);
     }
 }
 
-/* Print Styles */
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.clinic-row {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.clinic-row:nth-child(1) { animation-delay: 0.1s; }
+.clinic-row:nth-child(2) { animation-delay: 0.2s; }
+.clinic-row:nth-child(3) { animation-delay: 0.3s; }
+.clinic-row:nth-child(4) { animation-delay: 0.4s; }
+.clinic-row:nth-child(5) { animation-delay: 0.5s; }
+
+/* ===== PRINT STYLES ===== */
 @media print {
     .page-header {
         background: none;
         color: black;
-        padding: 20px 0;
+        padding: 40px 0;
     }
     
     .page-header::before,
@@ -610,8 +519,8 @@ const clinics = [
         display: none;
     }
     
-    .btn-appointment {
-        display: none;
+    .clinic-image img {
+        border: 1px solid #ddd;
     }
 }
 </style>

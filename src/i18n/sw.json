@@ -543,5 +543,175 @@
                 "Uratibu wa rufaa"
             ]
         }
+    },
+    "service": {
+        "breadcrumb": {
+            "home": "Nyumbani",
+            "services": "Huduma"
+        },
+        "features_title": "Huduma Muhimu:",
+        "opd": {
+            "pageTitle": "Idara ya Wagonjwa wa Nje",
+            "breadcrumb": "OPD",
+            "sectionTitle": "Huduma za Wagonjwa wa Nje",
+            "title": "Idara ya Wagonjwa wa Nje (OPD)",
+            "subtitle": "Huduma ya Jumla ya Matibabu",
+            "description": "Ushauri wa jumla, utambuzi, matibabu, na huduma ya ufuatiliaji kwa maradhi ya kawaida na hali sugu.",
+            "features": [
+                "Ushauri wa jumla wa matibabu",
+                "Utambuzi na matibabu",
+                "Huduma ya ufuatiliaji",
+                "Usimamizi wa magonjwa sugu",
+                "Uchunguzi wa afya"
+            ]
+        },
+        "ipd": {
+            "pageTitle": "Idara ya Wagonjwa wa Ndani",
+            "breadcrumb": "IPD",
+            "sectionTitle": "Huduma za Wagonjwa wa Ndani",
+            "title": "Idara ya Wagonjwa wa Ndani (IPD)",
+            "subtitle": "Huduma ya Kulazwa Hospitalini",
+            "description": "Ulazaji na huduma endelevu kwa wagonjwa wanaohitaji kulazwa, uangalizi maalum, au ahueni baada ya upasuaji.",
+            "features": [
+                "Huduma ya uuguzi 24/7",
+                "Wodi za faragha na za pamoja",
+                "Ahueni baada ya upasuaji",
+                "Ufuatiliaji wa wagonjwa mahututi",
+                "Huduma maalum za kitabibu"
+            ]
+        },
+        "maternity": {
+            "pageTitle": "Huduma za Uzazi",
+            "breadcrumb": "Uzazi",
+            "sectionTitle": "Huduma za Uzazi",
+            "title": "Huduma za Uzazi",
+            "subtitle": "Huduma kwa Mama na Mtoto",
+            "description": "Huduma kamili kwa akina mama na watoto wachanga wakati wa ujauzito, kujifungua, na baada ya kujifungua.",
+            "features": [
+                "Huduma ya ujauzito",
+                "Huduma salama za kujifungua",
+                "Huduma baada ya kujifungua",
+                "Uchunguzi wa watoto wachanga",
+                "Msaada wa kunyonyesha"
+            ]
+        },
+        "emergency": {
+            "pageTitle": "Huduma za Dharura",
+            "breadcrumb": "Dharura",
+            "sectionTitle": "Huduma za Dharura",
+            "title": "Huduma za Dharura",
+            "subtitle": "Huduma ya Dharura 24/7",
+            "description": "Idara ya dharura inayofanya kazi 24/7 iliyojizatiti kushughulikia kesi za hatari na dharura za kitabibu.",
+            "features": [
+                "Huduma 24/7",
+                "Tathmini ya haraka",
+                "Ufufuaji wa dharura",
+                "Huduma za majeraha",
+                "Utayarishaji kwa rufaa"
+            ]
+        },
+        "theatre": {
+            "pageTitle": "Upasuaji na Theatre",
+            "breadcrumb": "Upasuaji",
+            "sectionTitle": "Huduma za Upasuaji",
+            "title": "Upasuaji na Theatre",
+            "subtitle": "Huduma za Upasuaji",
+            "description": "Ukumbi wa upasuaji ulio na vifaa kamili unaotoa huduma salama za upasuaji kwa ganzi.",
+            "features": [
+                "Upasuaji wa jumla",
+                "Taratibu za mifupa",
+                "Upasuaji wa dharura",
+                "Timu ya upasuaji iliyobobea",
+                "Huduma baada ya upasuaji"
+            ]
+        },
+        "laboratory": {
+            "pageTitle": "Huduma za Maabara",
+            "breadcrumb": "Maabara",
+            "sectionTitle": "Huduma za Maabara",
+            "title": "Huduma za Maabara",
+            "subtitle": "Upimaji wa Uchunguzi",
+            "description": "Upimaji wa uchunguzi kwa ajili ya utambuzi wa magonjwa, ufuatiliaji wa matibabu, na uchunguzi wa afya.",
+            "features": [
+                "Vipimo vya damu",
+                "Uchunguzi wa mkojo",
+                "Vipimo vya vijidudu",
+                "Vipimo vya haraka",
+                "Matokeo yaliyohakikishwa"
+            ]
+        },
+        "radiology": {
+            "pageTitle": "Huduma za Radiology",
+            "breadcrumb": "Radiology",
+            "sectionTitle": "Huduma za Radiology",
+            "title": "Huduma za Radiology",
+            "subtitle": "Upigaji Picha wa Kimatibabu",
+            "description": "Huduma za kisasa za upigaji picha kwa ajili ya utambuzi sahihi na mipango ya matibabu.",
+            "features": [
+                "Huduma za X-ray",
+                "Uchunguzi wa Ultrasound",
+                "Uchunguzi wa CT"
+            ]
+        },
+        "pharmacy": {
+            "pageTitle": "Duka la Dawa",
+            "breadcrumb": "Dawa",
+            "sectionTitle": "Huduma za Dawa",
+            "title": "Duka la Dawa",
+            "subtitle": "Huduma za Dawa",
+            "description": "Dawa zilizohakikishwa ubora zinazotolewa kwa mwongozo wa kitaalamu na huduma ya kibinafsi.",
+            "features": [
+                "Ujazaji wa maagizo",
+                "Ushauri wa dawa",
+                "Dawa bora",
+                "Dawa za dharura",
+                "Dawa za magonjwa sugu"
+            ]
+        },
+        "icu": {
+            "pageTitle": "Wodi ya wagonjwa Mahututi",
+            "breadcrumb": "ICU",
+            "sectionTitle": "Huduma Zetu",
+            "title": "ICU / HDU",
+            "subtitle": "Huduma Mahututi",
+            "description": "Huduma maalum kwa wagonjwa mahututi wanaohitaji ufuatiliaji wa karibu na usaidizi maalum.",
+            "features": [
+                "Huduma mahututi 24/7",
+                "Ufuatiliaji wa ishara muhimu",
+                "Vifaa vya kusaidia uhai",
+                "Uuguzi maalum",
+                "Wataalamu wa wagonjwa mahututi"
+            ]
+        },
+        "specialized": {
+            "pageTitle": "Kliniki Maalum",
+            "breadcrumb": "Kliniki Maalum",
+            "sectionTitle": "Kliniki Zetu Maalum",
+            "title": "Kliniki Maalum",
+            "subtitle": "Huduma za Wataalamu",
+            "description": "Huduma maalum za afya na madaktari wataalamu kwa magonjwa mahususi.",
+            "features": [
+                "Kliniki ya Moyo",
+                "Kliniki ya Ubongo na Mishipa",
+                "Kliniki ya Watoto",
+                "Kliniki ya Mifupa na Viungo",
+                "Kliniki ya Kisukari"
+            ]
+        },
+        "default": {
+            "pageTitle": "Huduma ya Matibabu",
+            "breadcrumb": "Huduma",
+            "sectionTitle": "Huduma Zetu",
+            "title": "Huduma ya Matibabu",
+            "subtitle": "Huduma Bora",
+            "description": "Huduma bora za afya kwa uangalifu na huruma.",
+            "features": [
+                "Huduma bora",
+                "Madaktari wataalamu",
+                "Vifaa vya kisasa",
+                "Huduma inayomlenga mgonjwa",
+                "Huduma 24/7"
+            ]
+        }
     }
 }
