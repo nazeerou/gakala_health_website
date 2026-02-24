@@ -346,6 +346,9 @@ const { t } = useI18n()
     
     .staff-image {
         height: 240px;
+         width: 100%;
+        /* object-fit: cover; */
+        border-bottom: 3px solid #1e4b7c;
     }
     
     .statement-text {
@@ -370,6 +373,12 @@ const { t } = useI18n()
     
     .staff-description {
         font-size: 0.85rem;
+    }
+      .staff-image {
+        height: 300px;
+         width: 100%;
+        object-fit: cover;
+        border-bottom: 3px solid #1e4b7c;
     }
 }
 
