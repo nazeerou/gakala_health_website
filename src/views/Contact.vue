@@ -177,6 +177,7 @@ const submitContactForm = () => {
 
 <style scoped>
 /* CSS Variables */
+/* CSS Variables */
 :root {
     --primary: #1e4b7c;
     --primary-dark: #0f2f4f;
@@ -321,7 +322,7 @@ const submitContactForm = () => {
 
 .form-input {
     width: 100%;
-    padding: 12px 10px;
+    padding: 12px 2px;
     border-bottom: 1px solid var(--border-color);
     border: 1px solid #dddddd;
     background: transparent;
@@ -459,11 +460,15 @@ textarea.form-input {
     color: var(--primary);
 }
 
-/* Responsive Design */
+/* ===== IMPROVED MOBILE RESPONSIVE ===== */
+
+/* Tablet (768px - 968px) */
 @media (max-width: 968px) {
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 50px;
+        gap: 40px;
+        max-width: 600px;
+        padding: 0 15px;
     }
     
     .contact-info-col {
@@ -473,45 +478,202 @@ textarea.form-input {
     .page-title {
         font-size: 2.5rem;
     }
-}
-
-@media (max-width: 768px) {
+    
     .page-header {
         padding: 80px 0 40px;
     }
-    
+}
+
+/* Mobile Large (576px - 768px) */
+@media (max-width: 768px) {
     .page-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+    
+    .page-breadcrumb {
+        font-size: 0.9rem;
+        flex-wrap: wrap;
+        padding: 0 15px;
     }
     
     .form-title,
     .info-main-title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
+    }
+    
+    .contact-section {
+        padding: 40px 0;
+    }
+    
+    .form-input {
+        padding: 10px 10px;
+        font-size: 0.95rem;
     }
     
     .info-card {
         gap: 15px;
     }
+    
+    .info-description {
+        margin-bottom: 30px;
+    }
 }
 
-@media (max-width: 480px) {
+/* Mobile Medium (480px - 576px) */
+@media (max-width: 576px) {
     .page-title {
-        font-size: 1.75rem;
+        font-size: 2rem;
+    }
+    
+    .page-header {
+        padding: 70px 0 30px;
+    }
+    
+    .page-header::before,
+    .page-header::after {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .form-title,
+    .info-main-title {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+    
+    .form-title::after,
+    .info-main-title::after {
+        width: 50px;
+        height: 3px;
+    }
+    
+    .info-items {
+        gap: 20px;
     }
     
     .info-icon {
-        width: 35px;
-        height: 35px;
+        width: 38px;
+        height: 38px;
         font-size: 1rem;
     }
     
     .info-title {
         font-size: 0.95rem;
+        margin-bottom: 5px;
     }
     
     .info-text,
     .info-link {
         font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Mobile Small (up to 480px) */
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-breadcrumb {
+        gap: 0.5rem;
+        font-size: 0.85rem;
+    }
+    
+    .page-breadcrumb .separator {
+        font-size: 1rem;
+    }
+    
+    .form-title,
+    .info-main-title {
+        font-size: 1.4rem;
+    }
+    
+    .form-label {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+    
+    .form-input {
+        padding: 8px 1px;
+        font-size: 0.9rem;
+    }
+    
+    .submit-btn {
+        padding: 12px 30px;
+        font-size: 0.95rem;
+    }
+    
+    .info-card {
+        gap: 12px;
+    }
+    
+    .info-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 0.95rem;
+    }
+    
+    .info-title {
+        font-size: 0.9rem;
+        letter-spacing: 0.3px;
+    }
+    
+    .info-text,
+    .info-link {
+        font-size: 0.85rem;
+    }
+    
+    .info-description {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+}
+
+/* Very Small Mobile (up to 360px) */
+@media (max-width: 360px) {
+    .page-title {
+        font-size: 1.6rem;
+    }
+    
+    .page-breadcrumb {
+        font-size: 0.8rem;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .form-title,
+    .info-main-title {
+        font-size: 1.3rem;
+    }
+    
+    .form-input {
+        padding: 7px 1px;
+    }
+    
+    .info-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+    
+    .info-content {
+        word-break: break-word;
+    }
+    
+    .info-link {
+        word-break: break-all;
+    }
+}
+
+/* Fix for landscape orientation on small devices */
+@media (max-height: 500px) and (orientation: landscape) {
+    .page-header {
+        padding: 40px 0 20px;
+    }
+    
+    .contact-section {
+        padding: 30px 0;
     }
 }
 
