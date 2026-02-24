@@ -13,9 +13,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/logo_2_gakala.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/logo_2_gakala.png">
 
-    <!-- Tailwind CSS -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
@@ -23,19 +20,20 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        /* Add loading indicator styles */
-        /* .app-loading {
+        /* Medical-themed loading indicator */
+        .app-loading {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, #1e7c23, #123456);
+            background: linear-gradient(135deg, #0a2a45, #1e4b7c);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 9999;
             transition: opacity 0.5s ease;
+            font-family: 'Inter', sans-serif;
         }
         
         .app-loading.fade-out {
@@ -47,13 +45,83 @@
             display: none;
         }
         
-        .loading-spinner {
-            width: 60px;
-            height: 60px;
-            border: 4px solid rgba(255,255,255,0.3);
-            border-top-color: white;
+        .loading-container {
+            text-align: center;
+            max-width: 300px;
+        }
+        
+        /* Medical heart beat animation */
+        .medical-loader {
+            margin-bottom: 30px;
+        }
+        
+        .heart-beat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            height: 80px;
+        }
+        
+        .line {
+            width: 10px;
+            height: 40px;
+            background: linear-gradient(135deg, #4ade80, #22c55e);
+            border-radius: 5px;
+            animation: beat 1.2s ease-in-out infinite;
+            box-shadow: 0 0 15px rgba(74, 222, 128, 0.5);
+        }
+        
+        .line1 { animation-delay: 0s; height: 40px; }
+        .line2 { animation-delay: 0.2s; height: 55px; }
+        .line3 { animation-delay: 0.4s; height: 70px; }
+        .line4 { animation-delay: 0.6s; height: 55px; }
+        .line5 { animation-delay: 0.8s; height: 40px; }
+        
+        @keyframes beat {
+            0%, 100% {
+                height: 40px;
+                opacity: 0.7;
+            }
+            50% {
+                height: 70px;
+                opacity: 1;
+                box-shadow: 0 0 25px rgba(74, 222, 128, 0.8);
+            }
+        }
+        
+        /* Pulse circle */
+        .pulse-circle {
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 2s infinite;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .pulse-circle i {
+            font-size: 3rem;
+            color: white;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+            }
         }
         
         .loading-text {
@@ -62,15 +130,157 @@
             font-size: 1.2rem;
             font-weight: 500;
             letter-spacing: 1px;
+            opacity: 0.9;
         }
         
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        } */
+        .loading-subtext {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        
+        /* Progress bar */
+        .loading-progress {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+        
+        .loading-progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #4ade80, #22c55e);
+            border-radius: 4px;
+            animation: progress 2s ease-in-out infinite;
+        }
+        
+        @keyframes progress {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+        
+        /* Logo container */
+        .loading-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: white;
+            border-radius: 50%;
+            padding: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: logoPulse 2s infinite;
+        }
+        
+        .loading-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        @keyframes logoPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
+            50% { transform: scale(1.05); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+        }
+        
+        /* EKG Line Animation */
+        .ekg-line {
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ekg-line svg {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .ekg-path {
+            stroke: #4ade80;
+            stroke-width: 2;
+            fill: none;
+            stroke-dasharray: 200;
+            stroke-dashoffset: 200;
+            animation: drawEKG 2s linear infinite;
+        }
+        
+        @keyframes drawEKG {
+            to { stroke-dashoffset: 0; }
+        }
+        
+        /* Image preloader - hidden */
+        .image-preloader {
+            display: none;
+        }
     </style>
 </head>
 <body>    
+    <!-- Medical-themed loading indicator -->
+    <div id="app-loading" class="app-loading">
+        <div class="loading-container">
+            <!-- Option 1: Medical Heart Beat Loader -->
+            <div class="medical-loader">
+                <div class="heart-beat">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                    <div class="line line4"></div>
+                    <div class="line line5"></div>
+                </div>
+            </div>
+            
+            <!-- Option 2: Pulse Circle with Logo (uncomment to use) -->
+            <!-- <div class="loading-logo">
+                <img src="/assets/logo_2_gakala.png" alt="Gakala Health Centre">
+            </div>
+            <div class="pulse-circle">
+                <i class="fas fa-heartbeat"></i>
+            </div> -->
+            
+            <!-- EKG Line Animation -->
+            <div class="ekg-line">
+                <svg viewBox="0 0 200 50" preserveAspectRatio="none">
+                    <path class="ekg-path" d="M0,25 L20,25 L30,10 L40,40 L50,25 L70,25 L80,10 L90,40 L100,25 L120,25 L130,10 L140,40 L150,25 L170,25 L180,10 L190,40 L200,25" />
+                </svg>
+            </div>
+            
+            <div class="loading-text">Gakala Health Centre</div>
+            <div class="loading-subtext">Loading... please wait</div>
+            
+            <!-- Progress bar -->
+            <div class="loading-progress">
+                <div class="loading-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+    
     <div id="app"></div>
+    
+    <!-- Hidden image preloader -->
+    <div class="image-preloader">
+        <img src="/assets/logo_2_gakala.png" alt="preload">
+        <img src="/assets/img1.jpg" alt="preload">
+        <img src="/assets/img2.jpg" alt="preload">
+        <img src="/assets/img4.jpg" alt="preload">
+        <img src="/assets/img5.jpg" alt="preload">
+        <img src="/assets/img6.jpg" alt="preload">
+        <img src="/assets/img7.jpg" alt="preload">
+        <img src="/assets/img8.jpg" alt="preload">
+        <img src="/assets/img9.jpg" alt="preload">
+        <img src="/assets/img10.jpg" alt="preload">
+        <img src="/assets/img11.jpg" alt="preload">
+        <img src="/assets/img16.jpg" alt="preload">
+        <img src="/assets/img17.jpg" alt="preload">
+        <img src="/assets/outpatient.jpg" alt="preload">
+        <img src="/assets/maternity3.jpg" alt="preload">
+        <img src="/assets/icu.jpg" alt="preload">
+        <img src="/assets/nursing.jpg" alt="preload">
+    </div>
     
     <!-- Load Vue and Dependencies - order matters! -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -82,7 +292,6 @@
     
     <!-- Main App - load as module WITHOUT defer -->
     <script type="module" src="/src/main.js"></script>
-
     
     <script>
         // Function to hide loading indicator
@@ -92,9 +301,40 @@
                 loader.classList.add('fade-out');
                 setTimeout(() => {
                     loader.classList.add('hidden');
-                }, 500);
+                }, 500); // Match with CSS transition
             }
         }
+
+        // Preload images function
+        function preloadImages() {
+            const images = [
+                '/assets/logo_2_gakala.png',
+                '/assets/img1.jpg',
+                '/assets/img2.jpg',
+                '/assets/img4.jpg',
+                '/assets/img5.jpg',
+                '/assets/img6.jpg',
+                '/assets/img7.jpg',
+                '/assets/img8.jpg',
+                '/assets/img9.jpg',
+                '/assets/img10.jpg',
+                '/assets/img11.jpg',
+                '/assets/img16.jpg',
+                '/assets/img17.jpg',
+                '/assets/outpatient.jpg',
+                '/assets/maternity3.jpg',
+                '/assets/icu.jpg',
+                '/assets/nursing.jpg'
+            ];
+            
+            images.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        }
+
+        // Start preloading images immediately
+        preloadImages();
 
         // Hide loading when app is ready
         window.addEventListener('load', function() {
@@ -104,6 +344,9 @@
 
         // Fallback: hide after 3 seconds no matter what
         setTimeout(hideLoading, 3000);
+
+        // Listen for app ready event (if you emit one from Vue)
+        document.addEventListener('app-ready', hideLoading);
     </script>
 </body>
 </html>
