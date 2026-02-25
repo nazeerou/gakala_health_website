@@ -604,7 +604,7 @@ const { t } = useI18n()
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
     .services-page-section {
-        background: #0f172a;
+        /* background: #0f172a; */
     }
     
     .page-header {
@@ -612,18 +612,18 @@ const { t } = useI18n()
     }
     
     .service-card {
-        background: #1e293b;
-        border-color: #334155;
+        /* background: #1e293b; */
+        /* border-color: #334155; */
     }
     
     .section-title,
     .service-title {
-        color: #f1f5f9;
+        /* color: #f1f5f9; */
     }
     
     .section-description,
     .service-description {
-        color: #cbd5e1;
+        /* color: #cbd5e1; */
     }
     
     .read-more-link {
