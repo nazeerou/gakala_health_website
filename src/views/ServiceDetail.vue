@@ -179,6 +179,66 @@ const serviceData = computed(() => {
             image: '../../assets/icu.jpg'
         },
         
+        // Eye Clinic
+        'eye-clinic': {
+            pageTitle: t('service.eye_clinic.pageTitle'),
+            breadcrumb: t('service.eye_clinic.breadcrumb'),
+            sectionTitle: t('service.eye_clinic.sectionTitle'),
+            title: t('service.eye_clinic.title'),
+            subtitle: t('service.eye_clinic.subtitle'),
+            description: t('service.eye_clinic.description'),
+            features: t('service.eye_clinic.features', { returnObjects: true }),
+            image: '../../assets/img16.jpg'
+        },
+        
+        // Reproductive and Child Health (RCH) Clinic
+        'rch-clinic': {
+            pageTitle: t('service.rch_clinic.pageTitle'),
+            breadcrumb: t('service.rch_clinic.breadcrumb'),
+            sectionTitle: t('service.rch_clinic.sectionTitle'),
+            title: t('service.rch_clinic.title'),
+            subtitle: t('service.rch_clinic.subtitle'),
+            description: t('service.rch_clinic.description'),
+            features: t('service.rch_clinic.features', { returnObjects: true }),
+            image: '../../assets/outpatient.jpg'
+        },
+        
+        // Orthopedic Clinic
+        'orthopedic': {
+            pageTitle: t('service.orthopedic.pageTitle'),
+            breadcrumb: t('service.orthopedic.breadcrumb'),
+            sectionTitle: t('service.orthopedic.sectionTitle'),
+            title: t('service.orthopedic.title'),
+            subtitle: t('service.orthopedic.subtitle'),
+            description: t('service.orthopedic.description'),
+            features: t('service.orthopedic.features', { returnObjects: true }),
+            image: '../../assets/img7.jpg'
+        },
+        
+        // Psychology
+        'psychology': {
+            pageTitle: t('service.psychology.pageTitle'),
+            breadcrumb: t('service.psychology.breadcrumb'),
+            sectionTitle: t('service.psychology.sectionTitle'),
+            title: t('service.psychology.title'),
+            subtitle: t('service.psychology.subtitle'),
+            description: t('service.psychology.description'),
+            features: t('service.psychology.features', { returnObjects: true }),
+            image: '../../assets/img9.jpg'
+        },
+        
+        // Care and Development of Premature Babies
+        'premature-care': {
+            pageTitle: t('service.premature_care.pageTitle'),
+            breadcrumb: t('service.premature_care.breadcrumb'),
+            sectionTitle: t('service.premature_care.sectionTitle'),
+            title: t('service.premature_care.title'),
+            subtitle: t('service.premature_care.subtitle'),
+            description: t('service.premature_care.description'),
+            features: t('service.premature_care.features', { returnObjects: true }),
+            image: '../../assets/img15.jpg'
+        },
+        
         // Specialized Clinics 
         'specialized-clinics': {
             pageTitle: t('service.specialized.pageTitle'),

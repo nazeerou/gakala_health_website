@@ -81,6 +81,36 @@ const routes = [
         component: ServiceDetail,
         meta: { title: 'Specialized Clinics' }
       },
+       {
+        path: '/services/premature-care',
+        name: 'Premature-care Clinics',
+        component: ServiceDetail,
+        meta: { title: 'Premature-care Clinic' }
+      },
+       {
+        path: '/services/psychology',
+        name: 'Psychology Clinic',
+        component: ServiceDetail,
+        meta: { title: 'Psychology Clinic' }
+      },
+       {
+        path: '/services/orthopedic',
+        name: 'orthopedic Clinic',
+        component: ServiceDetail,
+        meta: { title: 'orthopedic Clinic' }
+      },
+       {
+        path: '/services/eye-clinic',
+        name: 'Eye Clinics',
+        component: ServiceDetail,
+        meta: { title: 'Eye Clinics' }
+      },
+       {
+        path: '/services/rch-clinic',
+        name: 'RCH Clinic',
+        component: ServiceDetail,
+        meta: { title: 'RCH Clinics' }
+      },
 
       { path: 'contact', component: Contact },
       { path: 'mission-vision', component: Mission },

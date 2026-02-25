@@ -29,7 +29,7 @@
                         </div>
                         <div class="service-body">
                             <p class="service-description">{{ t('services_page.opd.full_description') }}</p>
-                            <router-link @click="goToService('opd')" class="read-more-link">
+                            <router-link to="/services/opd" class="read-more-link">
                                 {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
                             </router-link>
                         </div>
@@ -45,7 +45,7 @@
                         </div>
                         <div class="service-body">
                             <p class="service-description">{{ t('services_page.ipd.full_description') }}</p>
-                            <router-link :to="'/services/ipd'" class="read-more-link">
+                            <router-link to="/services/ipd" class="read-more-link">
                                 {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
                             </router-link>
                         </div>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="service-body">
                             <p class="service-description">{{ t('services_page.maternity.full_description') }}</p>
-                            <router-link :to="'/services/maternity'" class="read-more-link">
+                            <router-link to="/services/maternity" class="read-more-link">
                                 {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
                             </router-link>
                         </div>
@@ -77,7 +77,7 @@
                         </div>
                         <div class="service-body">
                             <p class="service-description">{{ t('services_page.emergency.full_description') }}</p>
-                            <router-link :to="'/services/emergency'" class="read-more-link">
+                            <router-link to="/services/emergency" class="read-more-link">
                                 {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
                             </router-link>
                         </div>
@@ -93,7 +93,7 @@
                         </div>
                         <div class="service-body">
                             <p class="service-description">{{ t('services_page.theatre.full_description') }}</p>
-                            <router-link :to="'/services/theatre'" class="read-more-link">
+                            <router-link to="/services/theatre" class="read-more-link">
                                 {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
                             </router-link>
                         </div>
@@ -109,7 +109,7 @@
                         </div>
                         <div class="service-body">
                             <p class="service-description">{{ t('services_page.laboratory.full_description') }}</p>
-                            <router-link :to="'/services/laboratory'" class="read-more-link">
+                            <router-link to="/services/laboratory" class="read-more-link">
                                 {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
                             </router-link>
                         </div>
@@ -125,7 +125,7 @@
                         </div>
                         <div class="service-body">
                             <p class="service-description">{{ t('services_page.radiology.full_description') }}</p>
-                            <router-link :to="'/services/radiology'" class="read-more-link">
+                            <router-link to="/services/radiology" class="read-more-link">
                                 {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
                             </router-link>
                         </div>
@@ -141,7 +141,7 @@
                         </div>
                         <div class="service-body">
                             <p class="service-description">{{ t('services_page.pharmacy.full_description') }}</p>
-                            <router-link :to="'/services/pharmacy'" class="read-more-link">
+                            <router-link to="/services/pharmacy" class="read-more-link">
                                 {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
                             </router-link>
                         </div>
@@ -157,7 +157,87 @@
                         </div>
                         <div class="service-body">
                             <p class="service-description">{{ t('services_page.icu.full_description') }}</p>
-                            <router-link :to="'/services/icu'" class="read-more-link">
+                            <router-link to="/services/icu" class="read-more-link">
+                                {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
+                            </router-link>
+                        </div>
+                    </div>
+
+                    <!-- Eye Clinic (New) -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="service-title">{{ t('services_page.eye_clinic.name') }}</h3>
+                        </div>
+                        <div class="service-body">
+                            <p class="service-description">{{ t('services_page.eye_clinic.full_description') }}</p>
+                            <router-link to="/services/eye-clinic" class="read-more-link">
+                                {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
+                            </router-link>
+                        </div>
+                    </div>
+
+                    <!-- Reproductive and Child Health (RCH) Clinic (New) -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-baby"></i>
+                            </div>
+                            <h3 class="service-title">{{ t('services_page.rch_clinic.name') }}</h3>
+                        </div>
+                        <div class="service-body">
+                            <p class="service-description">{{ t('services_page.rch_clinic.full_description') }}</p>
+                            <router-link to="/services/rch-clinic" class="read-more-link">
+                                {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
+                            </router-link>
+                        </div>
+                    </div>
+
+                    <!-- Orthopedic Clinic (New) -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <h3 class="service-title">{{ t('services_page.orthopedic.name') }}</h3>
+                        </div>
+                        <div class="service-body">
+                            <p class="service-description">{{ t('services_page.orthopedic.full_description') }}</p>
+                            <router-link to="/services/orthopedic" class="read-more-link">
+                                {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
+                            </router-link>
+                        </div>
+                    </div>
+
+                    <!-- Psychology (New) -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="service-title">{{ t('services_page.psychology.name') }}</h3>
+                        </div>
+                        <div class="service-body">
+                            <p class="service-description">{{ t('services_page.psychology.full_description') }}</p>
+                            <router-link to="/services/psychology" class="read-more-link">
+                                {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
+                            </router-link>
+                        </div>
+                    </div>
+
+                    <!-- Care and Development of Premature Babies (New) -->
+                    <div class="service-card">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="fas fa-baby-carriage"></i>
+                            </div>
+                            <h3 class="service-title">{{ t('services_page.premature_care.name') }}</h3>
+                        </div>
+                        <div class="service-body">
+                            <p class="service-description">{{ t('services_page.premature_care.full_description') }}</p>
+                            <router-link to="/services/premature-care" class="read-more-link">
                                 {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
                             </router-link>
                         </div>
@@ -173,7 +253,7 @@
                         </div>
                         <div class="service-body">
                             <p class="service-description">{{ t('services_page.specialized.full_description') }}</p>
-                            <router-link :to="'/services/specialized-clinics'" class="read-more-link">
+                            <router-link to="/services/specialized-clinics" class="read-more-link">
                                 {{ t('services_page.read_more') }} <i class="fas fa-arrow-right"></i>
                             </router-link>
                         </div>
@@ -188,7 +268,6 @@
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
-
 </script>
 
 <style scoped>
@@ -290,7 +369,7 @@ const { t } = useI18n()
 .services-page-section {
     padding: 60px 20px;
     background: linear-gradient(135deg, #ffffff, #f0f5fa);
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -352,7 +431,7 @@ const { t } = useI18n()
 }
 
 .service-card:hover {
-    transform: translateY(-1px);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-md);
     border-color: #1e4b7c;
 }
@@ -525,7 +604,7 @@ const { t } = useI18n()
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
     .services-page-section {
-        color: #0f172a;
+        background: #0f172a;
     }
     
     .page-header {
@@ -533,18 +612,18 @@ const { t } = useI18n()
     }
     
     .service-card {
-        /* background: #1e293b; */
+        background: #1e293b;
         border-color: #334155;
     }
     
     .section-title,
     .service-title {
-        /* color: #f1f5f9; */
+        color: #f1f5f9;
     }
     
     .section-description,
     .service-description {
-        /* color: #cbd5e1; */
+        color: #cbd5e1;
     }
     
     .read-more-link {

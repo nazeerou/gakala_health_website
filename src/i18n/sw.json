@@ -25,7 +25,12 @@
       "emergency": " Dharura",
       "laboratory": " Maabara",
       "pharmacy": " Duka la Dawa",
-      "specialized": " Kliniki Maalum"
+      "specialized": " Kliniki Maalum",
+     "eye_clinic": "Kliniki ya Macho",
+    "rch_clinic": "Kliniki ya Afya ya Uzazi na Mtoto (RCH)",
+    "orthopedic": "Kliniki ya Mifupa",
+    "psychology": "Saikolojia",
+    "premature_care": "Huduma na Ukuaji wa Watoto Wanaozaliwa Kabla ya Wakati"
   },
  
     "about_us": {
@@ -106,7 +111,27 @@
         "specialized": {
             "name": "Kliniki Maalum",
             "description": "Hutoa huduma za kliniki kwa fani maalum za matibabu."
-        }
+        },
+    "eye_clinic": {
+      "name": "Kliniki ya Macho",
+      "description": "Huduma kamili za afya ya macho ikiwemo upimaji wa macho, matibabu, na taratibu ndogo za upasuaji."
+    },
+    "rch_clinic": {
+      "name": "Kliniki ya Afya ya Uzazi na Mtoto (RCH)",
+      "description": "Huduma maalum za afya ya uzazi, upangaji uzazi, na afya ya mtoto."
+    },
+    "orthopedic": {
+      "name": "Kliniki ya Mifupa",
+      "description": "Huduma za kitaalamu kwa magonjwa ya mifupa, viungo, na misuli pamoja na huduma za tiba ya mazoezi."
+    },
+    "psychology": {
+      "name": "Saikolojia",
+      "description": "Huduma za afya ya akili na ushauri nasaha kwa ustawi wa kihisia na kisaikolojia."
+    },
+    "premature_care": {
+      "name": "Huduma na Ukuaji wa Watoto Wanaozaliwa Kabla ya Wakati",
+      "description": "Huduma maalum za watoto wachanga waliozaliwa kabla ya wakati kwa lengo la ukuaji na maendeleo yao."
+    }
     },
     "why_choose": {
         "super_badge": "Kwa Nini Tuchague",
@@ -542,7 +567,27 @@
                 "Kliniki ya kisukari",
                 "Uratibu wa rufaa"
             ]
-        }
+        },
+        "eye_clinic": {
+      "name": "Kliniki ya Macho",
+      "full_description": "Huduma kamili za afya ya macho ikiwemo upimaji wa macho, matibabu, na taratibu ndogo za upasuaji. Madaktari wetu wa macho wanatoa huduma bora kwa matatizo yote ya macho."
+    },
+    "rch_clinic": {
+      "name": "Kliniki ya Afya ya Uzazi na Mtoto (RCH)",
+      "full_description": "Huduma maalum za afya ya uzazi, upangaji uzazi, na afya ya mtoto. Tunatoa huduma kamili kwa akina mama na watoto kwa lengo la kuhakikisha afya bora kwa familia."
+    },
+    "orthopedic": {
+      "name": "Kliniki ya Mifupa",
+      "full_description": "Huduma za kitaalamu kwa magonjwa ya mifupa, viungo, na misuli pamoja na huduma za tiba ya mazoezi. Tunatoa matibabu ya magonjwa ya mifupa, majeraha na matatizo ya viungo."
+    },
+    "psychology": {
+      "name": "Saikolojia",
+      "full_description": "Huduma za afya ya akili na ushauri nasaha kwa ustawi wa kihisia na kisaikolojia. Wasaidizi wetu wa saikolojia wanatoa msaada kwa watu wenye matatizo ya kihisia, mfadhaiko na wasiwasi."
+    },
+    "premature_care": {
+      "name": "Huduma na Ukuaji wa Watoto Wanaozaliwa Kabla ya Wakati",
+      "full_description": "Huduma maalum za watoto wachanga waliozaliwa kabla ya wakati kwa lengo la ukuaji na maendeleo yao. Timu yetu ya wataalamu wa watoto wachanga inatoa huduma maalum kwa watoto wanaozaliwa kabla ya wakati ili kuhakikisha wanakua vizuri."
+    }
     },
     "service": {
         "breadcrumb": {
@@ -698,6 +743,90 @@
                 "Kliniki ya Kisukari"
             ]
         },
+
+    "eye_clinic": {
+      "pageTitle": "Kliniki ya Macho",
+      "breadcrumb": "Kliniki ya Macho",
+      "sectionTitle": "Huduma Kamili za Afya ya Macho",
+      "title": "Kliniki ya Macho",
+      "subtitle": "Huduma za Kitaalamu za Macho",
+      "description": "Kliniki yetu ya Macho inatoa huduma kamili za afya ya macho ikiwemo upimaji wa macho, matibabu ya magonjwa mbalimbali ya macho, na taratibu ndogo za upasuaji. Madaktari wetu wenye uzoefu hutumia vifaa vya kisasa kuhakikisha uchunguzi sahihi na matibabu madhubuti kwa wagonjwa wote.",
+      "features": [
+        "Uchunguzi kamili wa macho",
+        "Upimaji wa macho na miwani",
+        "Matibabu ya maambukizi na magonjwa ya macho",
+        "Taratibu ndogo za upasuaji",
+        "Huduma za macho kwa watoto",
+        "Uchunguzi wa macho kwa wagonjwa wa kisukari"
+      ]
+    },
+    
+    "rch_clinic": {
+      "pageTitle": "Kliniki ya Afya ya Uzazi na Mtoto",
+      "breadcrumb": "Kliniki ya RCH",
+      "sectionTitle": "Huduma za Afya ya Uzazi na Mtoto",
+      "title": "Kliniki ya Afya ya Uzazi na Mtoto (RCH)",
+      "subtitle": "Kuwajali Akina Mama na Watoto",
+      "description": "Kliniki yetu ya Afya ya Uzazi na Mtoto inatoa huduma maalum za afya ya uzazi, upangaji uzazi, na afya ya mtoto. Tunatoa huduma kamili kwa akina mama na watoto ili kuhakikisha familia na jamii zenye afya bora.",
+      "features": [
+        "Huduma za kabla ya kuzaa",
+        "Huduma za baada ya kuzaa",
+        "Huduma za upangaji uzazi",
+        "Chanjo kwa watoto",
+        "Ufuatiliaji wa ukuaji wa watoto",
+        "Ushauri wa lishe bora"
+      ]
+    },
+    "orthopedic": {
+      "pageTitle": "Kliniki ya Mifupa",
+      "breadcrumb": "Kliniki ya Mifupa",
+      "sectionTitle": "Huduma za Mifupa",
+      "title": "Kliniki ya Mifupa",
+      "subtitle": "Huduma za Kitaalamu za Mifupa na Viungo",
+      "description": "Kliniki yetu ya Mifupa inatoa huduma za kitaalamu kwa magonjwa ya mifupa, viungo, na misuli. Tunatibu kuvunjika kwa mifupa, ugonjwa wa yabisi, majeraha ya michezo, na matatizo mengine ya mifupa kwa kutumia mbinu za upasuaji na zisizo za upasuaji.",
+      "features": [
+        "Matibabu ya kuvunjika kwa mifupa",
+        "Upasuaji wa kubadilisha viungo",
+        "Matibabu ya ugonjwa wa yabisi",
+        "Tiba ya mazoezi kwa majeraha ya michezo",
+        "Matibabu ya maumivu ya mgongo na shingo",
+        "Huduma za mifupa kwa watoto"
+      ]
+    },
+    
+    "psychology": {
+      "pageTitle": "Huduma za Saikolojia",
+      "breadcrumb": "Saikolojia",
+      "sectionTitle": "Huduma za Afya ya Akili na Ushauri Nasaha",
+      "title": "Saikolojia",
+      "subtitle": "Msaada kwa Ustawi wa Akili",
+      "description": "Idara yetu ya Saikolojia inatoa huduma za afya ya akili na ushauri nasaha kwa ustawi wa kihisia na kisaikolojia. Wasaidizi wetu wa saikolojia wenye sifa hutoa msaada wa kitaalamu kwa watu wenye matatizo ya kihisia, mfadhaiko, wasiwasi, na masuala mengine ya afya ya akili.",
+      "features": [
+        "Ushauri nasaha binafsi",
+        "Kukabiliana na mfadhaiko na wasiwasi",
+        "Kudhibiti msongo wa mawazo",
+        "Ushauri nasaha kwa wenye kiwewe",
+        "Tiba ya familia",
+        "Tathmini ya kisaikolojia"
+      ]
+    },
+    
+    "premature_care": {
+      "pageTitle": "Huduma na Ukuaji wa Watoto Wanaozaliwa Kabla ya Wakati",
+      "breadcrumb": "Huduma kwa Watoto Wanaozaliwa Kabla ya Wakati",
+      "sectionTitle": "Huduma Maalum kwa Watoto Wanaozaliwa Kabla ya Wakati",
+      "title": "Huduma na Ukuaji wa Watoto Wanaozaliwa Kabla ya Wakati",
+      "subtitle": "Kuwalea Watoto Wenye Thamani",
+      "description": "Kitengo chetu maalum cha watoto wachanga kinatoa huduma kamili kwa watoto wanaozaliwa kabla ya wakati, kwa kuzingatia ukuaji na maendeleo yao. Timu yetu ya wataalamu wa watoto wachanga na wauguzi maalumu hutoa huduma ya saa 24 kuhakikisha matokeo bora kwa watoto wanaozaliwa kabla ya wakati.",
+      "features": [
+        "Huduma mahututi kwa watoto wachanga",
+        "Huduma ya 'Kangaroo mother care'",
+        "Msaada wa ukuaji na maendeleo",
+        "Msaada wa unyonyeshaji",
+        "Ufuatiliaji wa ukuaji",
+        "Elimu na msaada kwa wazazi"
+      ]
+    },
         "default": {
             "pageTitle": "Huduma ya Matibabu",
             "breadcrumb": "Huduma",

@@ -30,7 +30,7 @@
                         {{ t('menu.home') }}
                     </router-link>
                     
-                    <!-- Services Dropdown - all services  -->
+                    <!-- Services Dropdown - all services -->
                     <div class="dropdown services-dropdown-container" 
                          @mouseenter="openDropdown = 'services'" 
                          @mouseleave="openDropdown = null">
@@ -48,7 +48,7 @@
                                     </router-link>
                                 </div>
                                 
-                                <!-- Services Grid - 2 columns as in image -->
+                                <!-- Services Grid - 2 columns -->
                                 <div class="services-grid">
                                     <!-- Outpatient Department (OPD) -->
                                     <router-link to="/services/opd" class="dropdown-item service-item" :class="{ active: $route.path === '/services/opd' }">
@@ -102,6 +102,36 @@
                                     <router-link to="/services/icu" class="dropdown-item service-item" :class="{ active: $route.path === '/services/icu' }">
                                         <i class="fas fa-heartbeat dropdown-icon"></i>
                                         {{ t('services.icu') }}
+                                    </router-link>
+
+                                    <!-- Eye Clinic (New) -->
+                                    <router-link to="/services/eye-clinic" class="dropdown-item service-item" :class="{ active: $route.path === '/services/eye-clinic' }">
+                                        <i class="fas fa-eye dropdown-icon"></i>
+                                        {{ t('services.eye_clinic') }}
+                                    </router-link>
+
+                                    <!-- Reproductive and Child Health (RCH) Clinic (New) -->
+                                    <router-link to="/services/rch-clinic" class="dropdown-item service-item" :class="{ active: $route.path === '/services/rch-clinic' }">
+                                        <i class="fas fa-baby dropdown-icon"></i>
+                                        {{ t('services.rch_clinic') }}
+                                    </router-link>
+
+                                    <!-- Orthopedic Clinic (New) -->
+                                    <router-link to="/services/orthopedic" class="dropdown-item service-item" :class="{ active: $route.path === '/services/orthopedic' }">
+                                        <i class="fas fa-bone dropdown-icon"></i>
+                                        {{ t('services.orthopedic') }}
+                                    </router-link>
+
+                                    <!-- Psychology (New) -->
+                                    <router-link to="/services/psychology" class="dropdown-item service-item" :class="{ active: $route.path === '/services/psychology' }">
+                                        <i class="fas fa-brain dropdown-icon"></i>
+                                        {{ t('services.psychology') }}
+                                    </router-link>
+
+                                    <!-- Care and Development of Premature Babies (New) -->
+                                    <router-link to="/services/premature-care" class="dropdown-item service-item" :class="{ active: $route.path === '/services/premature-care' }">
+                                        <i class="fas fa-baby-carriage dropdown-icon"></i>
+                                        {{ t('services.premature_care') }}
                                     </router-link>
 
                                     <!-- Specialized Clinics -->
@@ -166,8 +196,7 @@
 
                     <!-- Mobile Actions (Language + Hamburger) -->
                     <div class="mobile-actions">
-                        <!-- Mobile Language Select - Visible on mobile left of hamburger -->
-                         <!-- Mobile Language Select - Radio buttons -->
+                        <!-- Mobile Language Select - Radio buttons -->
                         <div class="mobile-lang-radio-group">
                             <label class="mobile-lang-radio" :class="{ active: locale === 'sw' }">
                                 <input 
@@ -208,75 +237,100 @@
                             {{ t('menu.home') }}
                         </router-link>
 
-                        <!-- Services Mobile Dropdown -->
-                        <!-- Services Mobile Dropdown - Updated to match desktop services -->
-                    <div class="mobile-dropdown">
-                        <button class="mobile-item" @click="toggleMobileSubmenu('services')">
-                            <i class="fas fa-list mobile-icon"></i>
-                            {{ t('menu.services') }}
-                            <i class="fas fa-chevron-down mobile-arrow" :class="{ 'rotate-180': mobileSubmenuOpen === 'services' }"></i>
-                        </button>
-                        <transition name="slide-down">
-                            <div v-if="mobileSubmenuOpen === 'services'" class="mobile-submenu services-mobile-submenu">
-                                <!-- All Services -->
-                                <router-link to="/services" class="mobile-subitem all-services-mobile" @click="mobileMenuOpen = false">
-                                    <i class="fas fa-list-ul mobile-icon"></i>
-                                    {{ t('services.all') }}
-                                </router-link>
-                                
-                                <!-- All services from desktop -->
-                                <router-link to="/services/opd" class="mobile-subitem" @click="mobileMenuOpen = false">
-                                    <i class="fas fa-user-injured mobile-icon"></i>
-                                    {{ t('services.opd') }}
-                                </router-link>
-                                
-                                <router-link to="/services/ipd" class="mobile-subitem" @click="mobileMenuOpen = false">
-                                    <i class="fas fa-procedures mobile-icon"></i>
-                                    {{ t('services.ipd') }}
-                                </router-link>
-                                
-                                <router-link to="/services/maternity" class="mobile-subitem" @click="mobileMenuOpen = false">
-                                    <i class="fas fa-female mobile-icon"></i>
-                                    {{ t('services.maternity') }}
-                                </router-link>
-                                
-                                <router-link to="/services/emergency" class="mobile-subitem" @click="mobileMenuOpen = false">
-                                    <i class="fas fa-ambulance mobile-icon"></i>
-                                    {{ t('services.emergency') }}
-                                </router-link>
-                                
-                                <router-link to="/services/theatre" class="mobile-subitem" @click="mobileMenuOpen = false">
-                                    <i class="fas fa-syringe mobile-icon"></i>
-                                    {{ t('services.theatre') }}
-                                </router-link>
-                                
-                                <router-link to="/services/laboratory" class="mobile-subitem" @click="mobileMenuOpen = false">
-                                    <i class="fas fa-flask mobile-icon"></i>
-                                    {{ t('services.laboratory') }}
-                                </router-link>
-                                
-                                <router-link to="/services/radiology" class="mobile-subitem" @click="mobileMenuOpen = false">
-                                    <i class="fas fa-x-ray mobile-icon"></i>
-                                    {{ t('services.radiology') }}
-                                </router-link>
-                                
-                                <router-link to="/services/pharmacy" class="mobile-subitem" @click="mobileMenuOpen = false">
-                                    <i class="fas fa-pills mobile-icon"></i>
-                                    {{ t('services.pharmacy') }}
-                                </router-link>
-                                
-                                <router-link to="/services/icu" class="mobile-subitem" @click="mobileMenuOpen = false">
-                                    <i class="fas fa-heartbeat mobile-icon"></i>
-                                    {{ t('services.icu') }}
-                                </router-link>
-                                
-                                <router-link to="/services/specialized-clinics" class="mobile-subitem" @click="mobileMenuOpen = false">
-                                    <i class="fas fa-stethoscope mobile-icon"></i>
-                                    {{ t('services.specialized') }}
-                                </router-link>
-                            </div>
-                        </transition>
-                    </div>
+                        <!-- Services Mobile Dropdown - Updated to include all new services -->
+                        <div class="mobile-dropdown">
+                            <button class="mobile-item" @click="toggleMobileSubmenu('services')">
+                                <i class="fas fa-list mobile-icon"></i>
+                                {{ t('menu.services') }}
+                                <i class="fas fa-chevron-down mobile-arrow" :class="{ 'rotate-180': mobileSubmenuOpen === 'services' }"></i>
+                            </button>
+                            <transition name="slide-down">
+                                <div v-if="mobileSubmenuOpen === 'services'" class="mobile-submenu services-mobile-submenu">
+                                    <!-- All Services -->
+                                    <router-link to="/services" class="mobile-subitem all-services-mobile" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-list-ul mobile-icon"></i>
+                                        {{ t('services.all') }}
+                                    </router-link>
+                                    
+                                    <!-- All services from desktop including new ones -->
+                                    <router-link to="/services/opd" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-user-injured mobile-icon"></i>
+                                        {{ t('services.opd') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/ipd" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-procedures mobile-icon"></i>
+                                        {{ t('services.ipd') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/maternity" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-female mobile-icon"></i>
+                                        {{ t('services.maternity') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/emergency" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-ambulance mobile-icon"></i>
+                                        {{ t('services.emergency') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/theatre" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-syringe mobile-icon"></i>
+                                        {{ t('services.theatre') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/laboratory" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-flask mobile-icon"></i>
+                                        {{ t('services.laboratory') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/radiology" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-x-ray mobile-icon"></i>
+                                        {{ t('services.radiology') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/pharmacy" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-pills mobile-icon"></i>
+                                        {{ t('services.pharmacy') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/icu" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-heartbeat mobile-icon"></i>
+                                        {{ t('services.icu') }}
+                                    </router-link>
+
+                                    <!-- New services -->
+                                    <router-link to="/services/eye-clinic" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-eye mobile-icon"></i>
+                                        {{ t('services.eye_clinic') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/rch-clinic" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-baby mobile-icon"></i>
+                                        {{ t('services.rch_clinic') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/orthopedic" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-bone mobile-icon"></i>
+                                        {{ t('services.orthopedic') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/psychology" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-brain mobile-icon"></i>
+                                        {{ t('services.psychology') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/premature-care" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-baby-carriage mobile-icon"></i>
+                                        {{ t('services.premature_care') }}
+                                    </router-link>
+                                    
+                                    <router-link to="/services/specialized-clinics" class="mobile-subitem" @click="mobileMenuOpen = false">
+                                        <i class="fas fa-stethoscope mobile-icon"></i>
+                                        {{ t('services.specialized') }}
+                                    </router-link>
+                                </div>
+                            </transition>
+                        </div>
 
                         <!-- About Mobile Dropdown -->
                         <div class="mobile-dropdown">

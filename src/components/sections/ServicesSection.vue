@@ -119,15 +119,80 @@
                         <i class="fas fa-heartbeat"></i>
                     </div>
                     <h3 class="service-title">{{ t('our_services.icu.name') }}</h3>
-                    <p class="service-description highlight">{{ t('our_services.icu.description') }}</p>
+                    <p class="service-description">{{ t('our_services.icu.description') }}</p>
                     <router-link to="/services/icu" class="service-link">
                         {{ t('our_services.learn_more') }} <i class="fas fa-arrow-right"></i>
                     </router-link>
                 </div>
 
-                <!-- 10. Specialized Clinics -->
+                <!-- 10. Eye Clinic -->
                 <div class="service-card">
                     <div class="service-number">10</div>
+                    <div class="service-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="service-title">{{ t('our_services.eye_clinic.name') }}</h3>
+                    <p class="service-description">{{ t('our_services.eye_clinic.description') }}</p>
+                    <router-link to="/services/eye-clinic" class="service-link">
+                        {{ t('our_services.learn_more') }} <i class="fas fa-arrow-right"></i>
+                    </router-link>
+                </div>
+
+                <!-- 11. Reproductive and Child Health (RCH) Clinic -->
+                <div class="service-card">
+                    <div class="service-number">11</div>
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3 class="service-title">{{ t('our_services.rch_clinic.name') }}</h3>
+                    <p class="service-description">{{ t('our_services.rch_clinic.description') }}</p>
+                    <router-link to="/services/rch-clinic" class="service-link">
+                        {{ t('our_services.learn_more') }} <i class="fas fa-arrow-right"></i>
+                    </router-link>
+                </div>
+
+                <!-- 12. Orthopedic Clinic -->
+                <div class="service-card">
+                    <div class="service-number">12</div>
+                    <div class="service-icon">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3 class="service-title">{{ t('our_services.orthopedic.name') }}</h3>
+                    <p class="service-description">{{ t('our_services.orthopedic.description') }}</p>
+                    <router-link to="/services/orthopedic" class="service-link">
+                        {{ t('our_services.learn_more') }} <i class="fas fa-arrow-right"></i>
+                    </router-link>
+                </div>
+
+                <!-- 13. Psychology -->
+                <div class="service-card">
+                    <div class="service-number">13</div>
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="service-title">{{ t('our_services.psychology.name') }}</h3>
+                    <p class="service-description">{{ t('our_services.psychology.description') }}</p>
+                    <router-link to="/services/psychology" class="service-link">
+                        {{ t('our_services.learn_more') }} <i class="fas fa-arrow-right"></i>
+                    </router-link>
+                </div>
+
+                <!-- 14. Care and Development of Premature Babies -->
+                <div class="service-card">
+                    <div class="service-number">14</div>
+                    <div class="service-icon">
+                        <i class="fas fa-baby-carriage"></i>
+                    </div>
+                    <h3 class="service-title">{{ t('our_services.premature_care.name') }}</h3>
+                    <p class="service-description">{{ t('our_services.premature_care.description') }}</p>
+                    <router-link to="/services/premature-care" class="service-link">
+                        {{ t('our_services.learn_more') }} <i class="fas fa-arrow-right"></i>
+                    </router-link>
+                </div>
+
+                <!-- 15. Specialized Clinics (New) -->
+                <div class="service-card">
+                    <div class="service-number">15</div>
                     <div class="service-icon">
                         <i class="fas fa-stethoscope"></i>
                     </div>
@@ -150,7 +215,7 @@ const { t } = useI18n()
 
 <style scoped>
 .services-section {
-    padding: 20px 0;
+    padding: 80px 0;
     background: linear-gradient(135deg, #f8fafd 0%, #ffffff 100%);
     position: relative;
     overflow: hidden;
@@ -182,10 +247,10 @@ const { t } = useI18n()
 }
 
 .section-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: #1a2634;
-    /* margin-bottom: 15px; */
+    margin-bottom: 15px;
 }
 
 .section-subtitle {
@@ -193,18 +258,18 @@ const { t } = useI18n()
     font-size: 1.2rem;
     max-width: 700px;
     margin: 0 auto;
-    line-height: 1;
+    line-height: 1.6;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 30px;
 }
 
 .service-card {
     background: white;
-    padding: 25px 20px;
+    padding: 30px 25px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
     transition: all 0.4s ease;
@@ -219,7 +284,7 @@ const { t } = useI18n()
     top: 0;
     left: 0;
     right: 0;
-    height: 0px;
+    height: 4px;
     background: linear-gradient(90deg, #1e4b7c, #2e6ca3);
     opacity: 0;
     transition: opacity 0.3s ease;

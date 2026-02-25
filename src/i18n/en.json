@@ -25,8 +25,12 @@
       "emergency": " Emergency",
       "laboratory": " Laboratory",
       "pharmacy": " Pharmacy",
-      "specialized": " Specialized Clinics"
-
+      "specialized": " Specialized Clinics",
+     "eye_clinic": "Eye Clinic",
+     "rch_clinic": "Reproductive and Child Health (RCH) Clinic",
+     "orthopedic": "Orthopedic Clinic",
+     "psychology": "Psychology",
+     "premature_care": "Care and Development of Premature Babies"
   },
     "about_us": {
         "badge": "ABOUT US",
@@ -110,7 +114,27 @@
         "specialized": {
             "name": "Specialized Clinics",
             "description": "Provides clinical services for specific medical fields."
-        }
+        },
+      "eye_clinic": {
+      "name": "Eye Clinic",
+      "description": "Comprehensive eye care services including vision testing, treatment, and minor procedures."
+    },
+    "rch_clinic": {
+      "name": "Reproductive and Child Health (RCH) Clinic",
+      "description": "Specialized care for reproductive health, family planning, and child wellness."
+    },
+    "orthopedic": {
+      "name": "Orthopedic Clinic",
+      "description": "Expert care for bone, joint, and muscle conditions with rehabilitation services."
+    },
+    "psychology": {
+      "name": "Psychology",
+      "description": "Mental health support and counseling services for emotional and psychological well-being."
+    },
+    "premature_care": {
+      "name": "Care and Development of Premature Babies",
+      "description": "Specialized neonatal care for premature infants focusing on growth and development."
+    }
     },
     "why_choose": {
         "super_badge": "Why Choose Us",
@@ -556,7 +580,27 @@
                 "Diabetes clinic",
                 "Referral coordination"
             ]
-        }
+        },
+         "eye_clinic": {
+      "name": "Eye Clinic",
+      "full_description": "Comprehensive eye care services including vision testing, treatment, and minor procedures. Our eye specialists provide quality care for all eye conditions."
+    },
+    "rch_clinic": {
+      "name": "Reproductive and Child Health (RCH) Clinic",
+      "full_description": "Specialized care for reproductive health, family planning, and child wellness. We provide comprehensive services for mothers and children to ensure family health."
+    },
+    "orthopedic": {
+      "name": "Orthopedic Clinic",
+      "full_description": "Expert care for bone, joint, and muscle conditions with rehabilitation services. We treat bone diseases, injuries, and joint problems."
+    },
+    "psychology": {
+      "name": "Psychology",
+      "full_description": "Mental health support and counseling services for emotional and psychological well-being. Our psychologists provide support for people with emotional problems, depression, and anxiety."
+    },
+    "premature_care": {
+      "name": "Care and Development of Premature Babies",
+      "full_description": "Specialized neonatal care for premature infants focusing on growth and development. Our neonatal specialist team provides special care for premature babies to ensure healthy development."
+    }
     },
     "service": {
         "breadcrumb": {
@@ -712,6 +756,90 @@
                 "Diabetes Clinic"
             ]
         },
+        "eye_clinic": {
+      "pageTitle": "Eye Clinic",
+      "breadcrumb": "Eye Clinic",
+      "sectionTitle": "Comprehensive Eye Care Services",
+      "title": "Eye Clinic",
+      "subtitle": "Expert Eye Care",
+      "description": "Our Eye Clinic provides comprehensive eye care services including vision testing, treatment of various eye conditions, and minor surgical procedures. Our experienced ophthalmologists use modern equipment to ensure accurate diagnosis and effective treatment for all patients.",
+      "features": [
+        "Comprehensive eye examinations",
+        "Vision testing and prescription glasses",
+        "Treatment of eye infections and diseases",
+        "Minor surgical procedures",
+        "Pediatric eye care",
+        "Diabetic eye screening"
+      ]
+    },
+    
+    "rch_clinic": {
+      "pageTitle": "Reproductive and Child Health Clinic",
+      "breadcrumb": "RCH Clinic",
+      "sectionTitle": "Reproductive and Child Health Services",
+      "title": "Reproductive and Child Health (RCH) Clinic",
+      "subtitle": "Caring for Mothers and Children",
+      "description": "Our Reproductive and Child Health Clinic offers specialized care for reproductive health, family planning, and child wellness. We provide comprehensive services for mothers and children to ensure healthy families and communities.",
+      "features": [
+        "Antenatal care",
+        "Postnatal care",
+        "Family planning services",
+        "Child immunization",
+        "Growth monitoring",
+        "Nutrition counseling"
+      ]
+    },
+    
+    "orthopedic": {
+      "pageTitle": "Orthopedic Clinic",
+      "breadcrumb": "Orthopedic Clinic",
+      "sectionTitle": "Orthopedic Care Services",
+      "title": "Orthopedic Clinic",
+      "subtitle": "Expert Bone and Joint Care",
+      "description": "Our Orthopedic Clinic provides expert care for bone, joint, and muscle conditions. We treat fractures, arthritis, sports injuries, and other musculoskeletal problems with both surgical and non-surgical approaches.",
+      "features": [
+        "Fracture management",
+        "Joint replacement surgery",
+        "Arthritis treatment",
+        "Sports injury rehabilitation",
+        "Back and neck pain treatment",
+        "Pediatric orthopedics"
+      ]
+    },
+    
+    "psychology": {
+      "pageTitle": "Psychology Services",
+      "breadcrumb": "Psychology",
+      "sectionTitle": "Mental Health and Counseling Services",
+      "title": "Psychology",
+      "subtitle": "Support for Mental Well-being",
+      "description": "Our Psychology department offers mental health support and counseling services for emotional and psychological well-being. Our qualified psychologists provide professional support for individuals experiencing emotional difficulties, depression, anxiety, and other mental health concerns.",
+      "features": [
+        "Individual counseling",
+        "Depression and anxiety management",
+        "Stress management",
+        "Trauma counseling",
+        "Family therapy",
+        "Psychological assessments"
+      ]
+    },
+    
+    "premature_care": {
+      "pageTitle": "Care and Development of Premature Babies",
+      "breadcrumb": "Premature Baby Care",
+      "sectionTitle": "Specialized Care for Premature Infants",
+      "title": "Care and Development of Premature Babies",
+      "subtitle": "Nurturing Precious Lives",
+      "description": "Our specialized neonatal care unit provides comprehensive care for premature infants, focusing on their growth and development. Our team of neonatologists and specialized nurses offers round-the-clock care to ensure the best outcomes for premature babies.",
+      "features": [
+        "Neonatal intensive care",
+        "Kangaroo mother care",
+        "Developmental support",
+        "Breastfeeding support",
+        "Growth monitoring",
+        "Parent education and support"
+      ]
+    },
         "default": {
             "pageTitle": "Medical Service",
             "breadcrumb": "Service",
